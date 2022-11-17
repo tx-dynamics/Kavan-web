@@ -1,0 +1,125 @@
+.kavan__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 6rem;
+}
+
+
+.kavan__navbar-links_logo {
+    margin-right: 2rem;
+}
+
+.kavan__navbar-links_logo img {
+    width: 114px;
+    height: 42px;
+}
+
+.kavan__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.kavan_navbar-links_container {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+.kavan__navbar-links_text {
+    color: white;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 25px;
+    margin: 0rem 2rem;
+    cursor: pointer;
+}
+
+
+.kavan__navbar-links_button {
+    background-color: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 20rem;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 25px;
+    margin: 0rem 2rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+
+}
+
+.kavan__navbar_closeIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.kavan__navbar_menuIcon {
+    width: 30px;
+    height: 30px;
+}
+
+.kavan__navbar-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+}
+
+.kavan__navbar-menu img {
+    cursor: pointer;
+}
+
+.kavan__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background-color: var(--color-theme);
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1.5rem;
+    min-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width:1260px) {
+    .kavan__navbar-links {
+        display: none;
+    }
+
+    .kavan__navbar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .kavan__navbar {
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .kavan__navbar {
+        padding: 1rem
+    }
+}
+
+.kavan__navbar-menu_container_links p {
+    margin: 1rem;
+}
+
+.kavan__navbar-menu_container_links button {
+    margin: 1rem;
+}

@@ -1,10 +1,12 @@
 import React from 'react'
 import './App.css'
-
+import { Navbar } from './components/index'
 const App = () => {
     return (
         <div>
-            <h1 className='heading'>Kavan website </h1>
+            <div className='navbar__bg'>
+                <Navbar />
+            </div>
         </div>
     )
 }
