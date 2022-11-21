@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
-import { Navbar } from './components/index'
+import { BrowserRouter } from "react-router-dom";
+import Navigation from './navigation/Navigation';
+
 const App = () => {
     return (
-        <div>
-            <div className='navbar__bg'>
-                <Navbar />
-            </div>
-        </div>
+        <BrowserRouter>
+            <Navigation />
+        </BrowserRouter>
     )
 }
 
