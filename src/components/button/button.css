@@ -1,22 +1,23 @@
 .button_container {
-    display: flex;
-    width: 181px;
-    height: 51px;
-    border: 1px solid #006039;
-    background-color: #006039;
-    border-radius: 30px;
-    justify-content: center;
-    align-items: center;
-    margin-right: 1.6rem;
-    margin-top: 3.2rem;
-    align-self: center;
+  display: flex;
+  width: 181px;
+  height: 51px;
+  border: 1px solid #006039;
+  background-color: #006039;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.6rem;
+  margin-top: 3.2rem;
+  align-self: center;
+  cursor: pointer;
 }
 
 .button_container p {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 26px;
-    color: #fff;
-    margin: 0;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #fff;
+  margin: 0;
 }

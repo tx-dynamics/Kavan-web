@@ -1,0 +1,63 @@
+.kwn-home-testi-comp-main_container {
+  min-width: 53.3rem;
+  /* height: 23.6rem; */
+  background: var(--color-white);
+  border: 1px solid #006039;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 2.5rem;
+}
+.kwn-home-testi-comp-text-container {
+  padding: 2rem 3.1rem 3.2rem 3.1rem;
+}
+
+.kwn-home-testi-comp-text-container p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 23px;
+  color: #666666;
+}
+.kvn-home-testi-com-review-main_container {
+  padding: 0rem 3.1rem 2rem 3.1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.kvn-home-testi-con-review-pro-pic-container img {
+  width: 7.2rem;
+  height: 7.2rem;
+  border-radius: 3.6rem;
+}
+.kvn-home-testi-com-review-name-container {
+  margin-left: 1.6rem;
+}
+.kvn-home-testi-com-review-name-container h2 {
+  color: var(--color-theme);
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: var(--font-family-poppins);
+}
+/* ----------Media-Query------- */
+@media screen and (max-width: 590px) {
+  .kwn-home-testi-comp-main_container {
+    min-width: 44.3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .kwn-home-testi-comp-main_container {
+    min-width: 36.3rem;
+  }
+  .kwn-home-testi-comp-text-container {
+    padding: 1rem 2.1rem 2.2rem 2.1rem;
+  }
+  .kvn-home-testi-com-review-main_container {
+    padding: 0rem 2.1rem 2rem 2.1rem;
+  }
+  .kvn-home-testi-com-review-name-container h2 {
+    font-size: 1.8rem;
+  }
+}

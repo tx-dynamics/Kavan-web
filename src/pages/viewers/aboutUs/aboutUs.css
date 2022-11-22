@@ -1,252 +1,263 @@
 .mianContainer {
-    display: flex;
-    flex: 1;
-    padding: 4.8rem 12.8rem;
-    background-color: rgb(255, 255, 255);
-    flex-direction: column;
+  display: flex;
+  flex: 1;
+  padding: 4.8rem 12.8rem;
+  background-color: rgb(255, 255, 255);
+  flex-direction: column;
 }
 
 .aboutTextDiv {
-    width: 100%;
+  width: 100%;
 }
 
 .aboutTextDiv h1 {
-    display: flex;
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 56px;
-    line-height: 72px;
-    letter-spacing: -0.639344px;
-    color: #2D292A;
-    text-align: center;
-    justify-content: center;
+  display: flex;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 72px;
+  letter-spacing: -0.639344px;
+  color: #2d292a;
+  text-align: center;
+  justify-content: center;
 }
 
 .usersTopDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 6rem;
 }
 
 .usersDiv {
-    position: relative;
-    /* background-color: #006039; */
-    flex-wrap: wrap;
-    /* display: flex; */
+  position: relative;
+  /* background-color: #006039; */
+  flex-wrap: wrap;
+  /* display: flex; */
 }
 
 .verifiedLogo {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    left: 32rem;
-    top: -3rem;
-
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 32rem;
+  top: -3rem;
 }
 
 .verifiedDiv {
-
-    background: #ffffff;
-    border: 1px solid #DFDFDF;
-    border-radius: 22px;
-    /* padding: 3rem 3rem; */
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-right: 10rem;
-    padding-left: 3rem;
+  background: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 22px;
+  /* padding: 3rem 3rem; */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  /* padding-right: 10rem; */
+  padding-left: 3rem;
+  width: 34.2rem;
 }
 
 .verifiedDiv img {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin-right: 1.6rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 1.6rem;
 }
 
 .verifiedDiv h1 {
-    font-family: var(--font-family-manrope);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 33px;
-    margin-bottom: 1.6rem;
-    color: #111235;
+  font-family: var(--font-family-manrope);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 1.6rem;
+  color: #111235;
 }
 
-
-
 .userDetailView {
-    display: flex;
-    margin-top: 2.4rem;
-    /* margin-bottom: ; */
+  display: flex;
+  margin-top: 2.4rem;
+  /* margin-bottom: ; */
 }
 
 .userDetailView h2 {
-    font-family: var(--font-family-manrope);
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 25px;
+  font-family: var(--font-family-manrope);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
 
-
-    color: #111235;
+  color: #111235;
 }
 
 .userDetailView p {
-    font-family: var(--font-family-manrope);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
+  font-family: var(--font-family-manrope);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
 
-    color: #6C6C6C;
+  color: #6c6c6c;
 }
 
 .seeMoreDiv {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
 
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 27px;
-    margin-top: 4.8rem;
-    color: #FF6160;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 4.8rem;
+  color: #ff6160;
 }
 
 .contactDiv {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    background-color: red;
-    /* box-sizing: border-box; */
-    position: absolute;
-    padding: 3rem 8rem;
-
-    left: 19rem;
-    bottom: -6.5rem;
-    background: #FFFFFF;
-    border: 1px solid #DFDFDF;
-    border-radius: 22px;
-    flex-direction: column;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  /* box-sizing: border-box; */
+  position: absolute;
+  padding: 2.6rem 0rem;
+  width: 37rem;
+  left: 19rem;
+  bottom: -6.5rem;
+  background: #ffffff;
+  border: 1px solid #dfdfdf;
+  border-radius: 22px;
+  flex-direction: column;
 }
 
 .contactDiv img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    margin-bottom: 1.6rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-bottom: 1.6rem;
 }
 
 .contactDiv h2 {
-    font-family: var(--font-family);
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 27px;
-    text-align: center;
-    margin-bottom: 0.8rem;
-    color: #111235;
-
+  font-family: var(--font-family);
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  color: #111235;
 }
 
 .contactDiv p {
-
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
-    text-align: center;
-    color: #6C6C6C;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #6c6c6c;
 }
 
 .chooseView {
-    display: flex;
-    flex-direction: column;
-    /* margin-top: 2rem; */
-    width: 59rem;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 2rem; */
+  width: 59rem;
 }
 
 .chooseView h2 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 33px;
-    text-transform: uppercase;
-    color: #006039;
-    margin-bottom: 0.8rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #006039;
+  margin-bottom: 0.8rem;
 }
 
 .chooseView h1 {
-
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 49px;
-    color: #000000;
-    margin-bottom: 1.6rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 49px;
+  color: #000000;
+  margin-bottom: 1.6rem;
 }
 
 .chooseView p {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 30px;
-    /* or 167% */
-    color: #6C6C6C;
-    letter-spacing: -0.02em;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 167% */
+  color: #6c6c6c;
+  letter-spacing: -0.02em;
 }
 
 .divider {
-    display: flex;
-    border: 0.5px solid #E6E6E6;
-    margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
+  display: flex;
+  border: 0.5px solid #e6e6e6;
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
 }
 
 .checkView {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
 }
 
 .checkView img {
-    width: 20px;
-    height: 20px;
-    margin-right: 1.6rem;
-    /* margin-bottom: 1rem; */
+  width: 20px;
+  height: 20px;
+  margin-right: 1.6rem;
+  /* margin-bottom: 1rem; */
 }
 
 .detailView {
-    display: flex;
-    flex-direction: column;
-    margin-top: 16rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 16rem;
 }
 
 .detailView h2 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: -0.639344px;
-    color: #666666;
-    margin-bottom: 0.8rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.639344px;
+  color: #666666;
+  margin-bottom: 0.8rem;
 }
 
 .detailView p {
-
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: -0.639344px;
-    color: #666666;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.639344px;
+  color: #666666;
 }
 
-@media screen and (max-width:1270px) {}
-
-@media screen and (max-width:750px) {
-    /* contactDiv */
+.kvn-about-viewers-main_container {
+  width: 59rem;
+  height: 50rem;
 }
 
-@media screen and (max-width:550px) {
-    /* .contactDiv{
-        position: ;
-    } */
+@media screen and (max-width: 1450px) {
+  .usersTopDiv {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1270px) {
+}
+
+@media screen and (max-width: 850px) {
+  .mianContainer {
+    padding: 4.8rem 7rem;
+  }
+  /* contactDiv */
+}
+
+@media screen and (max-width: 620px) {
+  .mianContainer {
+    padding: 2.8rem 1rem;
+  }
+  .aboutTextDiv h1 {
+    font-size: 4.8rem;
+    line-height: 4rem;
+  }
 }

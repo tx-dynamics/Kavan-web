@@ -1,566 +1,650 @@
 .mainContainer {
-    width: 100%;
-    height: 100%;
-    background-color: red;
+  width: 100%;
+  height: 100%;
+  background-color: red;
 }
 
-
 .header_main_view {
-    display: flex;
-    background-color: #0060391A;
+  display: flex;
+  background-color: #0060391a;
 }
 
 .header_content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-right: 8rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-right: 8rem;
 }
 
 .header_content h1 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 56px;
-    line-height: 66px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 56px;
+  line-height: 66px;
 
-    /* Text Heading */
+  /* Text Heading */
 
-    color: #2D292A;
+  color: #2d292a;
 }
 
 .header_content p {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    color: #2D292A;
-    margin-top: 2.4rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #2d292a;
+  margin-top: 2.4rem;
 }
 
 .button_view {
-    display: flex;
+  display: flex;
 }
-
 
 .header_image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .header_image img {
-    width: 100%;
-    height: 100%;
-
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (max-width:1260px) {
-    .header_main_view {
-        flex-direction: column;
-    }
+@media screen and (max-width: 1260px) {
+  .header_main_view {
+    flex-direction: column;
+  }
 
-    .header_content {
-        margin: 0 0 4.8rem;
-    }
-
+  .header_content {
+    margin: 0 0 4.8rem;
+  }
 }
 
-@media screen and (max-width:650px) {
-    .header_content h1 {
-        font-size: 45px;
-        line-height: 50px;
-    }
+@media screen and (max-width: 650px) {
+  .header_content h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
 
-    .header_content p {
-        font-size: 22px;
-        line-height: 26px;
-    }
-
-}
-
-@media screen and (max-width:490px) {
-    .header_content h1 {
-        font-size: 34px;
-        line-height: 40px;
-    }
-
-    .button_view {
-        flex-direction: column;
-    }
-
-    .header_content p {
-        font-size: 16px;
-        line-height: 25px;
-    }
+  .header_content p {
+    font-size: 22px;
+    line-height: 26px;
+  }
 }
 
 .body_view {
-    display: flex;
-    padding: 8rem 12.8rem;
+  display: flex;
+  padding: 8rem 12.8rem;
 }
 
 .body_content {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-left: 8rem;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 8rem;
 }
 
 .body_image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .body_image img {
-    width: 100%;
-    height: 100%;
-
+  width: 100%;
+  height: 100%;
 }
 
 .body_text_one {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 28px;
-    line-height: 33px;
-    color: #006039;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #006039;
 }
 
 .body_text_two {
-    text-align: center;
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 42px;
-    line-height: 49px;
-    padding-top: 3.2rem;
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 49px;
+  padding-top: 3.2rem;
 
-    color: #2D292A;
+  color: #2d292a;
 }
 
 .body_text_three {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-    color: #2D292A;
-    padding-top: 4rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 29px;
+  color: #2d292a;
+  padding-top: 4rem;
 }
 
 .body_therapy_icon_view {
-    font-family: var(--font-family);
-    display: flex;
-    background-color: #F5F5F5;
-    border-radius: 20px;
-    width: 552px;
-    height: 120px;
-    align-items: center;
-    margin-top: 4.8rem;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 38px;
-    padding: 0 3.2rem;
+  font-family: var(--font-family);
+  display: flex;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  width: 552px;
+  height: 120px;
+  align-items: center;
+  margin-top: 4.8rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  padding: 0 3.2rem;
 }
 
 .body_therapy_icon_view img {
-
-    width: 80px;
-    height: 80px;
-    margin-right: 3.2rem;
-
+  width: 80px;
+  height: 80px;
+  margin-right: 3.2rem;
 }
 
-@media screen and (max-width:1260px) {
+@media screen and (max-width: 1260px) {
+  .body_view {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .body_view {
-        flex-direction: column;
-        align-items: center;
-    }
+  body_image2 {
+    flex-direction: column;
+  }
 
-    body_image2 {
-        flex-direction: column;
-    }
-
-    .body_content {
-        margin: 0 0 4.8rem;
-    }
-
+  .body_content {
+    margin: 0 0 4.8rem;
+  }
 }
 
-@media screen and (max-width:750px) {
+@media screen and (max-width: 750px) {
+  .body_therapy_icon_view {
+    width: 400px;
+    font-size: 26px;
+    line-height: 32px;
+  }
 
-    .body_therapy_icon_view {
-        width: 400px;
-        font-size: 26px;
-        line-height: 32px;
-    }
+  .body_image2 {
+    margin-top: 3.2rem;
+  }
 
-    .body_image2 {
-        margin-top: 3.2rem;
-    }
+  .body_text_one {
+    font-size: 22px;
+    line-height: 28px;
+  }
 
+  .body_text_two {
+    font-size: 36px;
+    line-height: 42px;
+  }
 
-    .body_text_one {
-        font-size: 22px;
-        line-height: 28px;
-    }
+  .body_text_three {
+    font-size: 20px;
+    line-height: 26px;
+  }
 
-    .body_text_two {
-        font-size: 36px;
-        line-height: 42px;
-    }
+  .optionsView {
+    flex-direction: column;
+  }
 
-    .body_text_three {
-        font-size: 20px;
-        line-height: 26px;
+  .verticalDivider {
+    display: none;
+    border: 1.5px solid red;
+  }
 
-    }
-
-    .optionsView {
-        flex-direction: column;
-    }
-
-    .verticalDivider {
-        display: none;
-        border: 1.5px solid red;
-    }
-
-    .optionsContent {
-        margin-top: 3.2rem;
-    }
+  .optionsContent {
+    margin-top: 3.2rem;
+  }
 }
 
-@media screen and (max-width:490px) {
-    .body_therapy_icon_view {
-        width: 250px;
-        font-size: 22px;
-        line-height: 28px;
-    }
+@media screen and (max-width: 490px) {
+  .body_therapy_icon_view {
+    width: 250px;
+    font-size: 22px;
+    line-height: 28px;
+  }
 
-    .body_image2 {
-        margin-top: 3.2rem;
-    }
+  .body_image2 {
+    margin-top: 3.2rem;
+  }
 
-    .body_text_one {
-        font-size: 22px;
-        line-height: 24px;
-    }
+  .body_text_one {
+    font-size: 22px;
+    line-height: 24px;
+  }
 
-    .body_text_two {
-        font-size: 30px;
-        line-height: 35px;
-    }
+  .body_text_two {
+    font-size: 30px;
+    line-height: 35px;
+  }
 
-    .body_text_three {
-        font-size: 26px;
-        line-height: 32px;
-
-    }
+  .body_text_three {
+    font-size: 20px;
+    line-height: 32px;
+  }
 }
 
 .body_image2 {
-    flex: 1;
-    display: flex;
-    /* align-items: center;
+  flex: 1;
+  display: flex;
+  /* align-items: center;
     justify-content: center; */
 }
 
 .body_image2_1_view {
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    position: relative;
-    bottom: 0rem;
-    left: 8rem;
-    /* bottom: 10px; */
-
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 0rem;
+  left: 8rem;
+  /* bottom: 10px; */
 }
 
 .body_image2_1 {
-    width: 100%;
-    height: 80%;
-    border-radius: 30px;
-
+  width: 100%;
+  height: 80%;
+  border-radius: 30px;
 }
 
 .body_image2_2_view {
-    flex: 1;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-end;
-
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .body_content2 {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
 }
 
 .helpView {
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 3.2rem;
 }
 
 .optionsView {
-    display: flex;
-    padding: 6.4rem 9.6rem;
-    justify-content: space-between;
-    background-color: #0060391A;
+  display: flex;
+  padding: 6.4rem 9.6rem;
+  justify-content: space-between;
+  background-color: #0060391a;
 }
 
-
 .dotStyle {
-    width: 5px;
-    height: 5px;
-    border-radius: 3px;
-    margin-top: 0.8rem;
-    background-color: black;
-    margin-right: 3.2rem;
-    align-self: flex-start;
-
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+  margin-top: 0.8rem;
+  background-color: black;
+  margin-right: 3.2rem;
+  align-self: flex-start;
 }
 
 .dotTopView {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-    margin-top: 3.2rem;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  margin-top: 3.2rem;
 }
 
 .verticalDivider {
-    border: 1.5px solid #006039;
-    transform: rotate(180deg);
-    margin-top: 3.2rem;
-    margin-right: 9.6rem;
-    margin-left: 9.6rem;
+  border: 1.5px solid #006039;
+  transform: rotate(180deg);
+  margin-top: 3.2rem;
+  margin-right: 9.6rem;
+  margin-left: 9.6rem;
 }
 
 .availalbeTopView {
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    align-items: center;
-    justify-content: center;
-    padding: 9.6rem 6.4rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  padding: 9.6rem 6.4rem;
 }
 
 .patientsTopView {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 4.8rem 9.6rem;
-    flex-wrap: wrap;
-
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4.8rem 9.6rem;
+  flex-wrap: wrap;
 }
 
 .patientView {
-    box-sizing: border-box;
-    width: 320px;
-    min-width: 220px;
-    /* height: 325px; */
-    background: #ffffff;
-    box-shadow: 0px 0px 15px rgba(57, 61, 72, 0.1);
-    border-radius: 12px;
-    align-items: center;
-    /* justify-content: center; */
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 6.4rem;
-    padding: 3.2rem 0rem;
+  box-sizing: border-box;
+  width: 320px;
+  min-width: 220px;
+  /* height: 325px; */
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(57, 61, 72, 0.1);
+  border-radius: 12px;
+  align-items: center;
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6.4rem;
+  padding: 3.2rem 0rem;
 }
 
 .patientView img {
-    width: 96px;
-    height: 96px;
-    border-radius: 50px;
+  width: 96px;
+  height: 96px;
+  border-radius: 50px;
 }
 
 .patientView_star {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .patientView_star img {
-    width: 14px;
-    height: 14px;
-    margin-right: 0.8rem;
+  width: 14px;
+  height: 14px;
+  margin-right: 0.8rem;
 }
 
 .patientView_title {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    color: #2D292A;
-    margin-top: 3.2rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #2d292a;
+  margin-top: 3.2rem;
 }
 
 .patientView_profession {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    margin-top: 0.32rem;
-    color: #666666;
-    text-align: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  margin-top: 0.32rem;
+  color: #666666;
+  text-align: center;
 }
 
 .patientView_reviews {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
-    display: flex;
-    align-items: center;
-    margin-top: 0.32rem;
-    color: #666666;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  margin-top: 0.32rem;
+  color: #666666;
 }
 
 .reviewsTopView {
-    background-color: #333;
-    overflow: auto;
-    white-space: nowrap;
-    display: flex;
-    flex-direction: row;
-
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
 }
-
 
 .reviewsView {
-    margin-top: 3.2rem;
-    box-sizing: border-box;
-    width: 533px;
-    height: 236px;
-    background: #FFFFFF;
-    border: 1px solid #006039;
-    border-radius: 20px;
+  margin-top: 3.2rem;
+  box-sizing: border-box;
+  width: 533px;
+  height: 236px;
+  background: #ffffff;
+  border: 1px solid #006039;
+  border-radius: 20px;
 }
 
-@media screen and (max-width:1260px) {
-    .patientView img {
-        width: 90px;
-        height: 90px;
-        border-radius: 50px;
-    }
+@media screen and (max-width: 1260px) {
+  .patientView img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50px;
+  }
 
-    .patientView_star img {
-        width: 14px;
-        height: 14px;
-        margin-right: 0.8rem;
-    }
+  .patientView_star img {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.8rem;
+  }
 
-    .patientView_title {
+  .patientView_title {
+    font-size: 18px;
+    line-height: 21px;
+  }
 
-        font-size: 18px;
-        line-height: 21px;
+  .patientView_profession {
+    font-size: 18px;
+    line-height: 21px;
+  }
 
-    }
-
-    .patientView_profession {
-
-        font-size: 18px;
-        line-height: 21px;
-
-    }
-
-    .patientView_reviews {
-        font-size: 14px;
-        line-height: 17px;
-
-    }
-
+  .patientView_reviews {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
-@media screen and (max-width:750px) {
-    .patientsTopView {
-        justify-content: center;
-    }
+@media screen and (max-width: 750px) {
+  .patientsTopView {
+    justify-content: center;
+  }
 
-    .patientView img {
-        width: 70px;
-        height: 70px;
-        border-radius: 50px;
-    }
+  .patientView img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+  }
 
-    .patientView_star img {
-        width: 14px;
-        height: 14px;
-        margin-right: 0.8rem;
-    }
+  .patientView_star img {
+    width: 14px;
+    height: 14px;
+    margin-right: 0.8rem;
+  }
 
-    .patientView_title {
+  .patientView_title {
+    font-size: 16px;
+    line-height: 21px;
+  }
 
-        font-size: 16px;
-        line-height: 21px;
+  .patientView_profession {
+    font-size: 16px;
+    line-height: 21px;
+  }
 
-    }
-
-    .patientView_profession {
-
-        font-size: 16px;
-        line-height: 21px;
-
-    }
-
-    .patientView_reviews {
-        font-size: 12px;
-        line-height: 17px;
-
-    }
+  .patientView_reviews {
+    font-size: 12px;
+    line-height: 17px;
+  }
+}
+.kwn-home-testimonial-heading-main_container {
+  margin: 1rem 10rem 0 10rem;
+}
+.kwn-home-testimonial-heading-main_container h1 {
+  text-align: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 49px;
+  padding-top: 3.2rem;
+  color: #2d292a;
 }
 
-@media screen and (max-width:500px) {
-    .patientView img {
-        width: 70px;
-        height: 70px;
-        border-radius: 50px;
-    }
+.kvn-home-app-download_text-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+  padding-bottom: 3.3rem;
+}
+.kwn-home-testimonial-card-main_container {
+  margin-left: 10rem;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  /* overflow: hidden; */
+  overflow-x: scroll;
+}
 
-    .patientView_star img {
-        width: 14px;
-        height: 14px;
-        margin-right: 0.8rem;
-    }
+.kvn-home-app-download_by-click-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 10rem;
+}
 
-    .patientView_title {
+.kvn-home-app-download_by-click-photo-container {
+  width: 45rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.kvn-home-app-download_by-click-photo-container img {
+  width: 21.4rem;
+  height: 6.4rem;
+  cursor: pointer;
+}
 
-        font-size: 16px;
-        line-height: 21px;
+.kwn-home-testimonial-card-main_container::-webkit-scrollbar {
+  height: 2px;
+}
 
-    }
+/* Track */
+.kwn-home-testimonial-card-main_container::-webkit-scrollbar-track {
+  background: "red";
+  border-radius: 10px;
+}
 
-    .patientView_profession {
+/* Handle */
+.kwn-home-testimonial-card-main_container::-webkit-scrollbar-thumb {
+  background: rgb(226, 226, 226);
+  border-radius: 10px;
+}
 
-        font-size: 16px;
-        line-height: 21px;
+/* Handle on hover */
+.kwn-home-testimonial-card-main_container::-webkit-scrollbar-thumb:hover {
+  background: rgb(229, 229, 229);
+}
 
-    }
+/* -----------Media Query------------ */
 
-    .patientView_reviews {
-        font-size: 12px;
-        line-height: 17px;
+@media screen and (max-width: 850px) {
+  .body_view {
+    padding: 8rem 8.8rem;
+  }
+  .patientsTopView {
+    padding: 4.8rem 7.5rem;
+    justify-content: center;
+  }
+  .kwn-home-testimonial-card-main_container {
+    margin-left: 5rem;
+  }
+}
 
-    }
+@media screen and (max-width: 850px) {
+  .kwn-home-testimonial-card-main_container {
+    margin-left: 2rem;
+  }
+  .availalbeTopView {
+    padding: 9.6rem 4.4rem;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  .kwn-home-testimonial-card-main_container {
+    margin-left: 0rem;
+  }
+
+  .body_view {
+    padding: 8rem 3rem;
+  }
+  .availalbeTopView {
+    padding: 9.6rem 3.4rem;
+  }
+  .kwn-home-testimonial-heading-main_container {
+    margin: 1rem 1rem 0 1rem;
+  }
+  .optionsView {
+    padding: 3.4rem 4.6rem;
+  }
+
+  .kwn-home-testimonial-heading-main_container h1 {
+    font-size: 2.8rem;
+    line-height: 2.8rem;
+  }
+
+  .kwn-home-testi-comp-text-container p {
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+  }
+  .kvn-home-app-download_by-click-photo-container {
+    width: 36rem;
+  }
+  .kvn-home-app-download_by-click-photo-container img {
+    width: 15.4rem;
+    height: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .header_content h1 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+
+  .button_view {
+    flex-direction: column;
+  }
+  .section__padding {
+    padding: 5.6rem 2.4rem;
+  }
+
+  .header_content p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .body_image img {
+    width: 74%;
+    height: 74%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .kvn-home-app-download_by-click-photo-container {
+    width: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .kvn-home-app-download_by-click-photo-container img {
+    margin-top: 2rem;
+  }
+  .optionsView {
+    padding: 2.4rem 3.6rem;
+  }
 }

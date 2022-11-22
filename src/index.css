@@ -1,18 +1,22 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Roboto:wght@300;400;500;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+Mende+Kikakui&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mende+Kikakui&family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+Mende+Kikakui&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 :root {
-    --font-family: 'Roboto';
-    --font-family-manrope: 'Manrope', sans-serif;
+  --font-family: "Roboto";
+  --font-family-manrope: "Manrope", sans-serif;
+  --font-family-poppins: "Poppins", sans-serif;
 
-    --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
-    --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
 
-    --color-white: #ffffff;
-    --color-theme: #006039;
+  --color-white: #ffffff;
+  --color-theme: #006039;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
 }
