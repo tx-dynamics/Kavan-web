@@ -3,8 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Home from '../pages/viewers/homePage/HomePage';
-import AboutUs from '../pages/viewers/aboutUs/AboutUs';
+import { HomePage, ContactUs, AboutUs } from '../pages/viewers/index'
 
 const Navigation = () => {
     const Navigate = useNavigate();
@@ -13,8 +12,10 @@ const Navigation = () => {
     }, [])
     return (
         <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/contactUs" element={<ContactUs />} />
+
         </Routes>
     );
 };

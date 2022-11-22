@@ -16,7 +16,7 @@ const Menu = () => (
         <Link to={'/about'}>
             <p><a className='kavan__navbar-links_text' href='/about'>About us</a></p>
         </Link>
-        <Link>
+        <Link to={'/contactUs'}>
             <p><a className='kavan__navbar-links_text' href='#ContactUs'>Contact us</a></p>
         </Link>
         <button className='kavan__navbar-links_button'>Get Started</button>
