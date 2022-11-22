@@ -1,7 +1,7 @@
 .mianContainer {
     display: flex;
     flex: 1;
-    padding: 3rem 8rem;
+    padding: 4.8rem 12.8rem;
     background-color: rgb(255, 255, 255);
     flex-direction: column;
 }
@@ -23,48 +23,54 @@
 }
 
 .usersTopDiv {
-    /* width: 100%; */
     display: flex;
-    flex: 1;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* margin-top: 0rem; */
+    margin-top: 6rem;
 }
 
-
+.usersDiv {
+    position: relative;
+    /* background-color: #006039; */
+    flex-wrap: wrap;
+    /* display: flex; */
+}
 
 .verifiedLogo {
-    position: relative;
-    width: 80px;
-    height: 80px;
-    left: 18.5rem;
-    top: 3rem;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 32rem;
+    top: -3rem;
 
 }
 
 .verifiedDiv {
-    width: 342px;
-    height: 388px;
+
     background: #ffffff;
     border: 1px solid #DFDFDF;
     border-radius: 22px;
-    padding: 2rem;
+    /* padding: 3rem 3rem; */
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-right: 10rem;
+    padding-left: 3rem;
 }
 
 .verifiedDiv img {
     width: 50px;
     height: 50px;
     border-radius: 25px;
-    margin-right: 1rem;
+    margin-right: 1.6rem;
 }
 
 .verifiedDiv h1 {
-    font-family: var(--font-family);
+    font-family: var(--font-family-manrope);
     font-weight: 700;
     font-size: 24px;
     line-height: 33px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     color: #111235;
 }
 
@@ -72,12 +78,12 @@
 
 .userDetailView {
     display: flex;
-    margin-top: 1.5rem;
+    margin-top: 2.4rem;
     /* margin-bottom: ; */
 }
 
 .userDetailView h2 {
-    font-family: var(--font-family);
+    font-family: var(--font-family-manrope);
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
@@ -87,7 +93,7 @@
 }
 
 .userDetailView p {
-    font-family: var(--font-family);
+    font-family: var(--font-family-manrope);
     font-weight: 500;
     font-size: 14px;
     line-height: 19px;
@@ -101,7 +107,7 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
-    margin-top: 3rem;
+    margin-top: 4.8rem;
     color: #FF6160;
 }
 
@@ -109,12 +115,13 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    box-sizing: border-box;
+    background-color: red;
+    /* box-sizing: border-box; */
     position: absolute;
-    width: 370px;
-    height: 302px;
-    left: 20rem;
-    bottom: 2rem;
+    padding: 3rem 8rem;
+
+    left: 19rem;
+    bottom: -6.5rem;
     background: #FFFFFF;
     border: 1px solid #DFDFDF;
     border-radius: 22px;
@@ -125,7 +132,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
 }
 
 .contactDiv h2 {
@@ -134,7 +141,7 @@
     font-size: 20px;
     line-height: 27px;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
     color: #111235;
 
 }
@@ -152,8 +159,8 @@
 .chooseView {
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
-    max-width: 500px;
+    /* margin-top: 2rem; */
+    width: 59rem;
 }
 
 .chooseView h2 {
@@ -163,7 +170,7 @@
     line-height: 33px;
     text-transform: uppercase;
     color: #006039;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .chooseView h1 {
@@ -173,7 +180,7 @@
     font-size: 42px;
     line-height: 49px;
     color: #000000;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
 }
 
 .chooseView p {
@@ -189,27 +196,27 @@
 .divider {
     display: flex;
     border: 0.5px solid #E6E6E6;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 1.6rem;
+    margin-bottom: 1.6rem;
 }
 
 .checkView {
     display: flex;
     align-items: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .checkView img {
     width: 20px;
     height: 20px;
-    margin-right: 1rem;
+    margin-right: 1.6rem;
     /* margin-bottom: 1rem; */
 }
 
 .detailView {
     display: flex;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 16rem;
 }
 
 .detailView h2 {
@@ -219,7 +226,7 @@
     line-height: 36px;
     letter-spacing: -0.639344px;
     color: #666666;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem;
 }
 
 .detailView p {
@@ -230,4 +237,16 @@
     line-height: 30px;
     letter-spacing: -0.639344px;
     color: #666666;
+}
+
+@media screen and (max-width:1270px) {}
+
+@media screen and (max-width:750px) {
+    /* contactDiv */
+}
+
+@media screen and (max-width:550px) {
+    /* .contactDiv{
+        position: ;
+    } */
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import './homePage.css'
-import { Navbar, Button, Footer } from '../../components'
-import { home_headerImg, dummy2, dummy3, dummy1, therapyIcon, star } from '../../assets'
+import { Navbar, Button, Footer } from '../../../components'
+import { home_headerImg, dummy2, dummy3, dummy1, therapyIcon, star } from '../../../assets'
 
 export default function HomePage() {
     const psychologistArray = [

@@ -6,7 +6,7 @@
 
 .footerTopView {
     background-color: var(--color-theme);
-    padding: 2rem 6rem;
+    padding: 3.2rem 9.6rem;
 }
 
 .footerItemTopView h1 {
@@ -14,7 +14,7 @@
     font-weight: 400;
     font-size: 32px;
     line-height: 50px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     color: #FFFFFF;
 }
 
@@ -24,7 +24,7 @@
     font-size: 20px;
     line-height: 32px;
     color: #FFFFFF;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
 }
 
 .footerTopView h3 {
@@ -46,20 +46,20 @@
     /* or 150% */
     letter-spacing: -0.5px;
     color: #FFFFFF;
-    margin-bottom: 2rem;
+    margin-bottom: 3.2rem;
     max-width: 329px;
 }
 
 .footerItemTopView img {
     width: 144px;
     height: 42px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
 }
 
 .footerSocialView img {
     width: 22px;
     height: 22px;
-    margin-right: 1rem;
+    margin-right: 1.6rem;
 }
 
 .socialapp {
@@ -70,7 +70,7 @@
 
 @media screen and (max-width:980px) {
     .footerItemTopView {
-        margin-bottom: 2rem;
+        margin-bottom: 3.2rem;
     }
 
     .footerItemTopView h1 {

@@ -1,7 +1,7 @@
 import React from 'react'
 import './aboutUs.css'
-import { Navbar, Footer, Button } from '../../components'
-import { dummy2, dummy3, dummy, verified, check } from '../../assets'
+import { Navbar, Footer, Button } from '../../../components'
+import { dummy2, dummy3, dummy, verified, check } from '../../../assets'
 export default function AboutUs() {
     return (
         <div >
@@ -11,7 +11,7 @@ export default function AboutUs() {
                     <h1>About Kavan Health</h1>
                 </div>
                 <div className='usersTopDiv'>
-                    <div>
+                    <div className='usersDiv'>
                         <img src={verified} alt='' className='verifiedLogo' />
                         <div className='verifiedDiv'>
                             <h1>100+ Verified Users</h1>

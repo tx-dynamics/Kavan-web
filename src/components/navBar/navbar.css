@@ -2,13 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 6rem;
+    padding: 2.4rem 9.6rem;
     background-color: var(--color-theme)
 }
 
 
 .kavan__navbar-links_logo {
-    margin-right: 2rem;
+    margin-right: 3.2rem;
 }
 
 .kavan__navbar-links_logo img {
@@ -36,7 +36,7 @@
     font-weight: 500;
     font-size: 22px;
     line-height: 25px;
-    margin: 0rem 2rem;
+    margin: 0rem 3.2rem;
     cursor: pointer;
 }
 
@@ -44,13 +44,13 @@
 .kavan__navbar-links_button {
     background-color: white;
     color: black;
-    padding: 1rem 2rem;
-    border-radius: 20rem;
+    padding: 1.6rem 3.2rem;
+    border-radius: 32rem;
     font-family: var(--font-family);
     font-weight: 500;
     font-size: 22px;
     line-height: 25px;
-    margin: 0rem 2rem;
+    margin: 0rem 3.2rem;
     cursor: pointer;
     outline: none;
     border: none;
@@ -68,7 +68,7 @@
 }
 
 .kavan__navbar-menu {
-    margin-left: 1rem;
+    margin-left: 1.6rem;
     display: none;
     position: relative;
 }
@@ -85,11 +85,11 @@
 
     text-align: end;
     background-color: var(--color-theme);
-    padding: 2rem;
+    padding: 3.2rem;
     position: absolute;
     top: 35px;
     right: 0;
-    margin-top: 1.5rem;
+    margin-top: 2.4rem;
     min-width: 300px;
     border-radius: 5px;
     box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
@@ -107,20 +107,20 @@
 
 @media screen and (max-width:700px) {
     .kavan__navbar {
-        padding: 1rem 2rem;
+        padding: 1.6rem 3.2rem;
     }
 }
 
 @media screen and (max-width:550px) {
     .kavan__navbar {
-        padding: 1rem
+        padding: 1.6rem
     }
 }
 
 .kavan__navbar-menu_container_links p {
-    margin: 1rem;
+    margin: 1.6rem;
 }
 
 .kavan__navbar-menu_container_links button {
-    margin: 1rem;
+    margin: 1.6rem;
 }
