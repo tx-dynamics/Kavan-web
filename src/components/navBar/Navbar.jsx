@@ -3,28 +3,28 @@ import './navbar.css'
 import logo from '../../assets/navbarLogo.png'
 import close from '../../assets/close.png'
 import menu from '../../assets/menu.png'
-import { Link } from "react-router-dom";
-
-const Menu = () => (
-    <>
-        <Link to={'/'}>
-            <p><a className='kavan__navbar-links_text' href='#Home'>Home</a></p>
-        </Link>
-        <Link>
-            <p><a className='kavan__navbar-links_text' href='#Psychologists'>Psychologists</a></p>
-        </Link>
-        <Link to={'/about'}>
-            <p><a className='kavan__navbar-links_text' href='/about'>About us</a></p>
-        </Link>
-        <Link to={'/contactUs'}>
-            <p><a className='kavan__navbar-links_text' href='#ContactUs'>Contact us</a></p>
-        </Link>
-        <button className='kavan__navbar-links_button'>Get Started</button>
-    </>
-)
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
     const [toggleMenu, setToggleMenu] = useState(false)
+    const navigate = useNavigate()
+    const Menu = () => (
+        <>
+            <Link to={'/'}>
+                <p><a className='kavan__navbar-links_text' href='#Home'>Home</a></p>
+            </Link>
+            <Link>
+                <p><a className='kavan__navbar-links_text' href='#Psychologists'>Psychologists</a></p>
+            </Link>
+            <Link to={'/about'}>
+                <p><a className='kavan__navbar-links_text' href='/about'>About us</a></p>
+            </Link>
+            <Link to={'/contactUs'}>
+                <p><a className='kavan__navbar-links_text' href='#ContactUs'>Contact us</a></p>
+            </Link>
+            <button onClick={() => navigate('/signUp')} className='kavan__navbar-links_button'>Get Started</button>
+        </>
+    )
     return (
         <div className='kavan__navbar'>
             <div className='kavan__navbar-links_logo'>
