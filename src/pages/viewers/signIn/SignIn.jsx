@@ -36,9 +36,10 @@ export default function SignIn() {
                     <TextInput type={'text'} title={'Email'} placeholder={'EX:Lonnie@gmail.com'} />
                     <TextInput type={'password'} title={'Password'} placeholder={'************'} />
                 </div>
-
-                <div className=''></div>
-
+                <div className='kwn-sign_in-forgot_container'>
+                    <p className='kwn-sign_in-new_to_kavan'>New to Kavan Health?<span onClick={() => navigate('/signUp')}>  Signup</span></p>
+                    <p className='kwn-sign_in-forgot_password'>Forget password?</p>
+                </div>
                 <div className='kwn-sign_in-Button_container'>
                     <Button onClick={() => navigate('/fillOutForm')}>Sign In</Button>
                 </div>

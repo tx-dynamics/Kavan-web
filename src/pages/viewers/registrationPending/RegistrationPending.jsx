@@ -15,8 +15,8 @@ const RegistrationPending = () => {
                     <h2>After reviewing your profile by admin your profile is live then you can treat the patients</h2>
                 </div>
                 <Button onClick={() => navigate('/registrationSuccessfull')}>Next</Button>
-                <div className='kwn-reg_pending-back_to_login'>
-                    <p>Back to login</p>
+                <div onClick={() => navigate('/signIn')} className='kwn-reg_pending-back_to_login'>
+                    <p >Back to login</p>
                 </div>
             </div>
             <Footer />

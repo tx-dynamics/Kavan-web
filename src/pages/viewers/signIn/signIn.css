@@ -34,26 +34,52 @@
     flex-direction: column;
 }
 
-.kwn-sign_in-terms_container {
-    width: 40rem;
+.kwn-sign_in-forgot_container {
+    width: 38rem;
     display: flex;
     align-items: center;
-    padding: 1.5rem 1.5rem;
+    justify-content: space-between;
+    /* height: 10rem; */
+    padding-top: 1rem;
+    padding-bottom: 8rem;
 }
 
-.kwn-sign_in-terms_container img {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1.5rem;
-}
-
-.kwn-sign_in-terms_container p {
+.kwn-sign_in-new_to_kavan {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.5px;
     color: #2D292A;
 }
+
+.kwn-sign_in-forgot_container span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.5px;
+    color: #006039;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.kwn-sign_in-forgot_password {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    color: #006039;
+
+    text-decoration: underline;
+}
+
+
+
+
+
 
 .kwn-sign_in-terms_container span {
     text-decoration: underline;
