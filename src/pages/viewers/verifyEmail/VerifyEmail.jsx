@@ -19,16 +19,18 @@ const VerifyEmail = () => {
                         inputStyle='kwn-verify_email-otp_style'
                         numInputs={4}
                         onChange={(value) => setOtp(value)}
-                        separator={<span>      </span>}
+                        separator={<span></span>}
                         isInputNum={true}
                         shouldAutoFocus
                         value={otp}
                         containerStyle='kwn-verify_email-otp_container_style'
                     />
                 </div>
+                <div className='kwn-verify_email-change_email'>
+                    <p onClick={() => navigate(-1)}>Change Email address</p>
+                </div>
                 <div className='kwn-verify_email-Button_container'>
-                    <p>Change Email address</p>
-                    <Button onClick={() => navigate('/createProfile')}>Verify</Button>
+                    <Button onClick={() => navigate('/confirmPassword')}>Verify</Button>
                 </div>
             </div>
             <Footer />

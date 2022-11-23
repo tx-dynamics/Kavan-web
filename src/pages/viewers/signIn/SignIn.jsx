@@ -41,7 +41,7 @@ export default function SignIn() {
                     <p onClick={() => navigate('/forgotpassword')} className='kwn-sign_in-forgot_password'>Forget password?</p>
                 </div>
                 <div className='kwn-sign_in-Button_container'>
-                    <Button onClick={() => navigate('/fillOutForm')}>Sign In</Button>
+                    <Button onClick={() => navigate('/')}>Sign In</Button>
                 </div>
                 <h3>OR</h3>
                 <div className='kwn-sign_in-social_container'>
