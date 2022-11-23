@@ -96,14 +96,21 @@
 
   color: #6c6c6c;
 }
-
 .seeMoreDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 12rem;
+  margin-top: 4.8rem;
+}
+.seeMoreDiv h4 {
   font-family: var(--font-family);
 
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  margin-top: 4.8rem;
+
   color: #ff6160;
 }
 
@@ -230,6 +237,10 @@
   letter-spacing: -0.639344px;
   color: #666666;
 }
+.kvn-about_us-right_arrow img {
+  width: 1.7rem;
+  height: 1rem;
+}
 
 .kvn-about-viewers-main_container {
   width: 59rem;
@@ -239,6 +250,9 @@
 @media screen and (max-width: 1450px) {
   .usersTopDiv {
     justify-content: center;
+  }
+  .detailView {
+    margin-top: 6rem;
   }
 }
 
@@ -254,10 +268,106 @@
 
 @media screen and (max-width: 620px) {
   .mianContainer {
-    padding: 2.8rem 1rem;
+    padding: 3.8rem 5rem;
   }
   .aboutTextDiv h1 {
     font-size: 4.8rem;
     line-height: 4rem;
+  }
+  .contactDiv {
+    width: 29rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .aboutTextDiv h1 {
+    font-size: 2.8rem;
+    line-height: 2rem;
+  }
+  .verifiedDiv h1 {
+    font-size: 15px;
+    line-height: 17px;
+  }
+  .verifiedDiv {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+  .userDetailView h2 {
+    font-size: 11px;
+    line-height: 12px;
+  }
+  .userDetailView p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .verifiedDiv img {
+    width: 35px;
+    height: 36px;
+    margin-right: 0.6rem;
+  }
+  .userDetailView {
+    margin-top: 1.4rem;
+  }
+  .verifiedDiv {
+    width: 19.2rem;
+    padding-left: 2rem;
+  }
+  .seeMoreDiv {
+    margin-top: 0.8rem;
+  }
+  .verifiedLogo {
+    left: 15rem;
+  }
+  .contactDiv {
+    left: 11rem;
+  }
+  .contactDiv img {
+    width: 46px;
+    height: 46px;
+    border-radius: 24px;
+    margin-bottom: 0.6rem;
+  }
+  .contactDiv h2 {
+    font-size: 14px;
+    line-height: 15px;
+  }
+  .contactDiv p {
+    font-size: 12px;
+    line-height: 9px;
+  }
+  .contactDiv {
+    width: 18rem;
+  }
+  .kvn-about-viewers-main_container {
+    width: 27rem;
+    height: 36rem;
+  }
+  .chooseView h1 {
+    font-size: 26px;
+    line-height: 27px;
+  }
+  .chooseView p {
+    font-size: 16px;
+    line-height: 17px;
+  }
+  .chooseView h2 {
+    font-size: 23px;
+    line-height: 21px;
+  }
+  .seeMoreDiv {
+    margin-top: 0.8rem;
+    width: 8rem;
+  }
+  .seeMoreDiv h4 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .detailView p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .kvn-about_us-right_arrow img {
+    width: 1.5rem;
+    height: 0.9rem;
   }
 }

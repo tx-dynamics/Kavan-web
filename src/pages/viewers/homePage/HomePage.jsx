@@ -132,7 +132,9 @@ export default function HomePage() {
             nisi pellentesque morbi eget aliquet sem eu. Neque amet neque enim
             Lorem ipsum dolor sit amet.
           </p>
-          <Button>Read more</Button>
+          <div style={{ marginTop: "2rem" }}>
+            <Button>Read more</Button>
+          </div>
         </div>
         <div className="body_image2">
           <div className="body_image2_1_view">
@@ -207,7 +209,9 @@ export default function HomePage() {
                   <img src={star} alt="" />
                   <p className="patientView_reviews">{item.reviews}</p>
                 </div>
-                <Button>Contact</Button>
+                <div style={{ marginTop: "2rem" }}>
+                  <Button>Contact</Button>
+                </div>
               </div>
             );
           })}

@@ -1,105 +1,107 @@
 .footerContainer {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footerTopView {
-    background-color: var(--color-theme);
-    padding: 3.2rem 9.6rem;
+  background-color: var(--color-theme);
+  padding: 3.2rem 9.6rem;
 }
 
 .footerItemTopView h1 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 50px;
-    margin-bottom: 1.6rem;
-    color: #FFFFFF;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 50px;
+  margin-bottom: 1.6rem;
+  color: #ffffff;
 }
 
 .footerItemTopView h2 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 32px;
-    color: #FFFFFF;
-    margin-bottom: 1.6rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #ffffff;
+  margin-bottom: 1.6rem;
 }
 
 .footerTopView h3 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
 
-    text-align: center;
+  text-align: center;
 
-    color: #B9B9B9;
+  color: #b9b9b9;
 }
 
 .footerItemTopView p {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    /* or 150% */
-    letter-spacing: -0.5px;
-    color: #FFFFFF;
-    margin-bottom: 3.2rem;
-    max-width: 329px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-bottom: 3.2rem;
+  max-width: 329px;
 }
 
 .footerItemTopView img {
-    width: 144px;
-    height: 42px;
-    margin-bottom: 1.6rem;
+  width: 144px;
+  height: 42px;
+  margin-bottom: 1.6rem;
 }
 
 .footerSocialView img {
-    width: 22px;
-    height: 22px;
-    margin-right: 1.6rem;
+  width: 22px;
+  height: 22px;
+  margin-right: 1.6rem;
 }
 
 .socialapp {
-    width: 150px;
-    height: 45.45px;
-
+  width: 150px;
+  height: 45.45px;
 }
 
-@media screen and (max-width:980px) {
-    .footerItemTopView {
-        margin-bottom: 3.2rem;
-    }
+@media screen and (max-width: 980px) {
+  .footerItemTopView {
+    margin-bottom: 3.2rem;
+  }
 
-    .footerItemTopView h1 {
-        font-size: 28px;
-        line-height: 45px;
-    }
+  .footerItemTopView h1 {
+    font-size: 28px;
+    line-height: 45px;
+  }
 
-    .footerItemTopView h2 {
-
-        font-size: 18;
-        line-height: 28px;
-    }
-
+  .footerItemTopView h2 {
+    font-size: 18;
+    line-height: 28px;
+  }
 }
 
-@media screen and (max-width:650px) {
-    .footerItemTopView h1 {
-        font-size: 26px;
-        line-height: 40px;
-    }
+@media screen and (max-width: 650px) {
+  .footerItemTopView h1 {
+    font-size: 26px;
+    line-height: 40px;
+  }
 
-    .footerItemTopView h2 {
+  .footerItemTopView h2 {
+    font-size: 16;
+    line-height: 28px;
+  }
 
-        font-size: 16;
-        line-height: 28px;
-    }
+  .footerItemTopView p {
+    font-size: 14;
+    line-height: 24px;
+  }
+}
 
-    .footerItemTopView p {
-        font-size: 14;
-        line-height: 24px;
-    }
+@media screen and (max-width: 480px) {
+  .footerTopView {
+    padding: 3.2rem 3.6rem;
+  }
 }

@@ -40,6 +40,9 @@
 
 .button_view {
   display: flex;
+  margin-top: 3.2rem;
+  width: 38rem;
+  justify-content: space-between;
 }
 
 .header_image {
@@ -618,7 +621,8 @@
   }
 
   .button_view {
-    flex-direction: column;
+    width: 24rem;
+    margin-top: 1.2rem;
   }
   .section__padding {
     padding: 5.6rem 2.4rem;
