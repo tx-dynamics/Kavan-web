@@ -20,7 +20,8 @@ const Testimonial = ({ item }) => {
             style={{ color: "#F8B84E" }}
             allowHalf
             defaultValue={2.5}
-            onChange={setValue}
+            // onChange={setValue}
+            disabled
           />
         </div>
       </div>

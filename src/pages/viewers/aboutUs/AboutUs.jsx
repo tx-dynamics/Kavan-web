@@ -1,7 +1,14 @@
 import React from "react";
 import "./aboutUs.css";
 import { Navbar, Footer, Button } from "../../../components";
-import { dummy2, dummy3, dummy, verified, check } from "../../../assets";
+import {
+  dummy2,
+  dummy3,
+  dummy,
+  verified,
+  check,
+  rightArrow,
+} from "../../../assets";
 export default function AboutUs() {
   return (
     <div>
@@ -39,6 +46,9 @@ export default function AboutUs() {
                 </div>
                 <div className="seeMoreDiv">
                   <h4>See more</h4>
+                  <div className="kvn-about_us-right_arrow">
+                    <img src={rightArrow} />
+                  </div>
                 </div>
               </div>
               <div className="contactDiv">
