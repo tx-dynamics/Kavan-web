@@ -13,10 +13,10 @@ const TextInput = (props) => {
                 <div className='kwn-input_container_input' style={{ borderColor: isFoucs && '#006039' }}>
                     <input onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} onKeyPress={props.onKeyPress} onChange={props.onChange} value={props.value} type={props.type} placeholder={props.placeholder} />
                     {props.type === 'password' &&
-                        <img onClick={props.onClickEye} src={props.eyeValue ? show : hide} />
+                        <img alt='' onClick={props.onClickEye} src={props.eyeValue ? show : hide} />
                     }
                     {props.type === 'dropdown' &&
-                        <img onClick={props.onClickDropDown} src={arrowDown} />
+                        <img alt='' onClick={props.onClickDropDown} src={arrowDown} />
                     }
                     {props.dropDownValue &&
                         <div className='kwn-dropdown_container'>

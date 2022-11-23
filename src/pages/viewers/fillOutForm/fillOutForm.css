@@ -37,9 +37,7 @@
   flex-direction: column;
   align-items: center;
 }
-.kwn-fill_out_form-Button_container {
-  margin-left: 0.5rem;
-}
+
 
 .kwn-fill_out_form-main_container h3 {
   font-family: var(--font-family);
@@ -92,6 +90,7 @@
     padding-left: 5rem;
     padding-right: 5rem;
   }
+
   .kwn-fill_out_form-specialiezed_View {
     width: 30rem;
   }

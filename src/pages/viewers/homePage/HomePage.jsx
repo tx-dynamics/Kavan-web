@@ -239,8 +239,8 @@ export default function HomePage() {
       </div>
       <div className="kvn-home-app-download_by-click-container">
         <div className="kvn-home-app-download_by-click-photo-container">
-          <img src={appleStore} />
-          <img src={googleStore} />
+          <img src={appleStore} alt='' />
+          <img src={googleStore} alt='' />
         </div>
       </div>
 

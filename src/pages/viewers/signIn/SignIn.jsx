@@ -1,5 +1,5 @@
 import React from 'react'
-import { apple, blackCheck, facebookBlue, google } from '../../../assets'
+import { apple, facebookBlue, google } from '../../../assets'
 import { Navbar, Footer, TextInput, Button } from '../../../components'
 import { useNavigate } from 'react-router-dom'
 import './signIn.css'
@@ -38,7 +38,7 @@ export default function SignIn() {
                 </div>
                 <div className='kwn-sign_in-forgot_container'>
                     <p className='kwn-sign_in-new_to_kavan'>New to Kavan Health?<span onClick={() => navigate('/signUp')}>  Signup</span></p>
-                    <p className='kwn-sign_in-forgot_password'>Forget password?</p>
+                    <p onClick={() => navigate('/forgotpassword')} className='kwn-sign_in-forgot_password'>Forget password?</p>
                 </div>
                 <div className='kwn-sign_in-Button_container'>
                     <Button onClick={() => navigate('/fillOutForm')}>Sign In</Button>
@@ -48,7 +48,7 @@ export default function SignIn() {
                     {socialArray.map((item) => {
                         return (
                             <div>
-                                <img src={item.icon} />
+                                <img alt='' src={item.icon} />
                                 <p>{item.title}</p>
                             </div>
                         )

@@ -24,21 +24,21 @@ export default function AboutUs() {
               <div className="verifiedDiv">
                 <h1>100+ Verified Users</h1>
                 <div className="userDetailView">
-                  <img src={dummy} />
+                  <img src={dummy} alt='' />
                   <div>
                     <h2>Theresa Webb</h2>
                     <p>psychologist</p>
                   </div>
                 </div>
                 <div className="userDetailView">
-                  <img src={dummy2} />
+                  <img src={dummy2} alt='' />
                   <div>
                     <h2>Albert Flores</h2>
                     <p>psychologist</p>
                   </div>
                 </div>
                 <div className="userDetailView">
-                  <img src={dummy3} />
+                  <img src={dummy3} alt='' />
                   <div>
                     <h2>Robert Fox</h2>
                     <p>psychologist</p>
@@ -47,12 +47,12 @@ export default function AboutUs() {
                 <div className="seeMoreDiv">
                   <h4>See more</h4>
                   <div className="kvn-about_us-right_arrow">
-                    <img src={rightArrow} />
+                    <img src={rightArrow} alt='' />
                   </div>
                 </div>
               </div>
               <div className="contactDiv">
-                <img src={dummy2} />
+                <img src={dummy2} alt='' />
                 <h2>Daniel Kahneman</h2>
                 <p>psychologist</p>
                 <Button marginTop={20}>Contact</Button>
@@ -71,15 +71,15 @@ export default function AboutUs() {
             </p>
             <div className="divider" />
             <div className="checkView">
-              <img src={check} />
+              <img src={check} alt='' />
               <p>Get Overview at a glance</p>
             </div>
             <div className="checkView">
-              <img src={check} />
+              <img src={check} alt='' />
               <p>Deoposit funds easily, securlity</p>
             </div>
             <div className="checkView">
-              <img src={check} />
+              <img src={check} alt='' />
               <p>Get Live Support</p>
             </div>
           </div>

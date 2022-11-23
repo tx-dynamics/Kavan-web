@@ -40,7 +40,7 @@ export default function SignUp() {
                     <TextInput type={'password'} title={'Confirm Password'} placeholder={'************'} />
                 </div>
                 <div className='kwn-sign_up-terms_container'>
-                    <img src={blackCheck} />
+                    <img alt='' src={blackCheck} />
                     <p>I agree to <span>Terms & Conditions</span></p>
                 </div>
                 <div className='kwn-sign_up-Button_container'>
@@ -51,7 +51,7 @@ export default function SignUp() {
                     {socialArray.map((item) => {
                         return (
                             <div>
-                                <img src={item.icon} />
+                                <img alt='' src={item.icon} />
                                 <p>{item.title}</p>
                             </div>
                         )

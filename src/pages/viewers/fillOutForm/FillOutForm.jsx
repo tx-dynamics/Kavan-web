@@ -50,7 +50,7 @@ export default function FillOutForm() {
                             return (
                                 <div>
                                     <p>{item.title}</p>
-                                    <img onClick={() => subtractSpecialiezed(item.id)} src={cross} />
+                                    <img alt='' onClick={() => subtractSpecialiezed(item.id)} src={cross} />
                                 </div>
                             )
                         }).slice(0, 5)}
@@ -61,7 +61,7 @@ export default function FillOutForm() {
                     <TextInput type={'text'} title={'What is the average price of each session?'} placeholder={'1 Hour'} />
                 </div>
 
-                <div className='kwn-fill_out_form-Button_container'>
+                <div>
                     <Button onClick={() => navigate('/createProfile')}>Create Profile</Button>
                 </div>
 

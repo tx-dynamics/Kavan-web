@@ -9,7 +9,7 @@ const Navigation = () => {
     const Navigate = useNavigate();
     useEffect(() => {
         Navigate("/");
-    }, [])
+    })
     return (
         <Routes>
             <Route path="/" element={<Viewers.HomePage />} />
@@ -21,6 +21,10 @@ const Navigation = () => {
             <Route path="/createProfile" element={<Viewers.CreateProfile />} />
             <Route path="/registrationPending" element={<Viewers.RegistrationPending />} />
             <Route path="/registrationSuccessfull" element={<Viewers.RegistrationSuccessfull />} />
+            <Route path="/forgotPassword" element={<Viewers.ForgotPassword />} />
+            <Route path="/confirmPassword" element={<Viewers.ConfirmPassword />} />
+            <Route path="/verifyEmail" element={<Viewers.VerifyEmail />} />
+
         </Routes>
     );
 };

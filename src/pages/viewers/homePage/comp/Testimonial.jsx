@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { dummy2 } from "../../../../assets";
 import "./testimonial.css";
 import { Rate } from "antd";
 
 const Testimonial = ({ item }) => {
-  const [value, setValue] = useState("");
   return (
     <div className="kwn-home-testi-comp-main_container">
       <div className="kwn-home-testi-comp-text-container">
@@ -12,7 +11,7 @@ const Testimonial = ({ item }) => {
       </div>
       <div className="kvn-home-testi-com-review-main_container">
         <div className="kvn-home-testi-con-review-pro-pic-container">
-          <img src={dummy2} />
+          <img alt='' src={dummy2} />
         </div>
         <div className="kvn-home-testi-com-review-name-container">
           <h2>Rifki Abdurachman</h2>

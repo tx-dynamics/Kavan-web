@@ -11,7 +11,7 @@ const RegistrationSuccessfull = () => {
             <Navbar />
             <div className='kwn-reg_successfull-main_container'>
                 <div className='kwn-reg_successfull-title_container'>
-                    <img src={checkWithDots} />
+                    <img alt='' src={checkWithDots} />
                     <h1>You are Registered Successfully</h1>
                     <h2>Your profile has been approved by admin. Now can start start treating patients</h2>
                 </div>

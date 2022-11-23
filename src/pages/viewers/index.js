@@ -7,7 +7,9 @@ export { default as FillOutForm } from './fillOutForm/FillOutForm'
 export { default as CreateProfile } from './createProfile/CreateProfile'
 export { default as RegistrationPending } from './registrationPending/RegistrationPending'
 export { default as RegistrationSuccessfull } from './registrationSuccessfull/RegistrationSuccessfull'
-
+export { default as ForgotPassword } from './forgotPassword/ForgotPassword'
+export { default as VerifyEmail } from './verifyEmail/VerifyEmail'
+export { default as ConfirmPassword } from './confirmPassword/ConfirmPassword'
 
 
 

@@ -8,12 +8,12 @@ export default function Footer() {
             <div className='footerContainer' >
                 <div className='footerItemTopView'>
                     <h1>About us</h1>
-                    <img src={navbarLogo} />
+                    <img src={navbarLogo} alt='' />
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio fusce ut dictumst sollicitudin lorem ac nisi. At feugiat erat massa vitae. Elit donec ut elit quis in nunc mauris. Facilisis leo aenean magna nisl sed elementum. Odio fusce ut dictumst sollicitudin lorem ac nisi.</p>
                     <div className='footerSocialView'>
-                        <img src={facebook} />
-                        <img src={linkedIn} />
-                        <img src={instagram} />
+                        <img src={facebook} alt='' />
+                        <img src={linkedIn} alt='' />
+                        <img src={instagram} alt='' />
 
                     </div>
                 </div>
@@ -29,9 +29,9 @@ export default function Footer() {
                 <div className='footerItemTopView'>
                     <h1 style={{ marginBottom: 5 }}>Download our App</h1>
                     <div >
-                        <img className='socialapp' style={{ marginBottom: 5 }} src={appleStore} />
+                        <img className='socialapp' style={{ marginBottom: 5 }} alt='' src={appleStore} />
                     </div>
-                    <img className='socialapp' style={{ marginBottom: 5 }} src={googleStore} />
+                    <img className='socialapp' style={{ marginBottom: 5 }} alt='' src={googleStore} />
                     <h1 style={{ marginBottom: 5 }}>Support</h1>
                     <h2>Chat with us</h2>
                     <h2>Find Psychologists</h2>

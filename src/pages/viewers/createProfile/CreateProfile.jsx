@@ -51,9 +51,9 @@ const CreateProfile = () => {
                     <h2>Add a professional photo and submit profile</h2>
                 </div>
                 <div className='kwn-create_profile-img_container'>
-                    <img src={image == '' ? dummy2 : image} />
+                    <img src={image === '' ? dummy2 : image} alt='' />
                     <div onClick={() => uploadImage()} className='kwn-create_profile-edit_img_view'>
-                        <img src={edit} />
+                        <img src={edit} alt='' />
                         <input onChange={(e) => onChange(e.target.files[0])} id='selectFile' type={'file'} style={{ display: 'none' }} />
                     </div>
                 </div>
@@ -62,7 +62,7 @@ const CreateProfile = () => {
                     {imgOptionsArray.map((item, index) => {
                         return (
                             <div className='kwn-create_profile-img_options'>
-                                <img src={filled} />
+                                <img alt='' src={filled} />
                                 <p>{item.title}</p>
                             </div>
                         )

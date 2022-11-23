@@ -10,7 +10,7 @@ const RegistrationPending = () => {
             <Navbar />
             <div className='kwn-reg_pending-main_container'>
                 <div className='kwn-reg_pending-title_container'>
-                    <img src={clockWithDots} />
+                    <img alt='' src={clockWithDots} />
                     <h1>Your Registration Process is Pending!</h1>
                     <h2>After reviewing your profile by admin your profile is live then you can treat the patients</h2>
                 </div>
