@@ -22,7 +22,7 @@ const Navbar = () => {
             <Link to={'/contactUs'}>
                 <p><a className='kavan__navbar-links_text' href='#ContactUs'>Contact us</a></p>
             </Link>
-            <button onClick={() => navigate('/signUp')} className='kavan__navbar-links_button'>Get Started</button>
+            <button onClick={() => navigate('/signIn')} className='kavan__navbar-links_button'>Get Started</button>
         </>
     )
     return (

@@ -1,17 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { arrowDown, hide, show } from '../../assets'
 import './textInput.css'
 
 const TextInput = (props) => {
+    const [isFoucs, setisFocus] = useState(false)
     return (
         <div className='kwn-input_container'>
-
             <p>{props.title}</p>
             {props.textarea ?
-                <textarea placeholder={props.placeholder} />
+                <textarea style={{ borderColor: isFoucs && '#006039' }} onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} placeholder={props.placeholder} />
                 :
-                <div className='kwn-input_container_input'>
-                    <input onKeyPress={props.onKeyPress} onChange={props.onChange} value={props.value} type={props.type} placeholder={props.placeholder} />
+                <div className='kwn-input_container_input' style={{ borderColor: isFoucs && '#006039' }}>
+                    <input onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} onKeyPress={props.onKeyPress} onChange={props.onChange} value={props.value} type={props.type} placeholder={props.placeholder} />
                     {props.type === 'password' &&
                         <img onClick={props.onClickEye} src={props.eyeValue ? show : hide} />
                     }

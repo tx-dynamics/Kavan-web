@@ -1,0 +1,53 @@
+.kwn-reg_pending-main_container {
+    display: flex;
+    align-items: center;
+    padding-top: 8rem;
+    padding-left: 9.6rem;
+    padding-right: 9.6rem;
+    padding-bottom: 10rem;
+    flex-direction: column
+}
+
+.kwn-reg_pending-title_container {
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    width: 42rem;
+    /* align-items: center; */
+}
+
+.kwn-reg_pending-title_container img {
+    width: 12.2rem;
+    height: 11.4rem;
+}
+
+.kwn-reg_pending-title_container h1 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+    color: #2D292A;
+    padding-top: 2rem;
+}
+
+.kwn-reg_pending-title_container h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: #666666;
+    margin-top: 1.4rem;
+}
+
+.kwn-reg_pending-back_to_login p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 1px;
+    padding-top: 3rem;
+    color: #006039;
+    text-decoration: underline;
+    cursor: pointer;
+    /* padding-bottom: 2rem; */
+}
