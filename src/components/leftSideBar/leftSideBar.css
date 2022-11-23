@@ -1,0 +1,8 @@
+.kwn-left_side_bar-main_container {
+    display: flex;
+    width: 26rem;
+
+    height: 100vh;
+    flex-direction: row;
+    background-color: #006039;
+}

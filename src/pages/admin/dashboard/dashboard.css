@@ -1,0 +1,10 @@
+.hello {
+    background-color: red;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    /* overflow: hidden; */
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
