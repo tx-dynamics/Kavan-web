@@ -9,7 +9,7 @@ const Navigation = () => {
     const Navigate = useNavigate();
     useEffect(() => {
         Navigate("/");
-    })
+    }, [])
     return (
         <Routes>
             <Route path="/" element={<Viewers.HomePage />} />

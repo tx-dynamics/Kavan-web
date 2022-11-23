@@ -15,9 +15,11 @@ const ForgotPassword = () => {
                 <div className='kwn-forgot_password-form_container'>
                     <TextInput type={'text'} title={'Email'} placeholder={'Johndoe@mail.com'} />
                 </div>
+
                 <div className='kwn-forgot_password-Button_container'>
-                    <Button onClick={() => navigate('/createProfile')}>Verify</Button>
+                    <Button onClick={() => navigate('/verifyEmail')}>Verify</Button>
                 </div>
+
             </div>
             <Footer />
         </div>

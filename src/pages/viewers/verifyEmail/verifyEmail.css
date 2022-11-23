@@ -1,0 +1,79 @@
+.kwn-verify_email-main_container {
+    display: flex;
+    align-items: center;
+    padding-top: 8rem;
+    padding-left: 9.6rem;
+    padding-right: 9.6rem;
+    padding-bottom: 10rem;
+    flex-direction: column;
+}
+
+.kwn-verify_email-title_container {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kwn-verify_email-title_container h1 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 3.2rem;
+    line-height: 4.9rem;
+    color: #2d292a;
+}
+
+.kwn-verify_email-title_container h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: #2d292a;
+    margin-top: 1rem;
+}
+
+
+.kwn-verify_email-otp_container {
+    display: flex;
+    align-items: center;
+    width: 40rem;
+}
+
+.kwn-verify_email-otp_style {
+    font-size: 3rem;
+    width: 8rem !important;
+    height: 8rem;
+    border-radius: 1rem;
+    border: 1px solid #d9d9d9;
+}
+
+.kwn-verify_email-otp_container_style {
+    width: 40rem;
+    justify-content: space-between;
+}
+
+.kwn-verify_email-Button_container {
+    padding-top: 10rem;
+    width: 20rem;
+}
+
+.kwn-verify_email-main_container h3 {
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 2.6rem;
+    line-height: 3.6rem;
+    color: #2d292a;
+    padding-top: 5rem;
+}
+
+.kwn-verify_email-Button_container p {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    /* identical to box height, or 150% */
+    letter-spacing: -0.5px;
+    color: #006039;
+    text-decoration: underline;
+}
