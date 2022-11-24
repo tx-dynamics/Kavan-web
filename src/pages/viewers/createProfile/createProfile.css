@@ -1,110 +1,125 @@
 .kwn-create_profile-main_container {
-    display: flex;
-    align-items: center;
-    padding-top: 8rem;
-    padding-left: 9.6rem;
-    padding-right: 9.6rem;
-    padding-bottom: 10rem;
-    flex-direction: column
+  display: flex;
+  align-items: center;
+  padding-top: 8rem;
+  padding-left: 9.6rem;
+  padding-right: 9.6rem;
+  padding-bottom: 10rem;
+  flex-direction: column;
 }
 
 .kwn-create_profile-title_container {
-    margin-bottom: 6rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .kwn-create_profile-title_container h1 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 3.2rem;
-    line-height: 4.9rem;
-    color: #2D292A;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 4.9rem;
+  color: #2d292a;
 }
 
 .kwn-create_profile-title_container h2 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.3rem;
-    color: #2D292A;
-    margin-top: 1rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #2d292a;
+  margin-top: 1rem;
 }
 
 .kwn-create_profile-img_container {
-    position: relative;
+  position: relative;
 }
 
 .kwn-create_profile-img_container img {
-    width: 12rem;
-    height: 12rem;
-    border-radius: 6rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 6rem;
 }
 
 .kwn-create_profile-edit_img_view {
-    background-color: #006039;
-    width: 2.8rem;
-    display: flex;
-    height: 2.8rem;
-    border-radius: 2rem;
-    position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    align-items: center;
-    justify-content: center;
+  background-color: #006039;
+  width: 2.8rem;
+  display: flex;
+  height: 2.8rem;
+  border-radius: 2rem;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .kwn-create_profile-edit_img_view img {
-    width: 1.5rem;
-    height: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .kwn-create_profile-img_options-container {
-    display: flex;
-    width: 40rem;
-    padding-top: 5rem;
-    padding-bottom: 4rem;
-    flex-direction: column;
+  display: flex;
+  width: 40rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  flex-direction: column;
 }
 
 .kwn-create_profile-img_options-container h2 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 2.4rem;
-    line-height: 2.8rem;
-    color: #2D292A;
-    padding-bottom: 2rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  color: #2d292a;
+  padding-bottom: 2rem;
 }
 
 .kwn-create_profile-img_options {
-    display: flex;
-    align-items: center;
-    padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 2rem;
 }
 
 .kwn-create_profile-img_options img {
-    width: 1.6rem;
-    height: 1.6rem;
-    margin-right: 1rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem;
 }
 
 .kwn-create_profile-img_options p {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    color: #666666;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #666666;
 }
 
 .kwn-create_profile-add_later p {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    padding-top: 2rem;
-    color: #006039;
-    text-decoration: underline;
-    cursor: pointer;
-    /* padding-bottom: 2rem; */
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding-top: 2rem;
+  color: #006039;
+  text-decoration: underline;
+  cursor: pointer;
+  /* padding-bottom: 2rem; */
+}
+
+/* ---------Media Query-------- */
+
+@media screen and (max-width: 480px) {
+  .kwn-create_profile-img_options-container {
+    width: 30rem;
+  }
+  .kwn-create_profile-img_options p {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  .kwn-create_profile-add_later p {
+    font-size: 1rem;
+  }
 }

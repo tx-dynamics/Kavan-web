@@ -13,6 +13,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 42rem;
 }
 
 .kwn-fill_out_form-title_container h1 {
@@ -30,6 +31,7 @@
   line-height: 2.3rem;
   color: #2d292a;
   margin-top: 1rem;
+  text-align: center;
 }
 
 .kwn-fill_out_form-form_container {
@@ -37,7 +39,6 @@
   flex-direction: column;
   align-items: center;
 }
-
 
 .kwn-fill_out_form-main_container h3 {
   font-family: var(--font-family);
@@ -93,6 +94,12 @@
 
   .kwn-fill_out_form-specialiezed_View {
     width: 30rem;
+  }
+  .kwn-fill_out_form-title_container {
+    width: 30rem;
+  }
+  .kwn-fill_out_form-title_container h1 {
+    line-height: 2rem;
   }
 }
 

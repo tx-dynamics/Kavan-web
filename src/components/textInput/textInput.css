@@ -56,7 +56,6 @@
   color: #666666;
 }
 
-
 .kwn-dropdown_container {
   position: absolute;
   border: 1px solid #666666;
@@ -89,6 +88,9 @@
   .kwn-input_container {
     width: 33rem;
   }
+  .kwn-dropdown_container {
+    width: 33rem;
+  }
   .kwn-input_container textarea {
     width: 33rem;
   }
@@ -106,6 +108,9 @@
     width: 30rem;
   }
   .kwn-input_container textarea {
+    width: 30rem;
+  }
+  .kwn-dropdown_container {
     width: 30rem;
   }
 }
