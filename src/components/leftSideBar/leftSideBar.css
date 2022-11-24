@@ -1,8 +1,91 @@
 .kwn-left_side_bar-main_container {
     display: flex;
-    width: 26rem;
-
+    width: 41rem;
     height: 100vh;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: #006039;
+}
+
+.kwn-left-side_bar-logo_container {
+    display: flex;
+    height: 6.5rem;
+    padding-left: 2.1rem;
+    padding-top: 2.3rem;
+}
+
+.kwn-left-side_bar-logo_container img {
+    width: 14.4rem;
+    height: 4.2rem;
+}
+
+.kwn-left-side_bar-options_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8.3rem;
+}
+
+.kwn-left-side_bar-options_view_selected {
+    width: 95%;
+    height: 5.1rem;
+    border-radius: 1rem;
+    align-items: center;
+    padding-left: 2.4rem;
+    display: flex;
+    background-color: #1f7753;
+    margin-bottom: 3.3rem;
+}
+
+.kwn-left-side_bar-options_view {
+    width: 95%;
+    border-radius: 1rem;
+    align-items: center;
+    padding-left: 2.4rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    display: flex;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+}
+
+.kwn-left-side_bar-options_view h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.kwn-left-side_bar-options_view img {
+    width: 3.2rem;
+    height: 3.1rem;
+    margin-right: 2.5rem;
+}
+
+.kwn-left-side_bar-logout_container {
+    width: 95%;
+    align-items: center;
+    padding-left: 2.4rem;
+    display: flex;
+    margin-bottom: 4rem;
+    cursor: pointer;
+}
+
+.kwn-left-side_bar-logout_container h2 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    text-transform: uppercase;
+    color: #EC4B4A;
+}
+
+.kwn-left-side_bar-logout_container img {
+    width: 3.2rem;
+    height: 3.1rem;
+    margin-right: 2.5rem;
+
 }
