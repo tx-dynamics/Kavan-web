@@ -11,7 +11,7 @@ const TextInput = (props) => {
                 <textarea style={{ borderColor: isFoucs && '#006039' }} onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} placeholder={props.placeholder} />
                 :
                 <div className='kwn-input_container_input' style={{ borderColor: isFoucs && '#006039' }}>
-                    <input onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} onKeyPress={props.onKeyPress} onChange={props.onChange} value={props.value} type={props.type} placeholder={props.placeholder} />
+                    <input onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} onKeyPress={props.onKeyPress} onChange={props.onChange} value={props.value} type={props.type === 'password' ? props.eyeValue ? 'password' : 'text' : props.type} placeholder={props.placeholder} />
                     {props.type === 'password' &&
                         <img alt='' onClick={props.onClickEye} src={props.eyeValue ? show : hide} />
                     }

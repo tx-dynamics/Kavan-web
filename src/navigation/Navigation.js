@@ -4,11 +4,12 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import * as Viewers from '../pages/viewers';
+import * as Admin from '../pages/admin';
 
 const Navigation = () => {
     const Navigate = useNavigate();
     useEffect(() => {
-        Navigate("/");
+        Navigate("/dashboard");
     }, [])
     return (
         <Routes>
@@ -24,7 +25,7 @@ const Navigation = () => {
             <Route path="/forgotPassword" element={<Viewers.ForgotPassword />} />
             <Route path="/confirmPassword" element={<Viewers.ConfirmPassword />} />
             <Route path="/verifyEmail" element={<Viewers.VerifyEmail />} />
-
+            <Route path="/dashboard" element={<Admin.Dashboard />} />
         </Routes>
     );
 };
