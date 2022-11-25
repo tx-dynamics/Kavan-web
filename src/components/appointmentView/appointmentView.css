@@ -2,7 +2,7 @@
     margin-top: 3rem;
     margin-right: 4rem;
     width: 36.8rem;
-    height: 25.2rem;
+    /* height: 25.2rem; */
     display: flex;
     flex-direction: row;
     background: #FFFFFF;
@@ -73,7 +73,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 3rem;
 }
 
 .kwn-appointment_profile_view img {
@@ -110,6 +109,8 @@
     flex-direction: row;
     display: flex;
     justify-content: space-between;
+    padding-top: 3rem;
+
 }
 
 .kwn-appointment_button {
@@ -127,4 +128,46 @@
     font-size: 1.4rem;
     line-height: 1.6rem;
     color: #FFFFFF;
+}
+
+.kwn-top_button {
+    width: 10.4rem;
+    height: 3rem;
+    background: #006039;
+    border-radius: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kwn-top_button h3 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: #FFFFFF;
+}
+
+.kwn-appointment_reason_view {
+    padding-top: 2rem;
+}
+
+.kwn-appointment_reason_view h3 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    align-items: center;
+    text-transform: uppercase;
+    color: #2D292A;
+}
+
+.kwn-appointment_reason_view h4 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    align-items: center;
+    padding-top: 0.6rem;
+    color: #666666;
 }
