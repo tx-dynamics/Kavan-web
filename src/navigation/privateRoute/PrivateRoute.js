@@ -3,6 +3,7 @@ import { Navigate, Outlet } from "react-router-dom";
 
 const PrivateRoute = () => {
   const data = true;
+  //   ----file----
 
   if (data) {
     return <Outlet />;
