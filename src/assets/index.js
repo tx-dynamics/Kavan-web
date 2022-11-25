@@ -1,4 +1,3 @@
-
 export { default as close } from "./close.png";
 export { default as dummy } from "./dummy.jpg";
 export { default as dummy1 } from "./dummy1.png";
@@ -26,24 +25,25 @@ export { default as facebookBlue } from "./facebookBlue.png";
 export { default as arrowDown } from "./arrowDown.png";
 export { default as cross } from "./cross.png";
 export { default as rightArrow } from "./right--icon.png";
-export { default as filled } from './filled.png'
-export { default as unFilled } from './unFilled.png'
-export { default as edit } from './edit.png'
-export { default as checkWithDots } from './checkWithDots.png'
-export { default as clockWithDots } from './clockWithDots.png'
-export { default as sideBarHome } from './sideBarHome.png'
-export { default as sideBarChat } from './sideBarChat.png'
-export { default as sideBarSettings } from './sideBarSettings.png'
-export { default as sideBarAppointment } from './sideBarAppointment.png'
-export { default as sideBarLogout } from './sideBarLogout.png'
-export { default as clock } from './clock.png'
-export { default as dropdown } from './dropdown.png'
-export { default as info } from './info.png'
-export { default as bell } from './bell.png'
-export { default as threeDots } from './threeDots.png'
-export { default as users } from './users.png'
-export { default as arrowRight } from './arrowRight.png'
-export { default as arrowLeft } from './arrowLeft.png'
+export { default as filled } from "./filled.png";
+export { default as unFilled } from "./unFilled.png";
+export { default as edit } from "./edit.png";
+export { default as checkWithDots } from "./checkWithDots.png";
+export { default as clockWithDots } from "./clockWithDots.png";
+export { default as sideBarHome } from "./sideBarHome.png";
+export { default as sideBarChat } from "./sideBarChat.png";
+export { default as sideBarSettings } from "./sideBarSettings.png";
+export { default as sideBarAppointment } from "./sideBarAppointment.png";
+export { default as sideBarLogout } from "./sideBarLogout.png";
+export { default as clock } from "./clock.png";
+export { default as dropdown } from "./dropdown.png";
+export { default as info } from "./info.png";
+export { default as bell } from "./bell.png";
+export { default as threeDots } from "./threeDots.png";
+export { default as users } from "./users.png";
+export { default as arrowRight } from "./arrowRight.png";
+export { default as arrowLeft } from "./arrowLeft.png";
+export { default as menuBurger } from "./menu-burger-white.png";
+export { default as crossIcon } from "./closs-cross_icon.png";
 
-export { default as search } from './search.png'
-
+export { default as search } from "./search.png";

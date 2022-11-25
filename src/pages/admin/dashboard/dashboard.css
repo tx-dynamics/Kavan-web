@@ -1,192 +1,199 @@
 .kavan_admin_main_container {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    flex: 1;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    padding: 0rem 5rem;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  height: 84rem;
+  flex: 1;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 0rem 5rem;
 }
 
 .kavan_admin_main_container::-webkit-scrollbar {
-    width: 0 !important
+  width: 0 !important;
 }
 
 .kavan_admin_main_container {
-    overflow: -moz-scrollbars-none;
+  overflow: -moz-scrollbars-none;
 }
 
 .kavan_admin_main_container {
-    -ms-overflow-style: none;
+  -ms-overflow-style: none;
 }
 
 .kwn-heading {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 3.6rem;
-    line-height: 5.6rem;
-    letter-spacing: -0.5px;
-    text-transform: capitalize;
-    color: #2D292A;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 3.6rem;
+  line-height: 5.6rem;
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
+  color: #2d292a;
 }
 
 .kwn-dashboard-search {
-    padding: 5rem 0rem;
+  padding: 5rem 0rem;
 }
 
 .kwn-dashboard-title_container {
-    padding-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 .kwn-dashboard-title_container h1 {
-    font-family: var(--font-family);
-    font-weight: 700;
-    font-size: 3.6rem;
-    line-height: 4.2rem;
-    color: #2D292A;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 4.2rem;
+  color: #2d292a;
 }
 
 .kwn-dashboard-title_container h3 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 2.2rem;
-    line-height: 3.2rem;
-    color: #666666;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2.2rem;
+  line-height: 3.2rem;
+  color: #666666;
 }
 
 .kwn-dashboard-appointments_and_patients_top_view {
-    padding-bottom: 5rem;
-    flex-direction: row;
-    display: flex;
+  padding-bottom: 5rem;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .kwn-dashboard-appointments_and_patients_view {
-    width: 34rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 6.7rem;
-    border-radius: 3rem;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    margin-right: 5rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  width: 34rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 6.7rem;
+  border-radius: 3rem;
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .kwn-dashboard-round_calender_view {
-    width: 6.3rem;
-    height: 6.2rem;
-    border-radius: 5rem;
-    background-color: #006039;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-right: 1.8rem;
+  width: 6.3rem;
+  height: 6.2rem;
+  border-radius: 5rem;
+  background-color: #006039;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 1.8rem;
 }
 
 .kwn-dashboard-round_calender_view img {
-    width: 3rem;
-    height: 3rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .kwn-dashboard-appointments_and_patients_view h2 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 2.5rem;
-    line-height: 2.9rem;
-    color: #2D292A;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 2.9rem;
+  color: #2d292a;
 }
 
 .kwn-dashboard-appointments_and_patients_view h3 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2.3rem;
-    color: #666666;
-    padding-top: 0.5rem;
-
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #666666;
+  padding-top: 0.5rem;
 }
 
 .kwn-dashboard-arrows_top_view {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
 .kwn-dashboard-arrows_view {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-right: 10.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10.5rem;
 }
 
 .kwn-dashboard-arrows_view div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.2rem;
-    height: 3.2rem;
-    border-radius: 2rem;
-    background-color: #006039;
-    margin-left: 3.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 2rem;
+  background-color: #006039;
+  margin-left: 3.1rem;
 }
 
 .kwn-dashboard-arrows_view img {
-    width: 1.5rem;
-    height: 1.2rem;
+  width: 1.5rem;
+  height: 1.2rem;
 }
 
 .kwn-dashboard-total_patients_view {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-bottom: 7rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 7rem;
 }
 
 .kwn-dashboard-total_patients_view h3 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    text-transform: uppercase;
-    color: #2D292A;
-    padding-right: 2.3rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-transform: uppercase;
+  color: #2d292a;
+  padding-right: 2.3rem;
 }
 
 .kwn-dashboard-total_patients_view h4 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    text-transform: uppercase;
-    color: #2D292A;
-    padding-right: 1.1rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-transform: uppercase;
+  color: #2d292a;
+  padding-right: 1.1rem;
 }
 
 .kwn-dashboard-total_patients_view h5 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    align-items: center;
-    color: #666666;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  align-items: center;
+  color: #666666;
 }
 
 .kwn-dashboard-graph_view {
-    padding-bottom: 7rem;
-
+  padding-bottom: 7rem;
 }
 
 .kwn-dashboard-appointments_top_view {
-    padding-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 .kwn-dashboard-appointment_view {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* --------Media Query------ */
+
+@media screen and (max-width: 1420px) {
+  .kwn-dashboard-appointments_and_patients_view {
+    margin-bottom: 2rem;
+  }
 }
