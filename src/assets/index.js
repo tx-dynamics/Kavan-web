@@ -45,3 +45,5 @@ export { default as users } from './users.png'
 export { default as arrowRight } from './arrowRight.png'
 export { default as arrowLeft } from './arrowLeft.png'
 
+export { default as search } from './search.png'
+
