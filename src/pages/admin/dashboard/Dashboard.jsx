@@ -6,7 +6,6 @@ import { Area } from '@ant-design/plots';
 import './dashboard.css'
 
 const Dashboard = () => {
-    const [data, setData] = useState([]);
     const graphArray = [
         {
             'Date': '1',
@@ -145,17 +144,6 @@ const Dashboard = () => {
             img: users
         }
     ]
-    useEffect(() => {
-        asyncFetch();
-    }, []);
-    const asyncFetch = () => {
-        fetch('https://gw.alipayobjects.com/os/bmw-prod/1d565782-dde4-4bb6-8946-ea6a38ccf184.json')
-            .then((response) => response.json())
-            .then((json) => setData(json))
-            .catch((error) => {
-                console.log('fetch data failed', error);
-            });
-    };
 
     const config = {
         xField: 'Date',
@@ -177,7 +165,7 @@ const Dashboard = () => {
 
     return (
         <div className='kavan_admin_main_container'>
-            <div className='kwn-dashboard-search'>
+            <div className='kwn-search'>
                 <SearchBar />
             </div>
             <div className='kwn-dashboard-title_container'>
