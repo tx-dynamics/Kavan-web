@@ -57,7 +57,9 @@ export default function SignIn() {
           </p>
         </div>
         <div className="kwn-sign_in-Button_container">
-          <Button onClick={() => navigate("/fillOutForm")}>Sign In</Button>
+          <Button onClick={() => navigate("/dashboard/AdminHome")}>
+            Sign In
+          </Button>
         </div>
         <h3>OR</h3>
         <div className="kwn-sign_in-social_container">
