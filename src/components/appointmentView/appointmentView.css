@@ -1,6 +1,6 @@
 .kwn-appointment_view {
   margin-top: 3rem;
-  margin-right: 4rem;
+  /* margin-right: 4rem; */
   width: 36.8rem;
   /* height: 25.2rem; */
   display: flex;
@@ -178,6 +178,7 @@
     padding: 1rem 3.8rem;
   }
 }
+
 @media screen and (max-width: 420px) {
   .kwn-appointment_time_view h2 {
     font-size: 1.2rem;

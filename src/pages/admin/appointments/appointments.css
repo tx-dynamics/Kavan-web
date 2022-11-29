@@ -24,7 +24,9 @@
   display: flex;
   flex-direction: row;
   margin-right: -5rem;
-  overflow-y: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  /* height: 10rem; */
 }
 
 .kwn_appointments_type_top_view::-webkit-scrollbar {
@@ -41,6 +43,8 @@
 
 .kwn_appointments_type_view {
   padding: 1.5rem 3rem;
+  /* width: 14.4rem; */
+  /* height: 5rem; */
   box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
   margin-top: 3rem;
@@ -67,8 +71,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* flex: 1; */
-  /* height: 60%; */
+  justify-content: space-between;
+  height: 30%;
+  /* min-height: 60%; */
   padding-bottom: 5rem;
 }
 
@@ -78,6 +83,7 @@
   .kavan_admin_main_container {
     padding: 0rem 2rem;
   }
+
   .kwn_appointments_type_view {
     margin-top: 2rem;
     margin-right: 1rem;
