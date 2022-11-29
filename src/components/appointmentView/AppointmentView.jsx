@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { clock, dummy2, threeDots } from '../../assets'
 import './appointmentView.css'
 const AppointmentView = (props) => {
+    const [modelShow, setModelShow] = useState(false)
     const navigate = useNavigate()
     return (
         <div onClick={() => props.type === 'Upcoming' ? navigate('scheduleAppointment') : null} className='kwn-appointment_view'>
@@ -15,7 +16,15 @@ const AppointmentView = (props) => {
                             <h3>{props.type === 'Cancelled' ? 'CANCEL' : 'COMPLETED'}</h3>
                         </div>
                         :
-                        <img src={threeDots} />
+                        <div className='kwn_three_dot_top_view'>
+                            <img onClick={() => setModelShow(!modelShow)} src={threeDots} />
+                            {modelShow &&
+                                <div className='kwn-three_dot_modal'>
+                                    <h2 onClick={() => navigate('rescheduleAppointment')}>Reschedule</h2>
+                                    <h2 onClick={() => navigate('cancelAppointment')}>Cancel</h2>
+                                </div>
+                            }
+                        </div>
                     }
 
                 </div>

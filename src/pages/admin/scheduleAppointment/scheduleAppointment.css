@@ -1,0 +1,113 @@
+.kwn-schedule_appointment_top_view {
+    display: flex;
+    width: 100%;
+
+}
+
+.kwn-schedule_appointment_view {
+    box-sizing: border-box;
+    width: 75%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 1.5rem rgba(57, 61, 72, 0.1);
+    border-radius: 1.2rem;
+    margin-top: 5rem;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.kwn-schedule_appointment_img {
+    width: 7.5rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.kwn-schedule_appointment_img img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
+    margin-right: 1.5rem;
+}
+
+.kwn-schedule_appointment_prfile_top_view {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.kwn-schedule_appointment_title_view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 67%;
+    margin-top: 0.8rem;
+}
+
+.kwn-schedule_appointment_title_view div {
+    display: flex;
+    flex-direction: column;
+}
+
+.kwn-schedule_appointment_title_view h2 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #2D292A;
+}
+
+.kwn-schedule_appointment_title_view h3 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    display: flex;
+    align-items: center;
+    color: #666666;
+    padding-top: 0.6rem;
+}
+
+.kwn-schedule_appointment_session_view {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 61%;
+    margin-top: 4rem;
+}
+
+.kwn-schedule_appointment_session_view div {
+    display: flex;
+    flex-direction: column;
+}
+
+.kwn-schedule_appointment_session_view h2 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #2D292A;
+}
+
+.kwn-schedule_appointment_session_view h3 {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    display: flex;
+    align-items: center;
+    color: #666666;
+    padding-top: 0.6rem;
+}
+
+.kwn-schedule_appointment_button_view {
+    margin-top: 3rem;
+}
