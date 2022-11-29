@@ -3,16 +3,12 @@ import { dummy2 } from '../../../assets'
 import { AppointmentView, SearchBar } from '../../../components'
 import './appointments.css'
 const Appointments = () => {
-    const [selectedType, setSelectedType] = useState({ id: 0, title: 'Requests' })
+    const [selectedType, setSelectedType] = useState({ id: 1, title: 'Requests' })
 
     const appointmentTypeArray = [
         {
-            id: 0,
-            title: 'Requests',
-        },
-        {
             id: 1,
-            title: 'Pending',
+            title: 'Requests',
         },
         {
             id: 2,
@@ -39,16 +35,6 @@ const Appointments = () => {
             time: '10:00 AM',
             reason: 'I don’t want to consult right now',
             type: 'Requests',
-            image: dummy2,
-            name: 'Dr. Atiana',
-            profession: 'General Psychologist specialist',
-        },
-        {
-            id: 2,
-            date: '11 June 2021',
-            time: '10:00 AM',
-            reason: 'I don’t want to consult right now',
-            type: 'Pending',
             image: dummy2,
             name: 'Dr. Atiana',
             profession: 'General Psychologist specialist',

@@ -1,9 +1,11 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { clock, dummy2, threeDots } from '../../assets'
 import './appointmentView.css'
 const AppointmentView = (props) => {
+    const navigate = useNavigate()
     return (
-        <div className='kwn-appointment_view'>
+        <div onClick={() => props.type === 'Upcoming' ? navigate('scheduleAppointment') : null} className='kwn-appointment_view'>
             <div className='kwn-side_divider' />
             <div className='kwn-appointment_content_top_view'>
                 <div className='kwn-appointment_title_view'>
