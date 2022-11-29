@@ -1,173 +1,192 @@
 .kwn-appointment_view {
-    margin-top: 3rem;
-    margin-right: 4rem;
-    width: 36.8rem;
-    /* height: 25.2rem; */
-    display: flex;
-    flex-direction: row;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 1.5rem rgba(57, 61, 72, 0.1);
-    border-radius: 1.2rem;
+  margin-top: 3rem;
+  margin-right: 4rem;
+  width: 36.8rem;
+  /* height: 25.2rem; */
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  box-shadow: 0px 0px 1.5rem rgba(57, 61, 72, 0.1);
+  border-radius: 1.2rem;
 }
 
 .kwn-side_divider {
-    width: 0.5rem;
-    margin: 2rem 0rem;
-    background: #006039;
-    border-radius: 10px;
+  width: 0.5rem;
+  margin: 2rem 0rem;
+  background: #006039;
+  border-radius: 10px;
 }
 
 .kwn-appointment_content_top_view {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem;
 }
 
 .kwn-appointment_title_view {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .kwn-appointment_title_view h2 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    align-items: center;
-    text-transform: uppercase;
-    color: #2D292A;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  align-items: center;
+  text-transform: uppercase;
+  color: #2d292a;
 }
 
 .kwn-appointment_title_view img {
-    width: 0.4rem;
-    height: 1.8rem;
+  width: 0.4rem;
+  height: 1.8rem;
 }
 
 .kwn-appointment_time_view {
-    display: flex;
-    padding-top: 0.7rem;
+  display: flex;
+  padding-top: 0.7rem;
 }
 
 .kwn-appointment_time_view h2 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    align-items: center;
-    color: #666666;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  align-items: center;
+  color: #666666;
 }
 
 .kwn-appointment_time_view img {
-    width: 2rem;
-    height: 2rem;
-    margin-right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1.5rem;
 }
 
 .kwn-appointment_divider {
-    border: 0.5px solid #DADADA;
-    margin: 2rem 0rem;
+  border: 0.5px solid #dadada;
+  margin: 2rem 0rem;
 }
 
 .kwn-appointment_profile_view {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .kwn-appointment_profile_view img {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 3rem;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3rem;
 }
 
 .kwn-appointment_name_view {
-    display: flex;
-    flex-direction: column;
-    padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
 }
 
 .kwn-appointment_name_view h3 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    text-transform: uppercase;
-    color: #2D292A;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  text-transform: uppercase;
+  color: #2d292a;
 }
 
 .kwn-appointment_name_view h4 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    color: #666666;
-    padding-top: 0.6rem;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #666666;
+  padding-top: 0.6rem;
 }
 
 .kwn-appointment_buttons_view {
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 3rem;
-
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
 }
 
 .kwn-appointment_button {
-    padding: 1rem 4.8rem;
-    background: #EC4B4A;
-    border-radius: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  padding: 1rem 4.8rem;
+  background: #ec4b4a;
+  border-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .kwn-appointment_button h3 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    color: #FFFFFF;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  color: #ffffff;
 }
 
 .kwn-top_button {
-    width: 10.4rem;
-    height: 3rem;
-    background: #006039;
-    border-radius: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 10.4rem;
+  height: 3rem;
+  background: #006039;
+  border-radius: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .kwn-top_button h3 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    color: #FFFFFF;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: #ffffff;
 }
 
 .kwn-appointment_reason_view {
-    padding-top: 2rem;
+  padding-top: 2rem;
 }
 
 .kwn-appointment_reason_view h3 {
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    align-items: center;
-    text-transform: uppercase;
-    color: #2D292A;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  align-items: center;
+  text-transform: uppercase;
+  color: #2d292a;
 }
 
 .kwn-appointment_reason_view h4 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.9rem;
-    align-items: center;
-    padding-top: 0.6rem;
-    color: #666666;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  align-items: center;
+  padding-top: 0.6rem;
+  color: #666666;
+}
+
+/* --------Media Query--------- */
+
+@media screen and (max-width: 450px) {
+  .kwn-appointment_button {
+    padding: 1rem 3.8rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .kwn-appointment_time_view h2 {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 410px) {
+  .kwn-appointment_button {
+    padding: 1rem 2.8rem;
+  }
 }

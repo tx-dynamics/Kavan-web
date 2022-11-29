@@ -108,3 +108,31 @@
     margin-left: 3rem;
   }
 }
+
+@media screen and (max-width: 520px) {
+  .kwn-layout-profile-image-container img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .kwn-layout-menu-burger-container {
+    margin-left: 1rem;
+  }
+  .kwn-layout-notification-bell-container img {
+    margin-right: 1rem;
+  }
+  .kwn-layout-today-appointment-container p {
+    line-height: 1rem;
+    font-size: 1rem;
+    margin-top: 0.3rem;
+  }
+  .kwn-layout-today-recent_chat-container h2,
+  .kwn-layout-today-appointment-container h2 {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+  .kwn-layout-recent_chat-profile-container img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+}

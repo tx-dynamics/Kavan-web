@@ -43,6 +43,11 @@ const LeftSideBar = ({ flag, togglefun }) => {
     },
   ];
 
+  const toggleBack = () => {
+    if (flag) {
+      togglefun();
+    }
+  };
   return (
     <div
       className={
@@ -64,7 +69,10 @@ const LeftSideBar = ({ flag, togglefun }) => {
         {optionsArray.map((item) => {
           return (
             <div
-              onClick={() => navigate(item.to)}
+              onClick={() => {
+                navigate(item.to);
+                toggleBack();
+              }}
               className={"kwn-left-side_bar-options_view"}
               style={{ backgroundColor: item.route ? "#1f7753" : "" }}
             >

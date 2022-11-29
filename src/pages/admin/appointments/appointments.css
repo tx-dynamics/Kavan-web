@@ -1,74 +1,85 @@
 .kavan_admin_main_container {
-    display: flex;
-    flex-direction: column;
-    height: 84rem;
-    flex: 1;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    padding: 0rem 5rem;
+  display: flex;
+  flex-direction: column;
+  height: 84rem;
+  flex: 1;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  padding: 0rem 5rem;
 }
 
 .kavan_admin_main_container::-webkit-scrollbar {
-    width: 0 !important
+  width: 0 !important;
 }
 
 .kavan_admin_main_container {
-    overflow: -moz-scrollbars-none;
+  overflow: -moz-scrollbars-none;
 }
 
 .kavan_admin_main_container {
-    -ms-overflow-style: none;
+  -ms-overflow-style: none;
 }
 
 .kwn_appointments_type_top_view {
-    display: flex;
-    flex-direction: row;
-    margin-right: -5rem;
-    overflow-y: scroll;
-
+  display: flex;
+  flex-direction: row;
+  margin-right: -5rem;
+  overflow-y: scroll;
 }
 
 .kwn_appointments_type_top_view::-webkit-scrollbar {
-    width: 0 !important
+  width: 0 !important;
 }
 
 .kwn_appointments_type_top_view {
-    overflow: -moz-scrollbars-none;
+  overflow: -moz-scrollbars-none;
 }
 
 .kwn_appointments_type_top_view {
-    -ms-overflow-style: none;
+  -ms-overflow-style: none;
 }
 
 .kwn_appointments_type_view {
-    padding: 1.5rem 3rem;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    margin-top: 3rem;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    margin-right: 3rem;
-    cursor: pointer;
-    box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
-    margin-bottom: 1rem;
+  padding: 1.5rem 3rem;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-right: 3rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  margin-bottom: 1rem;
 }
 
 .kwn_appointments_type_view h3 {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 2rem;
-    line-height: 2rem;
-    letter-spacing: -0.5px;
-    text-transform: capitalize;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: -0.5px;
+  text-transform: capitalize;
 }
 
 .kwn-appointsments-appointment_view {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    /* flex: 1; */
-    /* height: 60%; */
-    padding-bottom: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex: 1; */
+  /* height: 60%; */
+  padding-bottom: 5rem;
+}
+
+/* -------Media Query------ */
+
+@media screen and (max-width: 480px) {
+  .kavan_admin_main_container {
+    padding: 0rem 2rem;
+  }
+  .kwn_appointments_type_view {
+    margin-top: 2rem;
+    margin-right: 1rem;
+  }
 }

@@ -14,6 +14,7 @@
   left: 0px;
   position: absolute;
   z-index: 100;
+  transition: all 0.2s;
   /* height: 100%; */
   /* display: flex; */
 }
@@ -22,6 +23,7 @@
   left: -350px;
   position: absolute;
   z-index: 100;
+  transition: all 0.2s;
 }
 
 @media screen and (max-width: 1050px) {
