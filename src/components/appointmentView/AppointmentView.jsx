@@ -16,7 +16,7 @@ const AppointmentView = (props) => {
                             <h3>{props.type === 'Cancelled' ? 'CANCEL' : 'COMPLETED'}</h3>
                         </div>
                         :
-                        <div className='kwn_three_dot_top_view'>
+                        <div className='kwn_three_dot_top_view' >
                             <img onClick={() => setModelShow(!modelShow)} src={threeDots} />
                             {modelShow &&
                                 <div className='kwn-three_dot_modal'>

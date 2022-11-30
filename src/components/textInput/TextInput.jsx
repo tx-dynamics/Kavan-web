@@ -19,7 +19,7 @@ const TextInput = (props) => {
                         <img alt='' onClick={props.onClickDropDown} src={arrowDown} />
                     }
                     {props.dropDownValue &&
-                        <div className='kwn-dropdown_container'>
+                        <div className='kwn-dropdown_container' style={props.style}>
                             <p>Online</p>
                             <p>Offline</p>
                         </div>

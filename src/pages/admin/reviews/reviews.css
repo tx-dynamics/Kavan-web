@@ -1,0 +1,5 @@
+.kwn-reviews-item-view {
+    flex-direction: column;
+    display: flex;
+    margin-top: 3rem;
+}
