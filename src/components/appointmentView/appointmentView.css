@@ -10,6 +10,7 @@
 
 .kwn-side_divider {
   width: 0.5rem;
+  /* height: 3rem; */
   margin: 2rem 0rem;
   background: #006039;
   border-radius: 10px;
@@ -179,7 +180,7 @@
   height: 12.8rem;
   top: 2.5rem;
   right: 0;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.15);
   border-radius: 2rem;
   padding-top: 3rem;
@@ -192,7 +193,7 @@
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.9rem;
-  color: #2D292A;
+  color: #2d292a;
   padding-bottom: 3rem;
   cursor: pointer;
 }
