@@ -5,13 +5,13 @@ import './textInput.css'
 const TextInput = (props) => {
     const [isFoucs, setisFocus] = useState(false)
     return (
-        <div className='kwn-input_container'>
+        <div className='kwn-input_container' style={props.style} >
             <p>{props.title}</p>
             {props.textarea ?
-                <textarea style={{ borderColor: isFoucs && '#006039' }} onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} placeholder={props.placeholder} />
+                <textarea style={{ borderColor: isFoucs && '#006039', ...props.style }} onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} placeholder={props.placeholder} />
                 :
-                <div className='kwn-input_container_input' style={{ borderColor: isFoucs && '#006039' }}>
-                    <input onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} onKeyPress={props.onKeyPress} onChange={props.onChange} value={props.value} type={props.type === 'password' ? props.eyeValue ? 'password' : 'text' : props.type} placeholder={props.placeholder} />
+                <div className='kwn-input_container_input' style={{ borderColor: isFoucs && '#006039', ...props.style }}>
+                    <input style={props.inputStyle} onFocus={() => setisFocus(true)} onBlur={() => setisFocus(false)} onKeyPress={props.onKeyPress} onChange={props.onChange} value={props.value} type={props.type === 'password' ? props.eyeValue ? 'password' : 'text' : props.type} placeholder={props.placeholder} />
                     {props.type === 'password' &&
                         <img alt='' onClick={props.onClickEye} src={props.eyeValue ? show : hide} />
                     }

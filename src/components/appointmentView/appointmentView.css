@@ -1,8 +1,6 @@
 .kwn-appointment_view {
   margin-top: 3rem;
-  /* margin-right: 4rem; */
   width: 36.8rem;
-  /* height: 25.2rem; */
   display: flex;
   flex-direction: row;
   background: #ffffff;
@@ -169,6 +167,34 @@
   align-items: center;
   padding-top: 0.6rem;
   color: #666666;
+}
+
+.kwn_three_dot_top_view {
+  position: relative;
+}
+
+.kwn-three_dot_modal {
+  position: absolute;
+  width: 20.8rem;
+  height: 12.8rem;
+  top: 2.5rem;
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 2rem rgba(0, 0, 0, 0.15);
+  border-radius: 2rem;
+  padding-top: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.kwn-three_dot_modal h2 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #2D292A;
+  padding-bottom: 3rem;
+  cursor: pointer;
 }
 
 /* --------Media Query--------- */

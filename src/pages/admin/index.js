@@ -4,6 +4,9 @@ export { default as Appointments } from './appointments/Appointments'
 export { default as ScheduleAppointment } from './scheduleAppointment/ScheduleAppointment'
 export { default as Chat } from './chat/Chat'
 export { default as Settings } from './settings/Settings'
+export { default as RescheduleAppointment } from './rescheduleAppointment/RescheduleAppointment'
+export { default as CancelAppointment } from './cancelAppointment/CancelAppointment'
+
 
 
 

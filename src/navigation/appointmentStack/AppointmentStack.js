@@ -7,6 +7,9 @@ const AppointmentStack = () => {
         <Routes>
             <Route path="/" element={<Admin.Appointments />} />
             <Route path="scheduleAppointment" element={<Admin.ScheduleAppointment />} />
+            <Route path="rescheduleAppointment" element={<Admin.RescheduleAppointment />} />
+            <Route path="cancelAppointment" element={<Admin.CancelAppointment />} />
+
         </Routes>
     );
 };

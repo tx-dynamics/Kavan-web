@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  width: 40rem;
+  /* width: 80rem; */
 }
 
 .kwn-input_container p {
@@ -81,19 +81,35 @@
   margin-bottom: 0.5rem;
 }
 
+.kwn-input_container input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  background: none no-repeat;
+  content: url(../../assets/calender.png);
+}
+
+.kwn-input_container input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 1;
+  background: none no-repeat;
+  content: url(../../assets/clock.png);
+}
+
 @media screen and (max-width: 480px) {
   .kwn-input_container_input {
     width: 33rem;
   }
+
   .kwn-input_container {
     width: 33rem;
   }
+
   .kwn-dropdown_container {
     width: 33rem;
   }
+
   .kwn-input_container textarea {
     width: 33rem;
   }
+
   .kwn-input_container p {
     font-size: 1.4rem;
     line-height: 1.4rem;
@@ -104,12 +120,15 @@
   .kwn-input_container_input {
     width: 30rem;
   }
+
   .kwn-input_container {
     width: 30rem;
   }
+
   .kwn-input_container textarea {
     width: 30rem;
   }
+
   .kwn-dropdown_container {
     width: 30rem;
   }

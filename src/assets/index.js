@@ -45,5 +45,7 @@ export { default as arrowRight } from "./arrowRight.png";
 export { default as arrowLeft } from "./arrowLeft.png";
 export { default as menuBurger } from "./menu-burger-white.png";
 export { default as crossIcon } from "./closs-cross_icon.png";
-
+export { default as calender } from "./calender.png";
 export { default as search } from "./search.png";
+export { default as calenderWithDots } from "./calenderWithDots.png";
+export { default as redCrossWithDots } from "./redCrossWithDots.png";
