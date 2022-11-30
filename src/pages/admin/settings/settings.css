@@ -1,0 +1,45 @@
+.kwn-settings_item_top_view {
+    flex-direction: column;
+    display: flex;
+    margin-top: 3rem;
+}
+
+.kwn-settings_item_view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.kwn_settings_item_title_view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.kwn_settings_item_title_view img {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1.5rem;
+}
+
+.kwn_settings_item_title_view h2 {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    color: #2D292A;
+}
+
+.kwn-settings_item_view img {
+    width: 3.2rem;
+    height: 3.2rem;
+
+}
+
+.kwn-settings_item_divider {
+    margin-top: 2.3rem;
+    margin-bottom: 2.2rem;
+    border: 0.5px solid #D9D9D9;
+}

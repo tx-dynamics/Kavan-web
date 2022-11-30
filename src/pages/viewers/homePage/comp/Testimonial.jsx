@@ -3,9 +3,9 @@ import { dummy2 } from "../../../../assets";
 import "./testimonial.css";
 import { Rate } from "antd";
 
-const Testimonial = ({ item }) => {
+const Testimonial = ({ item, props }) => {
   return (
-    <div className="kwn-home-testi-comp-main_container">
+    <div className="kwn-home-testi-comp-main_container" style={{ ...props }}>
       <div className="kwn-home-testi-comp-text-container">
         <p>{item.text}</p>
       </div>
