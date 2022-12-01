@@ -67,10 +67,12 @@ const Settings = () => {
     ]
 
     const IOSSwitch = styled((props) => (
+
         <Switch focusVisibleClassName=".Mui-focusVisible" disableRipple {...props} />
     ))(({ theme }) => ({
         width: 42,
         height: 26,
+        backgroundColor: 'red',
         padding: 0,
         '& .MuiSwitch-switchBase': {
             padding: 0,
@@ -133,7 +135,9 @@ const Settings = () => {
                                     <h2>{item.title}</h2>
                                 </div>
                                 {item.title === 'Notifications' ?
-                                    <IOSSwitch />
+                                    // <IOSSwitch />
+                                    <Switch />
+
                                     :
                                     <img src={arrowRightCircle} />
                                 }
