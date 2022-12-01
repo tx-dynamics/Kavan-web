@@ -1,22 +1,10 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
-import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import * as Viewers from "../pages/viewers";
 import * as Admin from "../pages/admin";
 import PrivateRoute from "./privateRoute/PrivateRoute";
 
 const Navigation = () => {
-  const Navigate = useNavigate();
-  //   const data = true;
-  //   useEffect(() => {
-  //     if (data) {
-  //       Navigate("/");
-  //     } else {
-  //       Navigate("/dashboard/AdminHome");
-  //     }
-  //   }, [data]);
   return (
     <Routes>
       <Route path="/" element={<Viewers.HomePage />} />

@@ -10,6 +10,7 @@ export { default as Questions } from './questions/Questions'
 export { default as Reviews } from './reviews/Reviews'
 export { default as Profile } from './profile/Profile'
 export { default as EditProfile } from './editProfile/EditProfile'
+export { default as SessionEnded } from './sessionEnded/SessionEnded'
 
 
 

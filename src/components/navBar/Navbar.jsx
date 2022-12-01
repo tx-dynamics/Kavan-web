@@ -11,16 +11,16 @@ const Navbar = () => {
     const Menu = () => (
         <>
             <Link to={'/'}>
-                <p><a className='kavan__navbar-links_text' href='#Home'>Home</a></p>
+                <p><a className='kavan__navbar-links_text' href='#home' style={{ borderBottomStyle: window.location.href === 'http://localhost:3000/' ? 'solid' : 'none' }} >Home</a></p>
             </Link>
             <Link>
-                <p><a className='kavan__navbar-links_text' href='#Psychologists'>Psychologists</a></p>
+                <p><a className='kavan__navbar-links_text' href='#psychologists' >Psychologists</a></p>
             </Link>
             <Link to={'/about'}>
-                <p><a className='kavan__navbar-links_text' href='/about'>About us</a></p>
+                <p><a className='kavan__navbar-links_text' href='#about' style={{ borderBottomStyle: window.location.href.includes("/about") ? 'solid' : 'none' }}>About us</a></p>
             </Link>
             <Link to={'/contactUs'}>
-                <p><a className='kavan__navbar-links_text' href='#ContactUs'>Contact us</a></p>
+                <p><a className='kavan__navbar-links_text' href='#contactUs' style={{ borderBottomStyle: window.location.href.includes("/contactUs") ? 'solid' : 'none' }}>Contact us</a></p>
             </Link>
             <button onClick={() => navigate('/signIn')} className='kavan__navbar-links_button'>Get Started</button>
         </>

@@ -6,6 +6,7 @@ const ChatStack = () => {
     return (
         <Routes>
             <Route path="/" element={<Admin.Chat />} />
+            <Route path="sessionEnded" element={<Admin.SessionEnded />} />
         </Routes>
     );
 };

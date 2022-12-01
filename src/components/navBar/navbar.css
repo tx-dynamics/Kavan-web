@@ -36,6 +36,9 @@
   line-height: 25px;
   margin: 0rem 3.2rem;
   cursor: pointer;
+  padding-bottom: 1.5rem;
+  border-bottom-width: 2px;
+
 }
 
 .kavan__navbar-links_button {
