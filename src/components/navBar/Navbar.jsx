@@ -11,7 +11,7 @@ const Navbar = () => {
     const Menu = () => (
         <>
             <Link to={'/'}>
-                <p><a className='kavan__navbar-links_text' href='#home' style={{ borderBottomStyle: window.location.href === 'http://localhost:3000/' ? 'solid' : 'none' }} >Home</a></p>
+                <p><a className='kavan__navbar-links_text' href='#home' style={{ borderBottomStyle: window.location.href === 'http://localhost:3000/' || window.location.href === 'https://kavan-web-ten.vercel.app/' ? 'solid' : 'none' }} >Home</a></p>
             </Link>
             <Link>
                 <p><a className='kavan__navbar-links_text' href='#psychologists' >Psychologists</a></p>
