@@ -200,6 +200,19 @@
 
 /* --------Media Query--------- */
 
+@media screen and (max-width: 550px) {
+  .kwn-three_dot_modal {
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 14.8rem;
+    height: 8.8rem;
+  }
+  .kwn-three_dot_modal h2 {
+    padding-bottom: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .kwn-appointment_button {
     padding: 1rem 3.8rem;
