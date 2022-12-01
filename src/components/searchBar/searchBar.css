@@ -40,6 +40,11 @@
 @media screen and (max-width: 520px) {
   .kwn_search_bar_container {
     height: 4rem;
-    width: 42rem;
+    /* width: 42rem; */
+  }
+
+  .kwn_search_bar_container div {
+    width: 100%;
+    height: 5.6rem;
   }
 }

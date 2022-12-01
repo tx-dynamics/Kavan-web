@@ -47,17 +47,26 @@
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .kwn-home-testi-comp-main_container {
-    min-width: 36.3rem;
+    min-width: 30.3rem;
   }
   .kwn-home-testi-comp-text-container {
-    padding: 1rem 2.1rem 2.2rem 2.1rem;
+    padding: 1rem 1.1rem 1.2rem 1.1rem;
   }
   .kvn-home-testi-com-review-main_container {
-    padding: 0rem 2.1rem 2rem 2.1rem;
+    padding: 0rem 1.1rem 1.2rem 1.1rem;
   }
   .kvn-home-testi-com-review-name-container h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+  .kwn-home-testi-comp-text-container p {
+    width: 28rem;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+  .kvn-home-testi-con-review-pro-pic-container img {
+    width: 5.2rem;
+    height: 5.2rem;
   }
 }

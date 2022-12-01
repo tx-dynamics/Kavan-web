@@ -132,5 +132,12 @@
   }
   .kwn-sign_in-forgot_container {
     width: 30rem;
+    padding-bottom: 3rem;
+  }
+  .kwn-fill_out_form-main_container h3 {
+    padding-bottom: 2rem;
+  }
+  .kwn-sign_in-social_container {
+    margin-top: 2rem;
   }
 }

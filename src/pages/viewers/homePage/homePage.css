@@ -233,7 +233,7 @@
 
   .body_text_three {
     font-size: 20px;
-    line-height: 32px;
+    line-height: 25px;
   }
 }
 
@@ -619,7 +619,12 @@
     font-size: 34px;
     line-height: 40px;
   }
-
+  .availalbeTopView {
+    padding: 4.6rem 2.4rem;
+  }
+  .patientView {
+    margin-bottom: 3rem;
+  }
   .button_view {
     width: 24rem;
     margin-top: 1.2rem;
@@ -637,7 +642,15 @@
     height: 74%;
   }
 }
-
+@media screen and (max-width: 420px) {
+  .kwn-home-testimonial-heading-main_container h1 {
+    font-size: 2.2rem;
+  }
+  .body_text_three {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+}
 @media screen and (max-width: 400px) {
   .kvn-home-app-download_by-click-photo-container {
     width: 30rem;

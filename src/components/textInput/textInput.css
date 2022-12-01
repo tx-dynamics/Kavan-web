@@ -96,6 +96,7 @@
 @media screen and (max-width: 480px) {
   .kwn-input_container_input {
     width: 33rem;
+    padding: 1.6rem 1.8rem;
   }
 
   .kwn-input_container {

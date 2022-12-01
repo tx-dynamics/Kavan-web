@@ -83,6 +83,26 @@ const Appointment = () => {
       profession: "General Psychologist specialist",
     },
     {
+      id: 1,
+      date: "11 June 2021",
+      time: "10:00 AM",
+      reason: "I don’t want to consult right now",
+      type: "Requests",
+      image: dummy2,
+      name: "Dr. Atiana",
+      profession: "General Psychologist specialist",
+    },
+    {
+      id: 1,
+      date: "11 June 2021",
+      time: "10:00 AM",
+      reason: "I don’t want to consult right now",
+      type: "Requests",
+      image: dummy2,
+      name: "Dr. Atiana",
+      profession: "General Psychologist specialist",
+    },
+    {
       id: 3,
       date: "11 June 2021",
       time: "10:00 AM",
@@ -133,6 +153,10 @@ const Appointment = () => {
       </div>
     );
   };
+
+  // const TimeIndicator = ({ ...restProps }) => {
+  //   <div {...restProps} style={{ background: "red" }}></div>;
+  // };
   const TooltipContent = ({
     appointmentData,
     formatDate,
@@ -161,7 +185,7 @@ const Appointment = () => {
                   year: "numeric",
                 })}
                 <span>
-                  |
+                  {" | "}
                   {`${formatDate(appointmentData.startDate, {
                     hour: "numeric",
                     minute: "numeric",
@@ -243,7 +267,9 @@ const Appointment = () => {
                     <ViewSwitcher />
 
                     <DateNavigator />
-                    <CurrentTimeIndicator />
+                    <CurrentTimeIndicator
+                    //  indicatorComponent={TimeIndicator}
+                    />
                     <AppointmentTooltip
                       contentComponent={TooltipContent}
                       // showCloseButton
