@@ -74,6 +74,18 @@
   padding-top: 1.4rem;
 }
 
+.kwn-right_side_bar-notification_content::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.kwn-right_side_bar-notification_content {
+  overflow: -moz-scrollbars-none;
+}
+
+.kwn-right_side_bar-notification_content {
+  -ms-overflow-style: none;
+}
+
 .kwn-right_side_bar-notification_content p {
   font-family: var(--font-family);
   font-weight: 400;
@@ -257,6 +269,7 @@
   height: 4.7rem;
   border-radius: 3rem;
 }
+
 /* ---------Media Query---------------------- */
 @media screen and (max-width: 1250px) {
   .kwn-right_side_bar-main_container {
