@@ -32,6 +32,7 @@
   color: #2d292a;
   margin-top: 1rem;
   text-align: center;
+  width: 50rem;
 }
 
 .kwn-fill_out_form-form_container {
@@ -84,6 +85,7 @@
   width: 1rem;
   height: 1rem;
   margin-left: 2rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 480px) {

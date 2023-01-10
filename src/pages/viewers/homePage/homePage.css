@@ -4,6 +4,85 @@
   background-color: red;
 }
 
+/*Therapy for all section--------- */
+
+.home-view img {
+  width: 100%;
+  height: 100%;
+}
+.kawan-therapy_all-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: "#F7FCFA";
+  position: relative;
+}
+.kawan-therapy_all-container {
+  position: absolute;
+  top: 32rem;
+  margin-left: 7rem;
+}
+
+.kawan-therapy_all-container h1 {
+  font-size: 7.6rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.kawan-therapy_all-img-container img {
+  width: 60rem;
+  margin-top: 20rem;
+}
+
+.download-app-container {
+  width: 38.6rem;
+  height: 5.5rem;
+  background: #9bd58b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-top: 5rem;
+  cursor: pointer;
+}
+
+.download-app-container p {
+  font-size: 2rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  color: #fff;
+}
+
+.kawan-therapy_all-container img {
+  width: 8.2rem;
+  height: 6rem;
+  position: absolute;
+  right: 0rem;
+  bottom: 3rem;
+}
+
+.kawan-therapy_all-dot-img-container img {
+  width: 70rem;
+  /* background-color: red; */
+}
+.kawan-therapy_all-dot-img-container {
+  position: absolute;
+}
+
+.kawan-comparison-container {
+  width: 100%;
+  height: 70rem;
+  background-color: #006039;
+  border-radius: 50%;
+}
+
+.kavan-option-container img {
+  width: 100%;
+  height: 100%;
+}
+
 .header_main_view {
   display: flex;
   background-color: #0060391a;
@@ -556,7 +635,100 @@
 
 /* -----------Media Query------------ */
 
+@media screen and (max-width: 1350px) {
+  .kawan-therapy_all-container {
+    margin-left: 5rem;
+    top: 30rem;
+  }
+  .kawan-therapy_all-container h1 {
+    font-size: 6.5rem;
+  }
+  .kawan-therapy_all-container img {
+    right: -2rem;
+    bottom: 1rem;
+    width: 6.8rem;
+    height: 5rem;
+  }
+  .download-app-container {
+    width: 33.6rem;
+    height: 5rem;
+    margin-top: 2.2rem;
+  }
+  .download-app-container p {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .kawan-therapy_all-container {
+    top: 28rem;
+  }
+
+  .kawan-therapy_all-container h1 {
+    font-size: 6rem;
+  }
+  .download-app-container {
+    width: 32.6rem;
+    height: 5rem;
+    margin-top: 2.2rem;
+  }
+  .download-app-container p {
+    font-size: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .kawan-therapy_all-container {
+    top: 28rem;
+  }
+
+  .kawan-therapy_all-container h1 {
+    font-size: 5rem;
+  }
+  .download-app-container {
+    width: 26.6rem;
+    height: 4rem;
+    margin-top: 2.2rem;
+  }
+  .download-app-container p {
+    font-size: 1.5rem;
+  }
+
+  .kawan-therapy_all-container img {
+    right: 0rem;
+    bottom: 1rem;
+    width: 5rem;
+    height: 4.2rem;
+    object-fit: contain;
+  }
+}
+
 @media screen and (max-width: 850px) {
+  .kawan-therapy_all-container {
+    top: 20rem;
+  }
+
+  .kawan-therapy_all-container h1 {
+    font-size: 3.2rem;
+  }
+  .download-app-container {
+    width: 16.6rem;
+    height: 2.2rem;
+    margin-top: 1rem;
+    border-radius: 0.4rem;
+  }
+  .download-app-container p {
+    font-size: 0.9rem;
+  }
+
+  .kawan-therapy_all-container img {
+    right: 0rem;
+    bottom: 0.5rem;
+    width: 3rem;
+    height: 2.2rem;
+    object-fit: contain;
+  }
+
   .body_view {
     padding: 8rem 8.8rem;
   }
@@ -579,6 +751,10 @@
 }
 
 @media screen and (max-width: 590px) {
+  .kawan-therapy_all-container {
+    top: 15rem;
+    margin-left: 2rem;
+  }
   .kwn-home-testimonial-card-main_container {
     margin-left: 0rem;
   }
@@ -615,6 +791,31 @@
 }
 
 @media screen and (max-width: 490px) {
+  .kawan-therapy_all-container {
+    top: 12rem;
+  }
+
+  .kawan-therapy_all-container h1 {
+    font-size: 2.2rem;
+  }
+  .download-app-container {
+    width: 10.6rem;
+    height: 1.2rem;
+    margin-top: 1rem;
+    border-radius: 0.2rem;
+  }
+  .download-app-container p {
+    font-size: 0.6rem;
+  }
+
+  .kawan-therapy_all-container img {
+    right: 0rem;
+    bottom: 0.5rem;
+    width: 2rem;
+    height: 1.8rem;
+    object-fit: contain;
+  }
+
   .header_content h1 {
     font-size: 34px;
     line-height: 40px;

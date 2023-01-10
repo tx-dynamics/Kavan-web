@@ -25,6 +25,22 @@ const Navigation = () => {
       <Route path="/forgotPassword" element={<Viewers.ForgotPassword />} />
       <Route path="/confirmPassword" element={<Viewers.ConfirmPassword />} />
       <Route path="/verifyEmail" element={<Viewers.VerifyEmail />} />
+      <Route
+        path="/verifyPhoneNumber"
+        element={<Viewers.VerifyPhoneNumber />}
+      />
+      <Route path="/phoneNumber" element={<Viewers.PhoneNumber />} />
+      <Route path="/addExperience" element={<Viewers.AddExperience />} />
+      <Route path="/specialist" element={<Viewers.Specialist />} />
+      <Route path="/aboutYourself" element={<Viewers.AboutYourself />} />
+      <Route path="/addQualification" element={<Viewers.AddQualification />} />
+      <Route path="/addDegree" element={<Viewers.AddDegree />} />
+      <Route path="/addSpecialist" element={<Viewers.AddSpecialist />} />
+      <Route path="/addLanguage" element={<Viewers.AddLanguage />} />
+      <Route
+        path="/addExperienceDegree"
+        element={<Viewers.AddExperienceDegree />}
+      />
       <Route path="/" element={<PrivateRoute />}>
         <Route path="dashboard/*" element={<Admin.Layout />} />
       </Route>

@@ -39,6 +39,7 @@
 .kwn-input_container img {
   width: 2rem;
   height: 2rem;
+  cursor: pointer;
 }
 
 .kwn-input_container textarea {
@@ -70,6 +71,27 @@
   overflow: scroll;
   padding: 1rem 2rem;
   cursor: pointer;
+}
+
+.kwn-dropdown_container::-webkit-scrollbar {
+  height: 2px;
+}
+
+/* Track */
+.kwn-dropdown_container::-webkit-scrollbar-track {
+  background: "red";
+  border-radius: 10px;
+}
+
+/* Handle */
+.kwn-dropdown_container::-webkit-scrollbar-thumb {
+  background: rgb(226, 226, 226);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.kwn-dropdown_container::-webkit-scrollbar-thumb:hover {
+  background: rgb(229, 229, 229);
 }
 
 .kwn-dropdown_container p {

@@ -10,8 +10,14 @@ import {
   star,
   appleStore,
   googleStore,
+  climb,
+  dots,
+  direction,
+  option,
+  home,
 } from "../../../assets";
 import Testimonial from "./comp/Testimonial";
+import { red } from "@mui/material/colors";
 
 export default function HomePage() {
   const testimonialArray = [
@@ -79,7 +85,18 @@ export default function HomePage() {
   return (
     <div>
       <Navbar />
-      <div className="header_main_view section__padding">
+      <div className="home-view">
+        <div className="kawan-therapy_all-container">
+          <h1>Therapy for all </h1>
+          <div className="download-app-container">
+            <p>Descarga la App para hacer el match</p>
+          </div>
+          <img src={direction} />
+        </div>
+        <img src={home} />
+      </div>
+
+      {/* <div className="header_main_view section__padding">
         <div className="header_content">
           <h1>
             Find Mental health in your life with the help of{" "}
@@ -151,9 +168,9 @@ export default function HomePage() {
         <h1 className="body_text_two" style={{ paddingTop: 10 }}>
           Psychologist & Patients
         </h1>
-      </div>
+      </div> */}
 
-      <div className="optionsView">
+      {/* <div className="optionsView">
         <div>
           <h1
             className="body_text_two"
@@ -191,10 +208,10 @@ export default function HomePage() {
             );
           })}
         </div>
-      </div>
+      </div> */}
 
       <div className="availalbeTopView">
-        <h1 className="body_text_one">Psychologists</h1>
+        {/* <h1 className="body_text_one">Psychologists</h1>
         <h1 className="body_text_two" style={{ paddingTop: 10 }}>
           Psychologist available 27/7 for patients
         </h1>
@@ -215,7 +232,7 @@ export default function HomePage() {
               </div>
             );
           })}
-        </div>
+        </div> */}
         <h1 className="body_text_one" style={{ paddingTop: 0 }}>
           Users Testimonials
         </h1>
@@ -239,8 +256,8 @@ export default function HomePage() {
       </div>
       <div className="kvn-home-app-download_by-click-container">
         <div className="kvn-home-app-download_by-click-photo-container">
-          <img src={appleStore} alt='' />
-          <img src={googleStore} alt='' />
+          <img src={appleStore} alt="" />
+          <img src={googleStore} alt="" />
         </div>
       </div>
 

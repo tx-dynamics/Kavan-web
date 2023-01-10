@@ -44,7 +44,7 @@ export default function SignUp() {
                     <p>I agree to <span>Terms & Conditions</span></p>
                 </div>
                 <div className='kwn-sign_up-Button_container'>
-                    <Button onClick={() => navigate('/fillOutForm')}>Sign UP</Button>
+                    <Button onClick={() => navigate('/phoneNumber')}>Sign UP</Button>
                 </div>
                 <h3>OR</h3>
                 <div className='kwn-sign_up-social_container'>

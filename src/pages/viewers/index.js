@@ -1,15 +1,22 @@
-export { default as HomePage } from './homePage/HomePage'
-export { default as AboutUs } from './aboutUs/AboutUs'
-export { default as ContactUs } from './contactUs/ContactUs'
-export { default as SignUp } from './signUp/SignUp'
-export { default as SignIn } from './signIn/SignIn'
-export { default as FillOutForm } from './fillOutForm/FillOutForm'
-export { default as CreateProfile } from './createProfile/CreateProfile'
-export { default as RegistrationPending } from './registrationPending/RegistrationPending'
-export { default as RegistrationSuccessfull } from './registrationSuccessfull/RegistrationSuccessfull'
-export { default as ForgotPassword } from './forgotPassword/ForgotPassword'
-export { default as VerifyEmail } from './verifyEmail/VerifyEmail'
-export { default as ConfirmPassword } from './confirmPassword/ConfirmPassword'
-
-
-
+export { default as HomePage } from "./homePage/HomePage";
+export { default as AboutUs } from "./aboutUs/AboutUs";
+export { default as ContactUs } from "./contactUs/ContactUs";
+export { default as SignUp } from "./signUp/SignUp";
+export { default as SignIn } from "./signIn/SignIn";
+export { default as FillOutForm } from "./fillOutForm/FillOutForm";
+export { default as CreateProfile } from "./createProfile/CreateProfile";
+export { default as RegistrationPending } from "./registrationPending/RegistrationPending";
+export { default as RegistrationSuccessfull } from "./registrationSuccessfull/RegistrationSuccessfull";
+export { default as ForgotPassword } from "./forgotPassword/ForgotPassword";
+export { default as VerifyEmail } from "./verifyEmail/VerifyEmail";
+export { default as ConfirmPassword } from "./confirmPassword/ConfirmPassword";
+export { default as PhoneNumber } from "./phoneNumber/phoneNumber";
+export { default as VerifyPhoneNumber } from "./verifyPhoneNUmber/phoneNumber";
+export { default as Specialist } from "./specialist/specialList";
+export { default as AboutYourself } from "./aboutYourself/aboutYourself";
+export { default as AddQualification } from "./addQualification/addQualification";
+export { default as AddDegree } from "./addDegree/addDegree";
+export { default as AddExperience } from "./addExperience/addExperience";
+export { default as AddExperienceDegree } from "./addExperinceDegree/addExperinceDegree";
+export { default as AddSpecialist } from "./addSpecialist/addSpecialist";
+export { default as AddLanguage } from "./addLanguage/addLanguage";

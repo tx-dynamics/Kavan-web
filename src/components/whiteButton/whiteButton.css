@@ -1,0 +1,20 @@
+.white-button-container {
+  width: 30.8rem;
+  height: 6.2rem;
+  border-radius: 8rem;
+  border: 1px solid #006039;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.white-button-container p {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 3px;
+  font-family: var(--font-family);
+  color: var(--color-theme);
+}

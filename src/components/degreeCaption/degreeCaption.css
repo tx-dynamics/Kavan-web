@@ -1,0 +1,64 @@
+.kawan-degree-caption-container {
+  width: 44.4rem;
+  height: 11rem;
+  /* margin-top: 6.4rem; */
+  /* margin-bottom: 4.8; */
+  background-color: var(--color-white);
+  box-shadow: 4px 4px 15px rgba(57, 61, 72, 0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+}
+.kavan-degree-caption-sub-container {
+  flex-direction: row;
+  display: flex;
+}
+.kavan-degree-caption-cap-container {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3rem;
+  background-color: var(--color-theme);
+}
+
+.kavan-degree-caption-cap-container img {
+  width: 2.8rem;
+  height: 2.8rem;
+  object-fit: contain;
+}
+
+.kavan-degree-caption-content-container {
+  margin-left: 2rem;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kavan-degree-caption-content-container h1 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 2rem;
+  color: #2d292a;
+  line-height: 23px;
+}
+
+.kavan-degree-caption-content-container p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #666;
+  line-height: 23px;
+}
+
+.kavan-degree-caption-edit-icon img {
+  width: 2.4rem;
+  height: 2.4rem;
+  object-fit: contain;
+}

@@ -1,0 +1,33 @@
+.kavan-select-date-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.kavan-select-date-container p {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: var(--font-family);
+  color: #666;
+  margin-bottom: 0.4rem;
+}
+.kavan-select-date-sub_container {
+  width: 44.4rem;
+  height: 7.4rem;
+  border-radius: 5rem;
+  border: 1.36615px solid #666666;
+  padding: 0 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.kavan-select-date-sub_container img {
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+}
+
+.react-datepicker {
+  font-size: 1rem !important;
+}

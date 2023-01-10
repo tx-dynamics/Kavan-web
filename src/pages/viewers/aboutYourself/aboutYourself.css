@@ -1,0 +1,12 @@
+.kawan-add_later-container p {
+  font-family: var(--font-family);
+  font-size: 20px;
+  color: var(--color-theme);
+  text-decoration: underline;
+}
+
+.kawan-add_later-container {
+  margin-top: 3rem;
+  margin-bottom: 10rem;
+  cursor: pointer;
+}
