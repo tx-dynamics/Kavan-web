@@ -1,0 +1,121 @@
+import React from "react";
+import { user, users } from "../../../assets";
+import { SearchBar } from "../../../components";
+import "./pacients.css";
+
+const patientData = [
+  {
+    id: 1,
+    name: "John Doe",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "16-07-2021 15:00",
+    idNumber: "65895647F",
+  },
+  {
+    id: 2,
+    name: "Annie",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "",
+    idNumber: "65895489D",
+  },
+  {
+    id: 3,
+    name: "John Doe",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "",
+    idNumber: "65895607F",
+  },
+  {
+    id: 4,
+    name: "Annie",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "16-07-2021 15:00",
+    idNumber: "6589729D",
+  },
+  {
+    id: 5,
+    name: "John Doe",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "",
+    idNumber: "65895647F",
+  },
+  {
+    id: 6,
+    name: "Annie",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "16-07-2021 15:00",
+    idNumber: "65893410F",
+  },
+  {
+    id: 7,
+    name: "John Doe",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "",
+    idNumber: "65895647H",
+  },
+  {
+    id: 8,
+    name: "Annie",
+    lastVisit: "16-07-2021 15:00",
+    nextVisit: "16-07-2021 15:00",
+    idNumber: "65895647G",
+  },
+];
+
+const Pacients = () => {
+  return (
+    <div className="kavan_admin_main_container">
+      <div className="kwn-search">
+        <SearchBar />
+      </div>
+      <div className="kwn-pacients-count-container">
+        <h1 className="kwn-heading">pacientes</h1>
+        <div style={{ marginLeft: "5.7rem" }}>
+          <div className="kwn-dashboard-appointments_and_patients_view">
+            <div className="kwn-dashboard-round_calender_view">
+              <img src={users} />
+            </div>
+            <div>
+              <h2>{"45"}</h2>
+              <h3>{"pacientes"}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="kwn-pacients-table-view">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">NOMBRE Y APELLIDO</th>
+              <th scope="col">LAST VISIT</th>
+              <th scope="col">NEXT VISIT</th>
+              <th scope="col">ID number</th>
+            </tr>
+          </thead>
+          <tbody>
+            {patientData.map((item) => {
+              return (
+                <tr>
+                  <td data-label={"NOMBRE Y APELLIDO"}>{item.name}</td>
+                  <td data-label={"Last Visit"}>16-07-2021 15:00</td>
+                  {item.nextVisit == "" ? (
+                    <td data-label={"Next Visit"}>
+                      <div className="kawan-pacient-table-create-visit">
+                        <p>Create next visit</p>
+                      </div>
+                    </td>
+                  ) : (
+                    <td data-label={"Next Visit"}>16-07-2021 15:00</td>
+                  )}
+                  <td data-label={"Next Visit"}>{item.idNumber}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+export default Pacients;

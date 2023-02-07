@@ -21,7 +21,7 @@ const AboutYourself = () => {
           placeholder={"Write Here"}
         />
         <div style={{ marginTop: "3rem" }}>
-          <Button onClick={() => navigate("/addQualification")}>Next</Button>
+          <Button onClick={() => navigate("/availability")}>Next</Button>
         </div>
         <div className="kawan-add_later-container">
           <p>Add Later</p>

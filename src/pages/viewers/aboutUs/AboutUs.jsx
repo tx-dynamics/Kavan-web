@@ -8,13 +8,144 @@ import {
   verified,
   check,
   rightArrow,
+  aboutUsImg,
+  emoji1,
+  aboutEllipse,
+  kawan,
+  listTag,
 } from "../../../assets";
+
+const listLink = [
+  {
+    id: 1,
+    title: "Lorem ipsum dolor sit amet consectetur. Eget risus vulputate in ",
+  },
+  {
+    id: 2,
+    title: "Lorem ipsum dolor sit amet consectetur. Eget risus vulputate in ",
+  },
+];
+
+const emojisArr = [
+  {
+    id: 1,
+    title: "Who we are",
+    des: "Kavan es una empresa de terapias online comprometida con democratizar el acceso a las terapias y mejorar el bienestar mental y emocional de las personas.",
+  },
+  {
+    id: 1,
+    title: "What we do",
+    des: "Ofrecemos terapias online accesibles y personalizadas mediante el uso de un chatbot para determinar las necesidades de los clientes y recomendar psicólogos específicos.",
+  },
+  {
+    id: 1,
+    title: " Why we do it?",
+    des: "Consideramos que todas las personas merecen tener acceso a terapias de calidad, independientemente de su situación. Trabajamos para crear un espacio donde las personas puedan convertirse en su mejor versión, ayudando así a mejorar su bienestar mental y emocional.",
+  },
+];
 export default function AboutUs() {
   return (
     <div>
       <Navbar />
       <div className="mianContainer">
-        <div className="aboutTextDiv">
+        <div
+          className="kawan-about_us-main-image-container"
+          style={{
+            backgroundImage: `url(${aboutUsImg})`,
+            width: "100%",
+            backgroundSize: "auto",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <h1>
+            About <span style={{ fontWeight: "600" }}>Kavan Health</span>
+          </h1>
+          <p style={{ marginTop: "6.4rem" }}>
+            Kavan empezó con una misión:
+            <span style={{ fontWeight: "500" }}>
+              Crear un espacio donde las personas puedan convertirse en su mejor
+              versión.
+            </span>
+          </p>
+          <p style={{ marginTop: "3.4rem", marginBottom: "41rem" }}>
+            Kavan empezó con una misión:
+            <span style={{ fontWeight: "500" }}>
+              Crear un espacio donde las personas puedan convertirse en su mejor
+              versión.
+            </span>
+          </p>
+        </div>
+        <div className="kawan-about_us-emoji-main-container">
+          {emojisArr.map((item) => {
+            return (
+              <div className="kawan-about_us-emoji-container">
+                <div className="kawan-about_us-emoji-sub-container">
+                  <div className="kawan-about_us-emoji-circle">
+                    <img src={emoji1} />
+                  </div>
+                  <h1>{item.title}</h1>
+                </div>
+                <p>{item.des}</p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div
+          style={{
+            backgroundImage: `url(${aboutEllipse})`,
+            width: "100%",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          <div className="kawan-about_us-who_is-main-container">
+            <div className="kawan-about_us-who_is-img">
+              <img src={kawan} />
+            </div>
+            <div className="kawan-about_us-who_is-des-container">
+              <div className="kawan-about_us-who_is-des-h1">
+                <h1>Who is Kavan</h1>
+              </div>
+
+              <p>
+                Kavan es una empresa con el objetivo de normalizar y facilitar
+                el acceso de porfessionales de la salud mental. Nuestro nombre
+                es en honor al elefante Kaavan, quien vivió encerrado en un
+                zoológico de Tailandia durante 35 años, deprimido y malnutrido.
+                Con este nombre queremos llamar la atención sobre la importancia
+                del bienestar mental y emocional.
+              </p>
+              <div style={{ marginTop: "3rem" }}>
+                <p>
+                  democratizar el acceso a las terapias y hacerlas más
+                  accesibles para todas las personas. Ofrecemos terapias
+                  personalizadas para ayudar a las personas a alcanzar sus metas
+                  y mejorar su bienestar mental y emocional.
+                </p>
+              </div>
+
+              <div style={{ marginTop: "3rem" }}>
+                <p>
+                  No te conformes con menos, el bienestar mental y emocional
+                  está al alcance de tu mano con Kavan. ¡Toma el control de tu
+                  vida y agende tu primera sesión con nosotros hoy!
+                </p>
+              </div>
+              <div className="kawan-about_us-who_is-list-tag-container">
+                {listLink.map((item) => {
+                  return (
+                    <div className="kawan-about_us-list-tag-container">
+                      <img src={listTag} />
+                      <h1>{item.title}</h1>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="aboutTextDiv">
           <h1>About Kavan Health</h1>
         </div>
         <div className="usersTopDiv">
@@ -186,7 +317,7 @@ export default function AboutUs() {
             tincidunt et lorem feugiat. Vestibulum id odio neque placerat ornare
             massa congue varius.{" "}
           </p>
-        </div>
+        </div> */}
       </div>
       <Footer />
     </div>

@@ -25,6 +25,7 @@ const Navigation = () => {
       <Route path="/forgotPassword" element={<Viewers.ForgotPassword />} />
       <Route path="/confirmPassword" element={<Viewers.ConfirmPassword />} />
       <Route path="/verifyEmail" element={<Viewers.VerifyEmail />} />
+      <Route path="/choosePofile" element={<Viewers.ChooseProfile />} />
       <Route
         path="/verifyPhoneNumber"
         element={<Viewers.VerifyPhoneNumber />}
@@ -37,6 +38,9 @@ const Navigation = () => {
       <Route path="/addDegree" element={<Viewers.AddDegree />} />
       <Route path="/addSpecialist" element={<Viewers.AddSpecialist />} />
       <Route path="/addLanguage" element={<Viewers.AddLanguage />} />
+      <Route path="/availability" element={<Viewers.Availability />} />
+      <Route path="/psychologist" element={<Viewers.Psychologist />} />
+      <Route path="/coach" element={<Viewers.Coach />} />
       <Route
         path="/addExperienceDegree"
         element={<Viewers.AddExperienceDegree />}

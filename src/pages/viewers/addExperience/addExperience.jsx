@@ -18,9 +18,9 @@ const countryArr = [
   { label: "France", value: "france" },
 ];
 const AddExperience = () => {
+  const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
-  const navigate = useNavigate();
   const positionArr = [
     { label: "Psychologist", value: "Psychologist" },
     { label: "Psychiatrists", value: "psychiatrists" },
@@ -87,6 +87,9 @@ const AddExperience = () => {
           customInput={<SelectDate2 text={"Start Date"} />}
           dateFormat="d MMMM yyyy"
           maxDate={new Date()}
+          // fixedHeight
+          // showTimeSelect
+          // showTimeSelectOnly
         />
 
         <DatePicker

@@ -58,6 +58,7 @@
 .kwn-create_profile-edit_img_view img {
   width: 1.5rem;
   height: 1.5rem;
+  cursor: pointer;
 }
 
 .kwn-create_profile-img_options-container {

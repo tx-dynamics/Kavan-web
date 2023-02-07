@@ -8,6 +8,7 @@ import AppointmentStack from "../../../navigation/appointmentStack/AppointmentSt
 import ChatStack from "../../../navigation/chatStack/ChatStack";
 import SettingStack from "../../../navigation/settngStack/SettingStack";
 import TopMenu from "../../../components/topMenu/TopMenu";
+import PacientsStack from "../../../navigation/pacientsStack/PacientsStack";
 
 const Layout = () => {
   const [toggle, setToggle] = useState(false);
@@ -39,6 +40,7 @@ const Layout = () => {
           />
           <Route exact path="ChatStack/*" element={<ChatStack />} />
           <Route exact path="SettingStack/*" element={<SettingStack />} />
+          <Route exact path="PacientsStack/*" element={<PacientsStack />} />
         </Routes>
       </div>
 

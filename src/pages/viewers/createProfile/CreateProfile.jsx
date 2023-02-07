@@ -10,19 +10,19 @@ const CreateProfile = () => {
   const imgOptionsArray = [
     {
       id: 1,
-      title: "Be a close up your face",
+      title: "Un primer plano de su cara",
     },
     {
       id: 2,
-      title: "Show your face clearly-No sunglassws!",
+      title: "Muestre claramente su rostro",
     },
     {
       id: 3,
-      title: "Be clear and crisp",
+      title: "Ser claro y nítido",
     },
     {
       id: 4,
-      title: "Have a nuetral background",
+      title: "Tener un fondo neutro",
     },
   ];
 
@@ -43,8 +43,8 @@ const CreateProfile = () => {
       <Navbar />
       <div className="kwn-fill_out_form-main_container">
         <div className="kwn-fill_out_form-title_container">
-          <h1>Create Profile</h1>
-          <h2>Add a professional photo and submit profile</h2>
+          <h1>Creación de Perfil</h1>
+          <h2>Añadir una foto profesional</h2>
         </div>
         <div className="kwn-create_profile-img_container">
           <img src={image === "" ? dummy2 : image} alt="" />
@@ -62,7 +62,7 @@ const CreateProfile = () => {
           </div>
         </div>
         <div className="kwn-create_profile-img_options-container">
-          <h2>Your photo should:</h2>
+          <h2>Su foto debe incluir:</h2>
           {imgOptionsArray.map((item, index) => {
             return (
               <div className="kwn-create_profile-img_options">
@@ -72,7 +72,7 @@ const CreateProfile = () => {
             );
           })}
         </div>
-        <Button onClick={() => navigate("/registrationPending")}>Submit</Button>
+        <Button onClick={() => navigate("/registrationPending")}>Enviar</Button>
         <div className="kwn-create_profile-add_later">
           <p>Add Later</p>
         </div>

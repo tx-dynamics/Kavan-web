@@ -7,7 +7,7 @@ const TextInput = (props) => {
 
   return (
     <div className="kwn-input_container" style={props.style}>
-      <p>{props.title}</p>
+      <p style={props.textStyle}>{props.title}</p>
       {props.textarea ? (
         <textarea
           style={{ borderColor: isFoucs && "#006039", ...props.style }}

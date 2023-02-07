@@ -20,3 +20,7 @@ export { default as AddExperience } from "./addExperience/addExperience";
 export { default as AddExperienceDegree } from "./addExperinceDegree/addExperinceDegree";
 export { default as AddSpecialist } from "./addSpecialist/addSpecialist";
 export { default as AddLanguage } from "./addLanguage/addLanguage";
+export { default as Availability } from "./availability/availability";
+export { default as ChooseProfile } from "./chooseProfile/chooseProfile.jsx";
+export { default as Psychologist } from "./psychologist/psychologist";
+export { default as Coach } from "./coach/coach";

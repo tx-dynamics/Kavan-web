@@ -6,6 +6,157 @@
 
 /*Therapy for all section--------- */
 
+.kawan-home-main-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.kawan-home-main-image h1 {
+  padding-top: 45rem;
+  font-size: 6.4rem;
+  color: #fff;
+  font-family: var(--font-family);
+  font-weight: 500;
+}
+
+.kawan-home-main-image p {
+  padding-top: 1.5rem;
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #fff;
+  font-family: var(--font-family);
+}
+
+.kawan-home-app-download-image-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16.4rem;
+  margin-bottom: 28rem;
+  justify-content: space-between;
+  width: 56rem;
+}
+.kawan-home-app-download-image-container img {
+  width: 24rem;
+  height: 5.4rem;
+}
+.kawan-home-app-comparison-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin-top: 4.7rem;
+}
+.kawan-home-app-comparison-container img {
+  width: 80%;
+  /* height: 100%; */
+}
+.kawan-home-app-source-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kawan-home-app-source-container p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #666;
+  font-family: var(--font-family);
+}
+
+.kawan-home-app-source-container span {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #005368;
+  font-family: var(--font-family);
+}
+.kawan-home-wave img {
+  width: 100%;
+  height: 100%;
+  margin-top: 1.5rem;
+}
+.kawan-home-session-online {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kawan-home-session-online p {
+  font-size: 4.8rem;
+  font-weight: 400;
+  color: #3d5a80;
+  font-family: var(--font-family);
+}
+
+.kawan-home-session-online span {
+  font-size: 4.8rem;
+  font-weight: 600;
+  color: #3d5a80;
+  font-family: var(--font-family);
+}
+.kawan-home-session-main-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 9rem;
+  justify-content: space-between;
+}
+
+.kawan-home-session-mobile-ss {
+  display: flex;
+  flex: 1;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.kawan-home-session-info-container {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 5rem;
+}
+
+.kawan-home-session-mobile-ss img {
+  width: 35rem;
+  height: 70rem;
+  background-color: red;
+  align-self: flex-end;
+}
+
+.kawan-home-session-vertical-line {
+  border-left: 1px solid #000000;
+  /* align-self: center; */
+  width: 1px;
+  opacity: 0.5;
+}
+.kawan-home-session-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.kawan-home-session-item img {
+  width: 14rem;
+  height: 14rem;
+}
+
+.kawan-home-session-item h2 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 29px;
+  color: #000000;
+  width: 38rem;
+  margin-bottom: 3rem;
+}
+
+.kawan-home-ellipse img {
+  width: 100%;
+  margin-top: 7.7rem;
+}
+/* --------------------------- */
 .home-view img {
   width: 100%;
   height: 100%;

@@ -1,0 +1,92 @@
+.kawan-pychologist-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kawan-pychologist-title-container h1 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 4.9rem;
+  color: #2d292a;
+}
+
+.kawan-pychologist-title-container h2 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #2d292a;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.kwn-choose-profile-drop-down-container {
+  display: flex;
+  flex-direction: row;
+  width: 100rem;
+  justify-content: space-between;
+  /* margin-top: 5.6rem; */
+}
+
+.kawa-checkbox {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #2d292a;
+  border-radius: 0;
+  /* -webkit-appearance: none; */
+  outline: none;
+  cursor: pointer;
+}
+
+.kawan-checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 3rem;
+  margin-right: 5rem;
+}
+
+.kawan-checkbox-container p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.3rem;
+  color: #2d292a;
+  margin-left: 1.3rem;
+}
+
+.kawan-pycholo-skill-select-container {
+  width: 100rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.kawan-pycholo-skill-select-container h1 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2d292a;
+}
+
+.kawan-pyscholo-skill-select-sub-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.kawan-psycholo-term-condition-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.kawan-psycholo-term-condition-container h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #2d292a;
+  margin-left: 1.3rem;
+}

@@ -1,0 +1,75 @@
+.kwn-pacients-count-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.kwn-pacients-table-view table {
+  width: 100%;
+  margin-top: 3.3rem;
+  border-collapse: collapse;
+}
+
+.kwn-pacients-table-view th {
+  font-weight: 500;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  text-align: left;
+  padding-bottom: 0.7rem;
+  color: #000;
+}
+
+.kwn-pacients-table-view thead {
+  border-bottom: 1px solid #474748;
+}
+
+.kwn-pacients-table-view tr {
+  border-bottom: 1px solid #666;
+}
+.kwn-pacients-table-view td {
+  padding-top: 1.3rem;
+  padding-bottom: 1.3rem;
+  font-weight: 400;
+  font-family: var(--font-family);
+  font-size: 1.7rem;
+  text-align: left;
+  padding-bottom: 0.7rem;
+  color: #000;
+}
+
+.kawan-pacient-table-create-visit p {
+  font-family: var(--font-family);
+  font-size: 1.7rem;
+  color: #3080ed;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* -------------Media Query--------- */
+
+@media screen and (max-width: 650px) {
+  .kwn-pacients-count-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .kwn-pacients-table-view table thead {
+    display: none;
+  }
+  .kwn-pacients-table-view table tr {
+    display: block;
+  }
+  .kwn-pacients-table-view table td {
+    display: block;
+    text-align: right;
+  }
+  .kwn-pacients-table-view table td:last-child {
+    border-bottom: 0;
+  }
+  .kwn-pacients-table-view table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: 600;
+    font-size: 1.6rem;
+  }
+}

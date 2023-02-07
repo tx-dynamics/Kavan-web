@@ -1,16 +1,14 @@
-export { default as Layout } from './layout/Layout'
-export { default as Dashboard } from './dashboard/Dashboard'
-export { default as Appointments } from './appointments/Appointments'
-export { default as ScheduleAppointment } from './scheduleAppointment/ScheduleAppointment'
-export { default as Chat } from './chat/Chat'
-export { default as Settings } from './settings/Settings'
-export { default as RescheduleAppointment } from './rescheduleAppointment/RescheduleAppointment'
-export { default as CancelAppointment } from './cancelAppointment/CancelAppointment'
-export { default as Questions } from './questions/Questions'
-export { default as Reviews } from './reviews/Reviews'
-export { default as Profile } from './profile/Profile'
-export { default as EditProfile } from './editProfile/EditProfile'
-export { default as SessionEnded } from './sessionEnded/SessionEnded'
-
-
-
+export { default as Layout } from "./layout/Layout";
+export { default as Dashboard } from "./dashboard/Dashboard";
+export { default as Appointments } from "./appointments/Appointments";
+export { default as ScheduleAppointment } from "./scheduleAppointment/ScheduleAppointment";
+export { default as Chat } from "./chat/Chat";
+export { default as Settings } from "./settings/Settings";
+export { default as RescheduleAppointment } from "./rescheduleAppointment/RescheduleAppointment";
+export { default as CancelAppointment } from "./cancelAppointment/CancelAppointment";
+export { default as Questions } from "./questions/Questions";
+export { default as Reviews } from "./reviews/Reviews";
+export { default as Profile } from "./profile/Profile";
+export { default as EditProfile } from "./editProfile/EditProfile";
+export { default as SessionEnded } from "./sessionEnded/SessionEnded";
+export { default as Pacients } from "./pacients/pacients";

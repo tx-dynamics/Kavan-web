@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import {
   crossIcon,
   navbarLogo,
+  profileWhite,
   sideBarAppointment,
   sideBarChat,
   sideBarHome,
@@ -22,7 +23,7 @@ const LeftSideBar = ({ flag, togglefun }) => {
     },
     {
       id: 2,
-      title: "appointments",
+      title: "AGENDA",
       icon: sideBarAppointment,
       route: window.location.href.includes("/dashboard/AppointmentStack"),
       to: "/dashboard/AppointmentStack",
@@ -36,6 +37,13 @@ const LeftSideBar = ({ flag, togglefun }) => {
     },
     {
       id: 4,
+      title: "Pacientes",
+      icon: profileWhite,
+      route: window.location.href.includes("/dashboard/PacientsStack"),
+      to: "/dashboard/PacientsStack",
+    },
+    {
+      id: 5,
       title: "SETTINGS",
       icon: sideBarSettings,
       route: window.location.href.includes("/dashboard/SettingStack"),

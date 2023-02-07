@@ -1,0 +1,25 @@
+.kawan-home-app-download {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8.3rem;
+  align-items: center;
+}
+
+.kawan-home-app-download h1 {
+  font-family: var(--font-family);
+  font-size: 4.5rem;
+  font-weight: 500;
+  color: var(--color-theme);
+}
+
+.kawan-ap-download-qr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* justify-content: space-between; */
+}
+
+.kawan-ap-download-qr {
+  cursor: pointer;
+}

@@ -141,14 +141,14 @@ const Dashboard = () => {
   const appointmentPatientArray = [
     {
       id: 1,
-      title: "Appointments",
-      count: "24.5k",
+      title: "Citas",
+      count: "856",
       img: sideBarAppointment,
     },
     {
       id: 2,
-      title: "Patients",
-      count: "24.5k",
+      title: "Pacientes",
+      count: "45",
       img: users,
     },
   ];
@@ -179,6 +179,24 @@ const Dashboard = () => {
       <div className="kwn-dashboard-title_container">
         <h1>Kavan Dashboard</h1>
         <h3>Welcome, Annette!</h3>
+      </div>
+      <div className="kwn-dashboard-resume_container">
+        <h1>Solicitud De Citas </h1>
+      </div>
+      <div className="kwn-dashboard-solicitud-container">
+        <div className="kwn-dashboard-solicitud-sub-container">
+          <div className="kwn-dashboard-side_line"></div>
+          <div className="kwn-dashboard-solicitud-tag">
+            <p>You have # new patient request</p>
+          </div>
+        </div>
+
+        <div className="kwn-dashboard-solicitud-btn">
+          <p>Ver solicitudes</p>
+        </div>
+      </div>
+      <div className="kwn-dashboard-resume_container">
+        <h1>Resumen</h1>
       </div>
       <div className="kwn-dashboard-appointments_and_patients_top_view">
         {appointmentPatientArray.map((item) => {

@@ -72,7 +72,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  height: 30%;
+  /* height: 30%; */
   /* min-height: 60%; */
   padding-bottom: 5rem;
 }
@@ -160,6 +160,110 @@
 .css-3nejl.Appointment-appointment {
   /* width: 35% !important; */
   background-color: var(--color-theme) !important;
+}
+
+.kwn-appointment_content-container {
+  /* height: 8.8rem; */
+  max-width: 37rem;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  /* justify-content: center; */
+  box-shadow: 4px 4px 15px rgba(57, 61, 72, 0.1);
+  border-radius: 12px;
+}
+.kwn-appointment-content-slider {
+  width: 5px;
+  height: 6.2rem;
+  background-color: #006039;
+  border-radius: 10px;
+}
+
+.kwn-appointment-content {
+  padding: 0 15px;
+  display: flex;
+  flex-direction: column;
+  width: 36.8rem;
+}
+
+.kwn-appointment-content-time-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1rem;
+  /* max-width: 35rem; */
+}
+
+.kwn-appointment-content-time-sub-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.kwn-appointment-content-time-sub-container img {
+  width: 15px;
+  height: 15px;
+}
+
+.kwn-appointment-content-time-sub-container h4 {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  font-family: var(--font-family);
+  color: #666666;
+  margin-left: 1.5rem;
+}
+
+.kwn-appointment-content-divider {
+  border: 1px solid #dadada;
+  margin-bottom: 6px;
+}
+.kwn-appointment-content-three-dot {
+  margin-bottom: 10px;
+}
+.kwn-appointment-content-three-dot img {
+  width: 1rem;
+  height: 2rem;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.kwn-appointment-content-btn-main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+
+.kwn-appointment-content-profile_name {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.kwn-appointment-content-profile_name img {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 1.4rem;
+}
+
+.kwn-appointment-content-profile_name-sub-container h2 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: var(--font-family);
+  color: #2d292a;
+  margin-left: 1rem;
+}
+
+.kwn-appointment-content-profile_name-sub-container h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  font-family: var(--font-family);
+  color: #666666;
+  margin-left: 1rem;
 }
 
 /* -------Media Query------ */

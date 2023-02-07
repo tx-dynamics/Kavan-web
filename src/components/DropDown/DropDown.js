@@ -3,12 +3,20 @@ import "./DropDown.css";
 import arrow from "./chevron-down.png";
 import { arrowDown } from "../../assets";
 
-const DropDown = ({ selected, setSelected, options, text, bg, width }) => {
+const DropDown = ({
+  selected,
+  setSelected,
+  options,
+  text,
+  bg,
+  width,
+  textStyle,
+}) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <div className="dropdown" style={bg}>
-      <p>{text}</p>
+      <p style={textStyle}>{text}</p>
       <div
         className="dropdown-btn"
         style={bg}

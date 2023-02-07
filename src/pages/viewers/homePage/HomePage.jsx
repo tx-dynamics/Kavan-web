@@ -15,9 +15,22 @@ import {
   direction,
   option,
   home,
+  homeImage1,
+  playStore,
+  appleStore2,
+  comparison,
+  wave,
+  mobileSS,
+  homeIcon1,
+  homeIcon2,
+  homeIcon3,
+  homeIcon4,
+  homeIcon5,
+  homeEllipse,
 } from "../../../assets";
 import Testimonial from "./comp/Testimonial";
 import { red } from "@mui/material/colors";
+import AppDownload from "../../../components/appDownload/appDownload";
 
 export default function HomePage() {
   const testimonialArray = [
@@ -82,18 +95,101 @@ export default function HomePage() {
     },
   ];
 
+  const iconArray = [
+    {
+      id: 1,
+      title: "Agobiado? Empieza una sesión en menos de  25 minutos",
+      icon: homeIcon1,
+    },
+    {
+      id: 2,
+      title: "Sesiones desde 25 EUR",
+      icon: homeIcon2,
+    },
+    {
+      id: 3,
+      title: "Matcheo con el profesional que mejor cubra tus necesidades",
+      icon: homeIcon3,
+    },
+    {
+      id: 4,
+      title: "Mas de 100 profesionales disponibles",
+      icon: homeIcon4,
+    },
+    {
+      id: 5,
+      title: "Desde la comodidad de tu casa",
+      icon: homeIcon5,
+    },
+  ];
+
   return (
     <div>
       <Navbar />
       <div className="home-view">
-        <div className="kawan-therapy_all-container">
+        {/* <div className="kawan-therapy_all-container">
           <h1>Therapy for all </h1>
           <div className="download-app-container">
             <p>Descarga la App para hacer el match</p>
           </div>
           <img src={direction} />
         </div>
-        <img src={home} />
+        <img src={home} /> */}
+      </div>
+      <div
+        className="kawan-home-main-image"
+        style={{
+          backgroundImage: `url(${homeImage1})`,
+          width: "100%",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "auto",
+        }}
+      >
+        <h1>Therapy for all</h1>
+        <p>El futuro es emocional, invierte en ti</p>
+        <div className="kawan-home-app-download-image-container">
+          <img src={playStore} />
+          <img src={appleStore2} />
+        </div>
+      </div>
+      <div className="kawan-home-app-comparison-container">
+        <img src={comparison} />
+      </div>
+      <div className="kawan-home-app-source-container">
+        <p>
+          source: <span> Journal of Telemedicine e-health</span>
+        </p>
+      </div>
+      <div className="kawan-home-wave">
+        <img src={wave} />
+      </div>
+      <div className="kawan-home-session-online">
+        <p>
+          Soluciones para tus <span>sesiones online</span>
+        </p>
+      </div>
+      <div className="kawan-home-session-main-container">
+        <div className="kawan-home-session-mobile-ss">
+          <img src={mobileSS} />
+        </div>
+        <div className="kawan-home-session-vertical-line"></div>
+        <div className="kawan-home-session-info-container">
+          {iconArray.map((item) => {
+            return (
+              <div className="kawan-home-session-item">
+                <img src={item.icon} />
+                <h2>{item.title}</h2>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="kawan-home-ellipse">
+        <img src={homeEllipse} />
+      </div>
+      <div>
+        <AppDownload />
       </div>
 
       {/* <div className="header_main_view section__padding">

@@ -31,9 +31,11 @@ const VerifyPhoneNumber = () => {
           <p>
             Didn’t recieve code,<span>Resend</span>
           </p>
-          <div style={{ marginTop: "3rem", marginRight: "0" }}>
-            <Button onClick={() => navigate("/specialist")}>verify</Button>
-          </div>
+        </div>
+
+        <div style={{ marginTop: "2rem" }}>
+          {/* <Button onClick={() => navigate("/specialist")}>Verify</Button> */}
+          <Button onClick={() => navigate("/choosePofile")}>Verify</Button>
         </div>
       </div>
       <Footer />
