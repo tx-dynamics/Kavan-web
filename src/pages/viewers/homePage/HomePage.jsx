@@ -31,6 +31,7 @@ import {
 import Testimonial from "./comp/Testimonial";
 import { red } from "@mui/material/colors";
 import AppDownload from "../../../components/appDownload/appDownload";
+import ReactButton from "../../../components/rectButton/reactButton";
 
 export default function HomePage() {
   const testimonialArray = [
@@ -142,7 +143,7 @@ export default function HomePage() {
           backgroundImage: `url(${homeImage1})`,
           width: "100%",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "auto",
+          backgroundSize: "cover",
         }}
       >
         <h1>Therapy for all</h1>
@@ -187,6 +188,15 @@ export default function HomePage() {
 
       <div className="kawan-home-ellipse">
         <img src={homeEllipse} />
+        <div className="kawan-home-ellipse-btn-main-container">
+          <ReactButton />
+          <div className="kawan-join-btn-main-container">
+            <p>
+              ¿Eres psicólogo?{" "}
+              <span style={{ color: "#006039", fontWeight: "600" }}>Únete</span>{" "}
+            </p>
+          </div>
+        </div>
       </div>
       <div>
         <AppDownload />
@@ -329,7 +339,7 @@ export default function HomePage() {
             );
           })}
         </div> */}
-        <h1 className="body_text_one" style={{ paddingTop: 0 }}>
+        {/* <h1 className="body_text_one" style={{ paddingTop: 0 }}>
           Users Testimonials
         </h1>
         <div className="kwn-home-testimonial-heading-main_container">
@@ -337,10 +347,10 @@ export default function HomePage() {
             The hospital is an integral part of a social and health organization
             providing services.
           </h1>
-        </div>
+        </div> */}
       </div>
 
-      <div className="kwn-home-testimonial-card-main_container">
+      {/* <div className="kwn-home-testimonial-card-main_container">
         {testimonialArray.map((item) => {
           return <Testimonial item={item} />;
         })}
@@ -355,7 +365,7 @@ export default function HomePage() {
           <img src={appleStore} alt="" />
           <img src={googleStore} alt="" />
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </div>

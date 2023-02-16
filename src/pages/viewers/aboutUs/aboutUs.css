@@ -37,7 +37,7 @@
   flex-wrap: wrap;
 }
 .kawan-about_us-emoji-container {
-  width: 46.8rem;
+  width: 39rem;
   height: 34rem;
   display: flex;
   flex-direction: column;
@@ -149,6 +149,125 @@
   text-decoration: underline;
   margin-left: 2rem;
   cursor: pointer;
+}
+.kawan-about_us-who_is-professional-heading {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8.3rem;
+  margin-bottom: 11rem;
+}
+.kawan-about_us-who_is-professional-heading h3 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 4.5rem;
+  color: var(--color-theme);
+  align-self: center;
+}
+.kawan-about_us-who_is-proffes-review-container {
+  min-width: 39.3rem;
+  /* height: 49rem; */
+  border-radius: 2rem;
+  border: 1px solid #449368;
+  background: #f7fffb;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2.8rem !important;
+  /* box-sizing: border-box; */
+}
+
+.kawan-about_us-who_is-prof-profile-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.kawan-about_us-who_is-prof-profile-container img {
+  width: 7.4rem;
+  height: 7.4rem;
+  border-radius: 3.8rem;
+}
+
+.kawan-about_us-who_is-prof-profile-name-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+
+.kawan-about_us-who_is-prof-profile-name-container h2 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--color-theme);
+}
+
+.kawan-about_us-who_is-prof-profile-name-container h3 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #3d5a80;
+}
+.kawan-about_us-who_is-proffes-review-container p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: #000000;
+  margin-top: 3rem;
+}
+/* ----Media Query */
+
+@media screen and (max-width: 850px) {
+  .kawan-about_us-main-image-container h1 {
+    font-size: 4.4rem;
+  }
+  .kawan-about_us-main-image-container p {
+    width: 52rem;
+  }
+  .kawan-about_us-emoji-container {
+    margin-bottom: 6rem;
+  }
+  .kawan-about_us-who_is-professional-heading h3 {
+    font-size: 3rem;
+  }
+
+  .kawan-about_us-who_is-proffes-review-container {
+    min-width: 29rem;
+  }
+  .kawan-about_us-who_is-prof-profile-name-container h2 {
+    font-size: 1.6rem;
+  }
+  .kawan-about_us-who_is-prof-profile-name-container h3 {
+    font-size: 1.6rem;
+  }
+  .kawan-about_us-who_is-proffes-review-container p {
+    font-size: 1.4rem;
+  }
+
+  .kawan-carousal-btn-for {
+    right: 43% !important;
+  }
+
+  .kawan-carousal-btn-back {
+    right: 43% !important;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .kawan-about_us-main-image-container h1 {
+    font-size: 3.4rem;
+  }
+  .kawan-about_us-main-image-container p {
+    width: 40rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .kawan-about_us-main-image-container p {
+    width: 30rem;
+  }
 }
 
 /* ------------------------------ */

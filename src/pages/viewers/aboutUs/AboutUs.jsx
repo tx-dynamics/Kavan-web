@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import Carousel from "react-simply-carousel";
+import ReactSimplyCarousel from "react-simply-carousel";
 import "./aboutUs.css";
 import { Navbar, Footer, Button } from "../../../components";
 import {
@@ -13,7 +15,13 @@ import {
   aboutEllipse,
   kawan,
   listTag,
+  forArrow,
+  preArrow,
+  emoji2,
+  emoji3,
+  aboutEllipse2,
 } from "../../../assets";
+import AppDownload from "../../../components/appDownload/appDownload";
 
 const listLink = [
   {
@@ -31,121 +39,293 @@ const emojisArr = [
     id: 1,
     title: "Who we are",
     des: "Kavan es una empresa de terapias online comprometida con democratizar el acceso a las terapias y mejorar el bienestar mental y emocional de las personas.",
+    img: emoji1,
   },
   {
     id: 1,
     title: "What we do",
     des: "Ofrecemos terapias online accesibles y personalizadas mediante el uso de un chatbot para determinar las necesidades de los clientes y recomendar psicólogos específicos.",
+    img: emoji2,
   },
   {
     id: 1,
     title: " Why we do it?",
     des: "Consideramos que todas las personas merecen tener acceso a terapias de calidad, independientemente de su situación. Trabajamos para crear un espacio donde las personas puedan convertirse en su mejor versión, ayudando así a mejorar su bienestar mental y emocional.",
+    img: emoji3,
   },
 ];
 export default function AboutUs() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const reviewData = [
+    {
+      id: 1,
+      title:
+        "Lorem ipsum dolor sit amet consectetur. Id tincidunt est dui mauris pharetra venenatis amet aliquet in. Massa ridiculus dui faucibus ac risus rutrum donec aenean pharetra. Est metus sed facilisis pharetra egestas non ipsum. Lorem turpis tempor nulla morbi. Vitae elit amet sapien sed cursus hendrerit malesuada. Pharetra quam nulla pellentesque nunc. In in quis mauris.",
+    },
+    {
+      id: 2,
+      title:
+        "Lorem ipsum dolor sit amet consectetur. Id tincidunt est dui mauris pharetra venenatis amet aliquet in. Massa ridiculus dui faucibus ac risus rutrum donec aenean pharetra. Est metus sed facilisis pharetra egestas non ipsum. Lorem turpis tempor nulla morbi. Vitae elit amet sapien sed cursus hendrerit malesuada. Pharetra quam nulla pellentesque nunc. In in quis mauris.",
+    },
+    {
+      id: 3,
+      title:
+        "Lorem ipsum dolor sit amet consectetur. Id tincidunt est dui mauris pharetra venenatis amet aliquet in. Massa ridiculus dui faucibus ac risus rutrum donec aenean pharetra. Est metus sed facilisis pharetra egestas non ipsum. Lorem turpis tempor nulla morbi. Vitae elit amet sapien sed cursus hendrerit malesuada. Pharetra quam nulla pellentesque nunc. In in quis mauris.",
+    },
+    {
+      id: 4,
+      title:
+        "Lorem ipsum dolor sit amet consectetur. Id tincidunt est dui mauris pharetra venenatis amet aliquet in. Massa ridiculus dui faucibus ac risus rutrum donec aenean pharetra. Est metus sed facilisis pharetra egestas non ipsum. Lorem turpis tempor nulla morbi. Vitae elit amet sapien sed cursus hendrerit malesuada. Pharetra quam nulla pellentesque nunc. In in quis mauris.",
+    },
+    {
+      id: 5,
+      title:
+        "Lorem ipsum dolor sit amet consectetur. Id tincidunt est dui mauris pharetra venenatis amet aliquet in. Massa ridiculus dui faucibus ac risus rutrum donec aenean pharetra. Est metus sed facilisis pharetra egestas non ipsum. Lorem turpis tempor nulla morbi. Vitae elit amet sapien sed cursus hendrerit malesuada. Pharetra quam nulla pellentesque nunc. In in quis mauris.",
+    },
+    {
+      id: 5,
+      title:
+        "Lorem ipsum dolor sit amet consectetur. Id tincidunt est dui mauris pharetra venenatis amet aliquet in. Massa ridiculus dui faucibus ac risus rutrum donec aenean pharetra. Est metus sed facilisis pharetra egestas non ipsum. Lorem turpis tempor nulla morbi. Vitae elit amet sapien sed cursus hendrerit malesuada. Pharetra quam nulla pellentesque nunc. In in quis mauris.",
+    },
+  ];
   return (
-    <div>
-      <Navbar />
-      <div className="mianContainer">
-        <div
-          className="kawan-about_us-main-image-container"
-          style={{
-            backgroundImage: `url(${aboutUsImg})`,
-            width: "100%",
-            backgroundSize: "auto",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <h1>
-            About <span style={{ fontWeight: "600" }}>Kavan Health</span>
-          </h1>
-          <p style={{ marginTop: "6.4rem" }}>
-            Kavan empezó con una misión:
-            <span style={{ fontWeight: "500" }}>
-              Crear un espacio donde las personas puedan convertirse en su mejor
-              versión.
-            </span>
-          </p>
-          <p style={{ marginTop: "3.4rem", marginBottom: "41rem" }}>
-            Kavan empezó con una misión:
-            <span style={{ fontWeight: "500" }}>
-              Crear un espacio donde las personas puedan convertirse en su mejor
-              versión.
-            </span>
-          </p>
-        </div>
-        <div className="kawan-about_us-emoji-main-container">
-          {emojisArr.map((item) => {
-            return (
-              <div className="kawan-about_us-emoji-container">
-                <div className="kawan-about_us-emoji-sub-container">
-                  <div className="kawan-about_us-emoji-circle">
-                    <img src={emoji1} />
-                  </div>
-                  <h1>{item.title}</h1>
-                </div>
-                <p>{item.des}</p>
-              </div>
-            );
-          })}
-        </div>
-
-        <div
-          style={{
-            backgroundImage: `url(${aboutEllipse})`,
-            width: "100%",
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-          }}
-        >
-          <div className="kawan-about_us-who_is-main-container">
-            <div className="kawan-about_us-who_is-img">
-              <img src={kawan} />
-            </div>
-            <div className="kawan-about_us-who_is-des-container">
-              <div className="kawan-about_us-who_is-des-h1">
-                <h1>Who is Kavan</h1>
-              </div>
-
-              <p>
-                Kavan es una empresa con el objetivo de normalizar y facilitar
-                el acceso de porfessionales de la salud mental. Nuestro nombre
-                es en honor al elefante Kaavan, quien vivió encerrado en un
-                zoológico de Tailandia durante 35 años, deprimido y malnutrido.
-                Con este nombre queremos llamar la atención sobre la importancia
-                del bienestar mental y emocional.
-              </p>
-              <div style={{ marginTop: "3rem" }}>
-                <p>
-                  democratizar el acceso a las terapias y hacerlas más
-                  accesibles para todas las personas. Ofrecemos terapias
-                  personalizadas para ayudar a las personas a alcanzar sus metas
-                  y mejorar su bienestar mental y emocional.
-                </p>
-              </div>
-
-              <div style={{ marginTop: "3rem" }}>
-                <p>
-                  No te conformes con menos, el bienestar mental y emocional
-                  está al alcance de tu mano con Kavan. ¡Toma el control de tu
-                  vida y agende tu primera sesión con nosotros hoy!
-                </p>
-              </div>
-              <div className="kawan-about_us-who_is-list-tag-container">
-                {listLink.map((item) => {
-                  return (
-                    <div className="kawan-about_us-list-tag-container">
-                      <img src={listTag} />
-                      <h1>{item.title}</h1>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+    console.log(activeSlide),
+    (
+      <div>
+        <Navbar />
+        <div className="mianContainer">
+          <div
+            className="kawan-about_us-main-image-container"
+            style={{
+              backgroundImage: `url(${aboutUsImg})`,
+              width: "100%",
+              backgroundSize: "auto",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <h1>
+              About <span style={{ fontWeight: "600" }}>Kavan Health</span>
+            </h1>
+            <p style={{ marginTop: "6.4rem" }}>
+              Kavan empezó con una misión:
+              <span style={{ fontWeight: "500" }}>
+                Crear un espacio donde las personas puedan convertirse en su
+                mejor versión.
+              </span>
+            </p>
+            <p style={{ marginTop: "3.4rem", marginBottom: "41rem" }}>
+              Kavan empezó con una misión:
+              <span style={{ fontWeight: "500" }}>
+                Crear un espacio donde las personas puedan convertirse en su
+                mejor versión.
+              </span>
+            </p>
           </div>
-        </div>
-        {/* <div className="aboutTextDiv">
+          <div className="kawan-about_us-emoji-main-container">
+            {emojisArr.map((item) => {
+              return (
+                <div className="kawan-about_us-emoji-container">
+                  <div className="kawan-about_us-emoji-sub-container">
+                    {/* <div className="kawan-about_us-emoji-circle">
+                    </div> */}
+                    <img src={item.img} />
+                    <h1>{item.title}</h1>
+                  </div>
+                  <p>{item.des}</p>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="kawan-who_is-kawan-main-container">
+            <img style={{ width: "100%" }} src={aboutEllipse2} />
+          </div>
+
+          {/* <div
+            style={{
+              backgroundImage: `url(${aboutEllipse})`,
+              width: "100%",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <div className="kawan-about_us-who_is-main-container">
+              <div className="kawan-about_us-who_is-img">
+                <img src={kawan} />
+              </div>
+              <div className="kawan-about_us-who_is-des-container">
+                <div className="kawan-about_us-who_is-des-h1">
+                  <h1>Who is Kavan</h1>
+                </div>
+
+                <p>
+                  Kavan es una empresa con el objetivo de normalizar y facilitar
+                  el acceso de porfessionales de la salud mental. Nuestro nombre
+                  es en honor al elefante Kaavan, quien vivió encerrado en un
+                  zoológico de Tailandia durante 35 años, deprimido y
+                  malnutrido. Con este nombre queremos llamar la atención sobre
+                  la importancia del bienestar mental y emocional.
+                </p>
+                <div style={{ marginTop: "3rem" }}>
+                  <p>
+                    democratizar el acceso a las terapias y hacerlas más
+                    accesibles para todas las personas. Ofrecemos terapias
+                    personalizadas para ayudar a las personas a alcanzar sus
+                    metas y mejorar su bienestar mental y emocional.
+                  </p>
+                </div>
+
+                <div style={{ marginTop: "3rem" }}>
+                  <p>
+                    No te conformes con menos, el bienestar mental y emocional
+                    está al alcance de tu mano con Kavan. ¡Toma el control de tu
+                    vida y agende tu primera sesión con nosotros hoy!
+                  </p>
+                </div>
+                <div className="kawan-about_us-who_is-list-tag-container">
+                  {listLink.map((item) => {
+                    return (
+                      <div className="kawan-about_us-list-tag-container">
+                        <img src={listTag} />
+                        <h1>{item.title}</h1>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div> */}
+
+          <div className="kawan-about_us-who_is-professional-heading">
+            <h3>Conoce a nuestros profesionales</h3>
+          </div>
+
+          <div>
+            <Carousel
+              innerProps={{
+                style: {
+                  maxWidth: "100%",
+                  minWidth: "100%",
+                  marginBottom: "12rem",
+                },
+              }}
+              containerProps={{
+                style: {
+                  width: "100%",
+                  justifyContent: "space-between",
+                  position: "relative",
+                  zIndex: 10,
+                },
+              }}
+              activeSlideIndex={activeSlide}
+              infinite={false}
+              onRequestChange={setActiveSlide}
+              forwardBtnProps={{
+                className: "kawan-carousal-btn-for",
+                disabled: activeSlide == reviewData.length - 3 ? true : false,
+                children: (
+                  <img
+                    style={{ height: "2.3rem", width: "1.3rem" }}
+                    src={forArrow}
+                  />
+                ),
+                style: {
+                  width: "4rem",
+                  height: "4rem",
+                  alignSelf: "center",
+                  background:
+                    activeSlide == reviewData.length - 3
+                      ? "#3D5A80"
+                      : "#275F40",
+                  border: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "4px",
+                  position: "absolute",
+                  right: "47%",
+                  top: "90%",
+                  cursor: "pointer",
+                },
+              }}
+              backwardBtnProps={{
+                className: "kawan-carousal-btn-back",
+                children: (
+                  <img
+                    style={{ height: "2.3rem", width: "1.3rem" }}
+                    src={preArrow}
+                  />
+                ),
+                style: {
+                  width: "4rem",
+                  height: "4rem",
+                  alignSelf: "center",
+                  background: activeSlide == 0 ? "#3D5A80" : "#275F40",
+                  border: "none",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  borderRadius: "4px",
+                  position: "absolute",
+                  left: "47%",
+                  top: "90%",
+                  cursor: "pointer",
+                },
+              }}
+              dotsNav={{
+                show: false,
+                itemBtnProps: {
+                  style: {
+                    height: 16,
+                    width: 16,
+                    borderRadius: "50%",
+                    border: 0,
+                  },
+                },
+                activeItemBtnProps: {
+                  style: {
+                    height: 16,
+                    width: 16,
+                    borderRadius: "50%",
+                    border: 0,
+                    background: "black",
+                  },
+                },
+              }}
+              itemsToShow={2}
+              speed={400}
+            >
+              {reviewData.map(() => {
+                return (
+                  <div className="kawan-about_us-who_is-proffes-review-container">
+                    <div className="kawan-about_us-who_is-prof-profile-container">
+                      <img src={dummy2} />
+                      <div className="kawan-about_us-who_is-prof-profile-name-container">
+                        <h2>Ms. Barry Kilback </h2>
+                        <h3>Psychologist</h3>
+                      </div>
+                    </div>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur. Id tincidunt est
+                      dui mauris pharetra venenatis amet aliquet in. Massa
+                      ridiculus dui faucibus ac risus rutrum donec aenean
+                      pharetra. Est metus sed facilisis pharetra egestas non
+                      ipsum. Lorem turpis tempor nulla morbi. Vitae elit amet
+                      sapien sed cursus hendrerit malesuada. Pharetra quam nulla
+                      pellentesque nunc. In in quis mauris.
+                    </p>
+                  </div>
+                );
+              })}
+            </Carousel>
+            <div>
+              <AppDownload />
+            </div>
+            <div style={{ marginTop: "6rem" }}></div>
+          </div>
+
+          {/* <div className="aboutTextDiv">
           <h1>About Kavan Health</h1>
         </div>
         <div className="usersTopDiv">
@@ -318,8 +498,9 @@ export default function AboutUs() {
             massa congue varius.{" "}
           </p>
         </div> */}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    )
   );
 }

@@ -88,6 +88,7 @@
   font-weight: 400;
   color: #3d5a80;
   font-family: var(--font-family);
+  margin-top: 2rem;
 }
 
 .kawan-home-session-online span {
@@ -101,6 +102,7 @@
   flex-direction: row;
   margin-top: 9rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .kawan-home-session-mobile-ss {
@@ -116,12 +118,12 @@
   align-items: flex-start;
   flex-direction: column;
   padding-left: 5rem;
+  margin-top: 3rem;
 }
 
 .kawan-home-session-mobile-ss img {
   width: 35rem;
   height: 70rem;
-  background-color: red;
   align-self: flex-end;
 }
 
@@ -151,11 +153,134 @@
   width: 38rem;
   margin-bottom: 3rem;
 }
-
+.kawan-home-ellipse {
+  position: relative;
+}
 .kawan-home-ellipse img {
   width: 100%;
   margin-top: 7.7rem;
 }
+
+.kawan-home-ellipse-btn-main-container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  left: 14%;
+  bottom: 24%;
+}
+
+.kawan-join-btn-main-container {
+  width: 27rem;
+  height: 6.6rem;
+  background-color: #fff;
+  border: 1.1361px solid #006039;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 3rem;
+  cursor: pointer;
+}
+
+.kawan-join-btn-main-container p {
+  color: #414141;
+  font-size: 1.8rem;
+  font-family: var(--font-family);
+}
+/* ----------------Media Query */
+
+@media screen and (max-width: 850px) {
+  .kawan-home-session-online p {
+    font-size: 2.8rem;
+  }
+  .kawan-home-session-online span {
+    font-size: 2.8rem;
+  }
+
+  .kawan-home-session-vertical-line {
+    display: none;
+  }
+
+  .kawan-home-session-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .kawan-join-btn-main-container {
+    width: 12rem;
+    height: 2.8rem;
+    border-radius: 0.6rem;
+    margin-left: 1rem;
+  }
+  .kawan-join-btn-main-container p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .kawan-home-session-item h2 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    width: 24rem;
+    margin-bottom: 1rem;
+  }
+  .kawan-home-app-download-image-container {
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 20rem;
+  }
+  .kawan-home-app-download-image-container {
+    height: 9rem;
+  }
+  .kawan-home-main-image h1 {
+    font-size: 2.4rem;
+  }
+  .kawan-home-main-image p {
+    font-size: 1.6rem;
+  }
+  .kawan-home-app-download-image-container img {
+    width: 12rem;
+    height: 2.8rem;
+  }
+  .kawan-home-app-source-container p {
+    font-size: 1rem;
+  }
+  .kawan-home-app-source-container span {
+    font-size: 1rem;
+  }
+  .kawan-home-session-online p {
+    font-size: 1.8rem;
+  }
+  .kawan-home-session-online span {
+    font-size: 1.8rem;
+  }
+
+  .kawan-home-session-mobile-ss img {
+    width: 18rem;
+    height: 35rem;
+    aspect-ratio: 1;
+  }
+  .kawan-home-session-item img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .kawan-join-btn-main-container {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.4rem;
+  }
+  .kawan-join-btn-main-container p {
+    font-size: 0.7rem;
+  }
+  .kawan-join-btn-main-container span {
+    font-size: 0.7rem;
+  }
+}
+
 /* --------------------------- */
 .home-view img {
   width: 100%;

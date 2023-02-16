@@ -16,10 +16,52 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 70rem;
+  justify-content: space-between;
+  margin-top: 3.9rem;
+  flex-wrap: wrap;
 
   /* justify-content: space-between; */
 }
 
-.kawan-ap-download-qr {
+.kawan-ap-download-qr img {
+  width: 30rem;
+  height: 30rem;
   cursor: pointer;
+  object-fit: contain;
+  box-shadow: 0px 28.15px 66.31px rgba(1, 23, 21, 0.09);
+  /* margin-left: 6rem; */
+}
+
+/* -----Media Query---- */
+
+@media screen and (max-width: 850px) {
+  .kawan-ap-download-qr img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .kawan-ap-download-qr {
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .kawan-home-app-download h1 {
+    font-size: 2.5rem;
+  }
+  .kawan-ap-download-qr {
+    flex-direction: column;
+  }
+  .kawan-ap-download-qr img {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .kawan-home-session-info-container {
+    margin-left: 0rem;
+  }
+  .kawan-home-ellipse-btn-main-container {
+    bottom: 20%;
+  }
 }

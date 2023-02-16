@@ -1,7 +1,7 @@
 .kwn-contact_us-main_container {
   display: flex;
   align-items: center;
-  padding: 2rem 9.6rem;
+  /* padding: 2rem 9.6rem; */
   flex-direction: column;
 }
 
@@ -17,6 +17,7 @@
 .kwn-contact_us-form_container {
   display: flex;
   flex-direction: column;
+  width: 75%;
 }
 
 .kwn-contact_us-Button_container {
@@ -25,6 +26,15 @@
   display: flex;
   justify-content: center;
   margin-top: 2.3rem;
+}
+
+.kwn-contact_us-form_sub-container1 {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 480px) {
