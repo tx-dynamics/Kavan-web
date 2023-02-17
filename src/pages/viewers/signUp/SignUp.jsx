@@ -61,6 +61,7 @@ export default function SignUp() {
                             name,
                             email,
                             password,
+                            doctor: true,
                         })
                         await req('POST', '/user/sendOTP', { email })
                         navigate(`/verifyEmail?email=${encodeURIComponent(email)}`)
