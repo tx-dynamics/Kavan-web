@@ -9,6 +9,7 @@ export { default as RegistrationPending } from "./registrationPending/Registrati
 export { default as RegistrationSuccessfull } from "./registrationSuccessfull/RegistrationSuccessfull";
 export { default as ForgotPassword } from "./forgotPassword/ForgotPassword";
 export { default as VerifyEmail } from "./verifyEmail/VerifyEmail";
+export { default as VerifyEmailForgetPassword } from "./verifyEmailForgetPassword/VerifyEmailForgetPassword";
 export { default as ConfirmPassword } from "./confirmPassword/ConfirmPassword";
 export { default as PhoneNumber } from "./phoneNumber/phoneNumber";
 export { default as VerifyPhoneNumber } from "./verifyPhoneNUmber/phoneNumber";

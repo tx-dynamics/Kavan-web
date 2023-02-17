@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { authReq } from "../../requests";
 import {
   crossIcon,
   navbarLogo,
@@ -91,7 +92,11 @@ const LeftSideBar = ({ flag, togglefun }) => {
         })}
       </div>
       <div
-        onClick={() => navigate("/")}
+        onClick={async () => {
+          await authReq('POST', '/user/logout', { device: {id: 'web', deviceToken: 'MockToken'} })
+          localStorage.clear()
+          navigate("/")
+        }}
         className="kwn-left-side_bar-logout_container"
       >
         <img src={sideBarLogout} />

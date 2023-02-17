@@ -25,6 +25,7 @@ const Navigation = () => {
       <Route path="/forgotPassword" element={<Viewers.ForgotPassword />} />
       <Route path="/confirmPassword" element={<Viewers.ConfirmPassword />} />
       <Route path="/verifyEmail" element={<Viewers.VerifyEmail />} />
+      <Route path="/verifyEmailForgetPassword" element={<Viewers.VerifyEmailForgetPassword />} />
       <Route path="/choosePofile" element={<Viewers.ChooseProfile />} />
       <Route
         path="/verifyPhoneNumber"

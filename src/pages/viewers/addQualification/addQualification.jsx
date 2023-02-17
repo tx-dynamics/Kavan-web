@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { Button, Footer, Navbar, TextInput } from "../../../components";
+import { WithAuth } from "../../../components/auth/auth";
+import { setParam, getAllParams } from "../../../urlParams";
 import DropDown from "../../../components/DropDown/DropDown";
 
 const qualificationArr = [
@@ -26,6 +28,7 @@ const countryArr = [
 
 function AddQualification() {
   const navigate = useNavigate();
+  const params = getAllParams()
 
   const [selected, setSelected] = useState({
     label: "Phd Psychology",
@@ -96,7 +99,19 @@ function AddQualification() {
         />
 
         <div style={{ marginTop: "2rem" }}>
-          <Button onClick={() => navigate("/addDegree")}>Next</Button>
+          <Button onClick={() => {
+            let educationArr = []
+            if(params.degrees) educationArr = JSON.parse(decodeURIComponent(params.degrees))?.degrees ?? [];
+            educationArr.push({
+              qualification: selected.value,
+              university: selectUniversity.value,
+              year: selectYear.value,
+              country: selectCountry.value,
+            })
+            console.log(educationArr)
+            const search = setParam(params, "degrees", JSON.stringify({degrees: educationArr}))
+            navigate(`/addDegree?${search}`)
+          }}>Next</Button>
         </div>
         <div className="kawan-add_later-container">
           <p>Add Later</p>

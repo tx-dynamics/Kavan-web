@@ -6,6 +6,7 @@ import "./verifyEmail.css";
 import { req } from "../../../requests";
 const VerifyEmail = () => {
   const [otp, setOtp] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const urlParams = new URLSearchParams(window.location.search);
   const email = urlParams.get('email');
   const navigate = useNavigate();
@@ -31,12 +32,14 @@ const VerifyEmail = () => {
         </div>
         <div className="kwn-verify_email-Button_container">
           <p>Change Email address</p>
+          <small style={{ color: 'red' }}>{errorMessage}</small>
           <div style={{ marginTop: "3rem", marginRight: "0" }}>
             <Button onClick={async () => {
-              const { token, refreshToken } = await req('POST', '/user/verify', { email, otp, device: { id: 'web', deviceToken: "MockToken" } })
-              localStorage.setItem('kawan_accessToken', token)
-              localStorage.setItem('kawan_refreshToken', refreshToken)
-              navigate("/createProfile")
+              const data = await req('POST', '/user/verifyOTPResetPassword', { email, otp, device: { id: 'web', deviceToken: "MockToken" } })
+              if(data?.correct) {
+                navigate(`/confirmPassword?email=${encodeURIComponent(email)}&otp=${encodeURIComponent(otp)}`)
+              }
+              else setErrorMessage("Incorrect OTP")
             }}>Verify</Button>
           </div>
         </div>

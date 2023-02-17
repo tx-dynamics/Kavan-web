@@ -2,9 +2,9 @@ import React from "react";
 
 import "./whiteButton.css";
 
-const WhiteButton = ({ text }) => {
+const WhiteButton = ({ text, onClick }) => {
   return (
-    <div className="white-button-container">
+    <div className="white-button-container" onClick={onClick}>
       <p>{text}</p>
     </div>
   );
