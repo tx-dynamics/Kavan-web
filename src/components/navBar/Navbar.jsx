@@ -3,6 +3,7 @@ import './navbar.css'
 import logo from '../../assets/navbarLogo.png'
 import close from '../../assets/close.png'
 import menu from '../../assets/menu.png'
+import { WithAuth } from '../auth/auth.js'
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
@@ -22,7 +23,11 @@ const Navbar = () => {
             <Link to={'/contactUs'}>
                 <p><a className='kavan__navbar-links_text' href='#contactUs' style={{ borderBottomStyle: window.location.href.includes("/contactUs") ? 'solid' : 'none' }}>Contact us</a></p>
             </Link>
-            <button onClick={() => navigate('/signIn')} className='kavan__navbar-links_button'>Get Started</button>
+            <WithAuth component={
+                <button onClick={() => navigate('/dashboard/AdminHome')} className='kavan__navbar-links_button'>Dashboard</button>
+            } elseComponent={
+                <button onClick={() => navigate('/signIn')} className='kavan__navbar-links_button'>Get Started</button>
+            }/>
         </>
     )
     return (

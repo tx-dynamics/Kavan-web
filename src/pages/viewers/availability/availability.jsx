@@ -4,9 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { calenderIcon, greenIcon } from "../../../assets";
 
 import { Button, Footer, Navbar, TextInput } from "../../../components";
+import { WithAuth } from "../../../components/auth/auth";
+import { getAllParams, setParam } from "../../../urlParams";
 import DropDown from "../../../components/DropDown/DropDown";
 
 const Availability = () => {
+  const params = getAllParams()
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -43,7 +46,8 @@ const Availability = () => {
     </div>
   ));
   return (
-    <>
+    <WithAuth component={
+      <>
       <Navbar />
       <div className="kawn-add-phone_number">
         <div className="kwn-fill_out_form-title_container">
@@ -89,7 +93,15 @@ const Availability = () => {
           dateFormat="h:mm aa"
         />
         <div style={{ marginTop: "3.7rem" }}>
-          <Button onClick={() => navigate("/addExperienceDegree")}>Next</Button>
+          <Button onClick={() => {
+            const search = setParam(params, {
+              startDate,
+              endDate,
+              dayStart: weekSelect?.value,
+              dayEnd: weekSelect2?.value,
+            })
+            navigate(`/addQualification?${search}`)
+          }}>Next</Button>
         </div>
         <div className="kawan-add_later-container">
           <p>Add Later</p>
@@ -97,6 +109,7 @@ const Availability = () => {
       </div>
       <Footer />
     </>
+    }/>
   );
 };
 

@@ -1,13 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { cross } from "../../../assets";
 
 import { Button, Footer, Navbar, TextInput } from "../../../components";
+import { getAllParams, setParam } from "../../../urlParams";
 
 const AddSpecialist = () => {
   const navigate = useNavigate();
+  const params = getAllParams()
   const [specialiezedText, setSpecialiezedText] = useState("");
   const [specialiezedArray, setSpecialiezedArray] = useState([]);
+
+  useEffect(() => console.log(specialiezedArray), [specialiezedArray])
 
   const addSpecialiezed = () => {
     var data = [...specialiezedArray];
@@ -54,7 +58,10 @@ const AddSpecialist = () => {
             .slice(0, 5)}
         </div>
         <div style={{ marginTop: "8.7rem" }}>
-          <Button onClick={() => navigate("/addLanguage")}>Next</Button>
+          <Button onClick={() => {
+            const search = setParam(params, "specialistArray", JSON.stringify({ specialistArray: specialiezedArray.map(x => x?.title).filter(x => !!x) }))
+            navigate(`/addLanguage?${search}`)
+          }}>Next</Button>
         </div>
         <div className="kawan-add_later-container">
           <p>Add Later</p>

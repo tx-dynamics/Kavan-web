@@ -49,7 +49,7 @@ const EditProfile = () => {
 
     const addSpecialiezed = () => {
         var data = [...fieldArray];
-        data.push({ id: data.length + 1, title: specialiezedText });
+        data.push({ id: data?.length + 1 ?? 0, title: specialiezedText });
         setFieldArray(data)
         setSpecialiezedText('')
     }

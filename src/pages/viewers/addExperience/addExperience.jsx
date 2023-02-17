@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { calenderIcon } from "../../../assets";
 
 import { Button, Footer, Navbar, TextInput } from "../../../components";
+import { setParam, getAllParams } from "../../../urlParams";
 import DropDown from "../../../components/DropDown/DropDown";
 import SelectDate from "../../../components/selectDate/selectDate";
 
@@ -19,6 +20,7 @@ const countryArr = [
 ];
 const AddExperience = () => {
   const navigate = useNavigate();
+  const params = getAllParams();
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const positionArr = [
@@ -62,8 +64,8 @@ const AddExperience = () => {
       <Navbar />
       <div className="kawn-add-phone_number">
         <div className="kwn-fill_out_form-title_container">
-          <h1>Add Qualification</h1>
-          <h2>Add your highest qualifictaion detail here</h2>
+          <h1>Add Experience</h1>
+          <h2>Add your experience here</h2>
         </div>
         <DropDown
           options={positionArr}
@@ -108,7 +110,19 @@ const AddExperience = () => {
           setSelected={setSelectCountry}
         />
         <div style={{ marginTop: "3.7rem" }}>
-          <Button onClick={() => navigate("/addExperienceDegree")}>Save</Button>
+          <Button onClick={() => {
+            let expArr = []
+            if(params.exp) expArr = JSON.parse(decodeURIComponent(params.exp))?.exp ?? [];
+            expArr.push({
+              position: selected.value,
+              hospital: selectHospital.value,
+              country: selectCountry.value,
+              startDate,
+              endDate
+            })
+            const search = setParam(params, "exp", JSON.stringify({exp: expArr}))
+            navigate(`/addExperienceDegree?${search}`)
+          }}>Save</Button>
         </div>
         <div className="kawan-add_later-container">
           <p>Add Later</p>

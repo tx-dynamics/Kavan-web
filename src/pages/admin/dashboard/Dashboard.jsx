@@ -12,6 +12,7 @@ import {
   users,
 } from "../../../assets";
 import { AppointmentView, SearchBar } from "../../../components";
+import { WithAuth } from "../../../components/auth/auth.js";
 import { Area } from "@ant-design/plots";
 import "./dashboard.css";
 
@@ -171,79 +172,79 @@ const Dashboard = () => {
     },
   };
 
-  return (
-    <div className="kavan_admin_main_container">
-      <div className="kwn-search">
-        <SearchBar />
-      </div>
-      <div className="kwn-dashboard-title_container">
-        <h1>Kavan Dashboard</h1>
-        <h3>Welcome, Annette!</h3>
-      </div>
-      <div className="kwn-dashboard-resume_container">
-        <h1>Solicitud De Citas </h1>
-      </div>
-      <div className="kwn-dashboard-solicitud-container">
-        <div className="kwn-dashboard-solicitud-sub-container">
-          <div className="kwn-dashboard-side_line"></div>
-          <div className="kwn-dashboard-solicitud-tag">
-            <p>You have # new patient request</p>
-          </div>
-        </div>
-
-        <div className="kwn-dashboard-solicitud-btn">
-          <p>Ver solicitudes</p>
-        </div>
-      </div>
-      <div className="kwn-dashboard-resume_container">
-        <h1>Resumen</h1>
-      </div>
-      <div className="kwn-dashboard-appointments_and_patients_top_view">
-        {appointmentPatientArray.map((item) => {
-          return (
-            <div className="kwn-dashboard-appointments_and_patients_view">
-              <div className="kwn-dashboard-round_calender_view">
-                <img src={item.img} />
-              </div>
-              <div>
-                <h2>{item.count}</h2>
-                <h3>{item.title}</h3>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-
-      <div className="kwn-dashboard-arrows_top_view">
-        <h1 className="kwn-heading">Patient’s Graph</h1>
-        <div className="kwn-dashboard-arrows_view">
-          <div>
-            <img src={arrowLeft} />
-          </div>
-          <div>
-            <img src={arrowRight} />
-          </div>
-        </div>
-      </div>
-
-      <div className="kwn-dashboard-total_patients_view">
-        <h3>Total patient in july</h3>
-        <h4>165</h4>
-        <h5>20.5 %</h5>
-      </div>
-      <div className="kwn-dashboard-graph_view">
-        <Area data={graphArray} {...config} />
-      </div>
-
-      <div className="kwn-dashboard-appointments_top_view">
-        <h1 className="kwn-heading">appointments requests </h1>
-        <div className="kwn-dashboard-appointment_view">
-          <AppointmentView />
-          <AppointmentView />
-        </div>
+  return <WithAuth component={
+  <div className="kavan_admin_main_container">
+  <div className="kwn-search">
+    <SearchBar />
+  </div>
+  <div className="kwn-dashboard-title_container">
+    <h1>Kavan Dashboard</h1>
+    <h3>Welcome, Annette!</h3>
+  </div>
+  <div className="kwn-dashboard-resume_container">
+    <h1>Solicitud De Citas </h1>
+  </div>
+  <div className="kwn-dashboard-solicitud-container">
+    <div className="kwn-dashboard-solicitud-sub-container">
+      <div className="kwn-dashboard-side_line"></div>
+      <div className="kwn-dashboard-solicitud-tag">
+        <p>You have # new patient request</p>
       </div>
     </div>
-  );
+
+    <div className="kwn-dashboard-solicitud-btn">
+      <p>Ver solicitudes</p>
+    </div>
+  </div>
+  <div className="kwn-dashboard-resume_container">
+    <h1>Resumen</h1>
+  </div>
+  <div className="kwn-dashboard-appointments_and_patients_top_view">
+    {appointmentPatientArray.map((item) => {
+      return (
+        <div className="kwn-dashboard-appointments_and_patients_view">
+          <div className="kwn-dashboard-round_calender_view">
+            <img src={item.img} />
+          </div>
+          <div>
+            <h2>{item.count}</h2>
+            <h3>{item.title}</h3>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <div className="kwn-dashboard-arrows_top_view">
+    <h1 className="kwn-heading">Patient’s Graph</h1>
+    <div className="kwn-dashboard-arrows_view">
+      <div>
+        <img src={arrowLeft} />
+      </div>
+      <div>
+        <img src={arrowRight} />
+      </div>
+    </div>
+  </div>
+
+  <div className="kwn-dashboard-total_patients_view">
+    <h3>Total patient in july</h3>
+    <h4>165</h4>
+    <h5>20.5 %</h5>
+  </div>
+  <div className="kwn-dashboard-graph_view">
+    <Area data={graphArray} {...config} />
+  </div>
+
+  <div className="kwn-dashboard-appointments_top_view">
+    <h1 className="kwn-heading">appointments requests </h1>
+    <div className="kwn-dashboard-appointment_view">
+      <AppointmentView />
+      <AppointmentView />
+    </div>
+  </div>
+</div>}
+  />;
 };
 
 export default Dashboard;
