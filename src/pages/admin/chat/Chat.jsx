@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   chatLogo,
@@ -9,306 +9,84 @@ import {
   mic,
   optionsIcon,
   send,
+  user,
   video,
 } from "../../../assets";
 import { SearchBar } from "../../../components";
+import { baseURL } from "../../../constants";
+import { authReq } from "../../../requests";
+import socketIO from "socket.io-client"
 
 import "./chat.css";
+
+const socket = socketIO(baseURL);
+
 const Chat = () => {
   const navigate = useNavigate();
   const [toggle, setToggle] = useState(false);
+
   const [selectedChat, setSelectedChat] = useState({
     id: 1,
-    title: "Annie",
-    message: "Hi, Mark Odama how are you",
-    image: dummy,
-    messagesArray: [
-      {
-        id: 1,
-        message: "Hi, Sweety! 👋 How are you today?",
-        type: "sender",
-      },
-      {
-        id: 2,
-        message: "I am fine",
-        type: "receiver",
-      },
-      {
-        id: 3,
-        message: "How can I help you.",
-        type: "sender",
-      },
-    ],
+    messagesArray: [],
   });
 
-  const chatArray = [
-    {
-      id: 1,
-      title: "Annie",
-      message: "Hi, Mark Odama how are you",
-      image: dummy,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: "John doe",
-      message: "Hi, Mark Odama how are you",
-      image: dummy3,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: "Annie",
-      message: "Hi, Mark Odama how are you",
-      image: dummy2,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: "John doe",
-      message: "Hi, Mark Odama how are you",
-      image: dummy3,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "Annie",
-      message: "Hi, Mark Odama how are you",
-      image: dummy,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 6,
-      title: "John doe",
-      message: "Hi, Mark Odama how are you",
-      image: dummy2,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 7,
-      title: "John doe",
-      message: "Hi, Mark Odama how are you",
-      image: dummy3,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 8,
-      title: "Annie",
-      message: "Hi, Mark Odama how are you",
-      image: dummy,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 9,
-      title: "John doe",
-      message: "Hi, Mark Odama how are you",
-      image: dummy2,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 10,
-      title: "John doe",
-      message: "Hi, Mark Odama how are you",
-      image: dummy3,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 11,
-      title: "Annie",
-      message: "Hi, Mark Odama how are you",
-      image: dummy,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-    {
-      id: 12,
-      title: "John doe",
-      message: "Hi, Mark Odama how are you",
-      image: dummy2,
-      messagesArray: [
-        {
-          id: 1,
-          message: "Hi, Sweety! 👋 How are you today?",
-          type: "sender",
-        },
-        {
-          id: 2,
-          message: "I am fine",
-          type: "receiver",
-        },
-        {
-          id: 3,
-          message: "How can I help you.",
-          type: "sender",
-        },
-      ],
-    },
-  ];
+  const [message, setMessage] = useState("")
+  const [chatArray, setChatArray] = useState([]);
+  const [user, setUser] = useState({})
+
+
+  useEffect(() => {
+    authReq('GET', '/user/me')
+      .then(data => setUser(data.data))
+  }, [])
+
+  useEffect(() => {
+    if(!user._id) return
+    socket.emit('user-enter', { userId: user._id })
+    socket.emit('get-inboxes', { userId: user._id })
+
+    let first = true
+
+    socket.on('inboxes', data => {
+      const inboxes = data.data.inboxes
+      // console.log(inboxes)
+      socket.emit('get-messages', { userId: user._id, inbox: inboxes[0]._id })
+      socket.on('messages', data => {
+        // console.log("Got some messages!")
+        // console.log(data.data.messages)
+        const messagesArray = data.data.messages.map(message => {
+          return { ...message, type: message.sender == user._id ? 'sender' : 'receiver' }
+        })
+
+        const newinboxes = inboxes.map(inbox => {
+          return {
+            id: inbox.id,
+            title: inbox.name,
+            message: inbox.lastMessage,
+            image: inbox.image,
+            messagesArray,
+          }
+        })
+
+        console.log(newinboxes)
+        setChatArray(newinboxes)
+        newinboxes.forEach(inbox => {
+          console.log(inbox.id, selectedChat.id)
+          if(inbox.id == selectedChat.id) setSelectedChat(inbox)
+        })
+        setSelectedChat(newinboxes[0])
+        first = false
+      })
+    })
+
+  }, [user])
+
+  useEffect(() => {
+    const objDiv = document.getElementById('chatbox')
+    const messageEls = document.getElementsByClassName('kwn-chat-chating_item_view')
+    messageEls[messageEls.length - 1]?.scrollIntoView()
+    // objDiv.scrollTop = objDiv.scrollHeight
+  }, [selectedChat])
 
   return (
     <div className="kavan_admin_main_container">
@@ -324,11 +102,14 @@ const Chat = () => {
           }
         >
           <HeradrBox
+            user={user}
+            setChatArray={setChatArray}
             chatArray={chatArray}
             selectedChat={selectedChat}
             setSelectedChat={setSelectedChat}
             setToggle={setToggle}
             toggle={toggle}
+            socket={socket}
           />
         </div>
 
@@ -360,33 +141,30 @@ const Chat = () => {
           </div>
           <div className="kwn-chat-messages-view">
             <div className="kwn-chat-chating_view">
-              <div className="kwn-chat-chating_view_date">
-                <h3>Wed 8:21 AM</h3>
-              </div>
-              <div className="kwn-chat-chating_item_top_viwe">
-                {selectedChat.messagesArray.map((item) => {
+              <div id="chatbox" className="kwn-chat-chating_item_top_viwe">
+                {selectedChat.messagesArray.sort((a, b) => a.createdAt > b.createdAt ? 1 : -1).map((item) => {
                   return (
                     <div
                       className="kwn-chat-chating_item_view"
                       style={{
                         alignSelf:
-                          item.type === "sender" ? "flex-start" : "flex-end",
+                          item.sender === user._id ? "flex-start" : "flex-end",
                       }}
                     >
-                      {item.type === "sender" && <img src={chatLogo} />}
+                      {item.sender === user._id && <img src={chatLogo} />}
                       <div
                         style={{
                           backgroundColor:
-                            item.type === "sender" ? "#FFFFFF" : "#006039",
-                          borderTopLeftRadius: item.type === "sender" ? 0 : 24,
+                            item.sender === user._id ? "#FFFFFF" : "#006039",
+                          borderTopLeftRadius: item.sender === user._id ? 0 : 24,
                           borderBottomRightRadius:
-                            item.type === "sender" ? 24 : 0,
+                            item.sender === user._id ? 24 : 0,
                         }}
                       >
                         <h3
                           style={{
                             color:
-                              item.type === "sender" ? "#666666" : "#FFFFFF",
+                              item.sender === user._id ? "#666666" : "#FFFFFF",
                           }}
                         >
                           {item.message}
@@ -399,11 +177,15 @@ const Chat = () => {
             </div>
             <div className="kwn-chat-send_view">
               <div className="kwn-chat-send-input_view">
-                <input placeholder="Type a message..." />
-                <img src={mic} />
+                <input placeholder="Type a message..." value={message} onChange={ev => setMessage(ev.target.value)} />
+                <img src={mic} style={{ cursor: 'pointer' }} />
               </div>
               <div className="kwn-chat-send_button_view">
-                <img src={send} />
+                <img src={send} style={{ cursor: 'pointer' }} onClick={() => {
+                  socket.emit('send-message', { userId: user._id, to: selectedChat.id, message, messageType: 'text', messageTime: Date.now() })
+                  socket.emit('get-messages', { userId: user._id, inbox: selectedChat.id })
+                  setMessage("")
+                }} />
               </div>
             </div>
           </div>
@@ -413,11 +195,14 @@ const Chat = () => {
   );
 };
 const HeradrBox = ({
+  user,
+  setChatArray,
   chatArray,
   selectedChat,
   setSelectedChat,
   setToggle,
   toggle,
+  socket
 }) => {
   return (
     <div className="kwn-chat-inbox_top_view">
@@ -433,8 +218,24 @@ const HeradrBox = ({
           return (
             <div
               onClick={() => {
-                setSelectedChat(item);
+                console.log("Selected Chat =>", selectedChat)
                 setToggle(!toggle);
+                socket.emit('get-messages', { userId: user._id, inbox: item.id });
+                socket.on('messages', res => {
+                  console.log("Hi! Messages")
+                  const mapRes = chatArray.map(chat => 
+                      chat.id == item.id ? 
+                        { ...chat, messagesArray: res.data.messages.map(message => 
+                          { return { ...message, type: message.sender == user._id ? 'sender' : 'receiver' } }
+                        ) } :
+                      chat
+                    )
+                      // .map(inbox => { return {...inbox, messagesArray: inbox.messagesArray.reverse()} })
+                  const singleChat = chatArray.filter(chat => chat = chat.id == item.id)[0]
+                  singleChat.messagesArray = res.data.messages
+                  setChatArray(mapRes)
+                  setSelectedChat(singleChat)
+                })
               }}
               className="kwn-chat-inbox_item"
               style={{

@@ -1,36 +1,72 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { calenderWithDots, filled, unFilled } from "../../../assets";
+import { authReq } from "../../../requests";
+import { getAllParams } from "../../../urlParams";
 import { Button, SearchBar, TextInput } from "../../../components";
+import DropDown from "../../../components/DropDown/DropDown";
 import "./rescheduleAppointment.css";
+
+const baseArray = new Array(15).fill(0).map((_, i) => i+8 > 12 ? `${i+8-12}:00 PM` : `${i+8}:00 AM`).map(x => { return {label: x, value: x} })
+
 const RescheduleAppointment = () => {
+  const params = getAllParams()
   const navigate = useNavigate();
-  const [selected, setSelected] = useState({ id: 0 });
+  const [date, setDate] = useState("")
+  const [reason, setReason] = useState("")
+  const [duration, setDuration] = useState("")
+  const [appointments, setAppointments] = useState([])
   const [isSubmit, setIsSubmit] = useState(false);
 
-  const reasonArray = [
-    {
-      id: 0,
-      title: "I am having a schedule clash",
-    },
-    {
-      id: 1,
-      title: "I am not available on schedule",
-    },
-    {
-      id: 2,
-      title: "I have a activity that can’t be left behind",
-    },
-    {
-      id: 3,
-      title: "I don’t want to tell",
-    },
-    {
-      id: 4,
-      title: "Others",
-    },
-  ];
+  const [times, setTimes] = useState(baseArray)
+  const [time, setSelectedTime] = useState({})
 
+  console.log(times)
+  const formatTime = (date, time) => {
+    const slot = `${time} ${date}`;
+    return slot
+  }
+
+  useEffect(() => {
+    authReq('GET', '/appointment')
+      .then(data => {
+        setAppointments(data.appointments.filter(x => x.status !== 'patient-canceled').filter(x => x.status !== 'patient-completed').map(app => {
+          const startDate = new Date(app.appointmentStart).toISOString()
+          const endDate = new Date(app.appointmentEnd).toISOString()
+          console.log(startDate, endDate, app.status)
+          return { ...app }
+        }))
+      })
+  }, [])
+
+  useEffect(() => {
+    console.log("Ummmm")
+    const existsArr = appointments.filter(app => app.slot === formatTime(date, time))
+    console.log(appointments)
+    if(existsArr.length > 0) console.log("Exists")
+  }, [date, time])
+
+  useEffect(() => {
+    setSelectedTime("")
+    const newTimes = baseArray
+      .map(({label}) => label)
+      .filter(t => {
+        const hour = `${parseInt(t.split(' ')[0].split(':')[0]) + (t.split(' ')[1] == 'AM' ? 0 : 12)}:00`
+        const finalDateString = `${date}T${hour}`
+        const finalDate = date ? +new Date(finalDateString) : 0
+        console.log(finalDate, Date.now(), finalDate > Date.now())
+        return finalDate > Date.now()
+      })
+      .map(t => { return { label: t, value: t } })
+      .filter(t => {
+        const dateTimeString = `${t.value} ${new Date(date).toISOString().split('T')[0]}`
+        const existsArr = appointments.filter(app => app.slot === dateTimeString)
+        return existsArr.length <= 0
+      })
+
+    setTimes(newTimes)
+    console.log("New Ts", newTimes)
+  }, [date])
   return (
     <div className="kavan_admin_main_container">
       <div className="kwn-search">
@@ -80,6 +116,8 @@ const RescheduleAppointment = () => {
               })} */}
               <TextInput
                 type={"text"}
+                value={reason}
+                onChange={ev => setReason(ev.target.value)}
                 inputStyle={{ fontSize: 20 }}
                 style={{ width: "97%" }}
                 placeholder={"Me ha surgido un imprevisto personal..."}
@@ -91,26 +129,49 @@ const RescheduleAppointment = () => {
             <div className="kwn_reschedule_appointment_inputs_top_view">
               <TextInput
                 type={"date"}
+                value={date}
+                onChange={ev => setDate(ev.target.value)}
                 inputStyle={{ fontSize: 20 }}
                 style={{ width: "100%" }}
                 title={"Select Date"}
               />
-              <TextInput
-                type={"time"}
-                inputStyle={{ fontSize: 20 }}
-                style={{ width: "100%" }}
-                title={"Select Time"}
+              <DropDown
+                text={"Time"}
+                options={times}
+                selected={time}
+                setSelected={setSelectedTime}
               />
               <TextInput
-                type={"text"}
-                placeholder={"30:00 Mins "}
+                type={"number"}
+                value={duration}
+                onChange={ev => setDuration(ev.target.value)}
+                placeholder={"30"}
                 inputStyle={{ fontSize: 20 }}
                 style={{ width: "100%" }}
-                title={"Select Duration"}
+                title={"Select Duration (Mins)"}
               />
             </div>
             <div className="kwn_reschedule_appointment_button_view">
-              <Button onClick={() => setIsSubmit(true)}>Submit</Button>
+              <Button onClick={async () => {
+                const durationMs = parseInt(duration)*60*1000
+                const timeValue = parseInt(time.value.split(' ')[0]) + (time.value.includes('AM') ? 0 : 12)
+                const appointmentStart = Date.parse(`${date}T${timeValue}:00`)
+                const appointmentEnd = Date.parse(`${date}T${timeValue}:00`) + durationMs
+
+                const slot = formatTime(date, time.value)
+
+                console.log("APPOINTMENT =>", appointmentStart, appointmentEnd, `${date}T${timeValue}:00`)
+
+                await authReq('PATCH', `/appointment/${params.id}`, {
+                  status: 'patient-upcoming',
+                  appointmentStart,
+                  appointmentEnd,
+                  slot,
+                  cancelationReason: reason
+                })
+
+                setIsSubmit(true)
+              }}>Submit</Button>
             </div>
           </div>
         </>
