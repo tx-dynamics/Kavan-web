@@ -77,6 +77,11 @@ const Chat = () => {
         setSelectedChat(newinboxes[0])
         first = false
       })
+
+      return () => {
+        socket.removeAllListeners('inboxes')
+        socket.removeAllListeners('messages')
+      }
     })
 
   }, [user])

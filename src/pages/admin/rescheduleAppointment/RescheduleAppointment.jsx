@@ -12,6 +12,7 @@ const baseArray = new Array(15).fill(0).map((_, i) => i+8 > 12 ? `${i+8-12}:00 P
 const RescheduleAppointment = () => {
   const params = getAllParams()
   const navigate = useNavigate();
+  const [user, setUser] = useState({})
   const [date, setDate] = useState("")
   const [reason, setReason] = useState("")
   const [duration, setDuration] = useState("")
@@ -26,6 +27,11 @@ const RescheduleAppointment = () => {
     const slot = `${time} ${date}`;
     return slot
   }
+
+  useEffect(() => {
+    authReq('GET', '/user/me')
+      .then(data => setUser(data.data))
+  }, [])
 
   useEffect(() => {
     authReq('GET', '/appointment')
@@ -56,6 +62,13 @@ const RescheduleAppointment = () => {
         const finalDate = date ? +new Date(finalDateString) : 0
         console.log(finalDate, Date.now(), finalDate > Date.now())
         return finalDate > Date.now()
+      })
+      .filter(t => {
+        const hour = `${parseInt(t.split(' ')[0].split(':')[0]) + (t.split(' ')[1] == 'AM' ? 0 : 12)}:00`
+        const actualStartDate = user?.startDate?.split("T")[1]?.split(':')?.slice(0, 2)?.join(':')
+        const actualEndDate = user?.endDate?.split("T")[1]?.split(':')?.slice(0, 2)?.join(':')
+        console.log(hour, actualStartDate, actualEndDate)
+        return hour >= actualStartDate && hour <= actualEndDate
       })
       .map(t => { return { label: t, value: t } })
       .filter(t => {

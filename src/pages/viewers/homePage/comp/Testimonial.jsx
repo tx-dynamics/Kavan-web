@@ -4,7 +4,6 @@ import "./testimonial.css";
 import Rating from "@mui/material/Rating";
 
 const Testimonial = ({ item, props }) => {
-  const [value, setValue] = React.useState(2);
   return (
     <div className="kwn-home-testi-comp-main_container" style={{ ...props }}>
       <div className="kwn-home-testi-comp-text-container">
@@ -12,19 +11,12 @@ const Testimonial = ({ item, props }) => {
       </div>
       <div className="kvn-home-testi-com-review-main_container">
         <div className="kvn-home-testi-con-review-pro-pic-container">
-          <img alt="" src={dummy2} />
+          <img alt="" src={item.image} />
         </div>
         <div className="kvn-home-testi-com-review-name-container">
-          <h2>Rifki Abdurachman</h2>
-          <Rating
-            name="simple-controlled"
-            value={value}
-            onChange={(event, newValue) => {
-              setValue(newValue);
-            }}
-            readOnly={true}
-            size="large"
-          />
+          <h2>{item.name}</h2>
+          {console.log("Rating =>", item, item.rating)}
+          <Rating name="read-only" value={item.rating ?? 0} readOnly />
         </div>
       </div>
     </div>

@@ -166,7 +166,7 @@ const Appointment = () => {
                         await authReq('PATCH', `/appointment/${restProps.data.id}`, { status: 'patient-upcoming' })
                         setRefresh(!refresh)
                       }
-                      else {}
+                      else navigate(`/dashboard/ChatStack?id=${restProps.data.id}`)
                     }}
                     containerStyle={{
                       backgroundColor:
@@ -242,7 +242,7 @@ const Appointment = () => {
                 // startDayHour={parseInt(user?.startDate?.split("T")[1]?.split(":")[0])}
                 // endDayHour={parseInt(user?.endDate?.split("T")[1]?.split(":")[0])}
                 startDayHour={startDate == 0 ? 11 : startDate}
-                endDayHour={endDate == 0 ? 16 : endDate}
+                endDayHour={endDate == 0 ? 21 : endDate}
               />
               {/* <WeekView cellDuration={60} startDayHour={startDate == 0 ? 11 : startDate} endDayHour={endDate == 0 ? 16 : endDate} /> */}
 

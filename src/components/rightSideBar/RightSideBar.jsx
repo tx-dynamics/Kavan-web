@@ -30,32 +30,7 @@ const RightSideBar = () => {
         },
     ]
     const [appointmentArray, setAppointmentArray] = useState([])
-    const chatsArray = [
-        {
-            id: 1,
-            image: dummy2
-        },
-        {
-            id: 2,
-            image: dummy2
-        },
-        {
-            id: 3,
-            image: dummy2
-        },
-        {
-            id: 4,
-            image: dummy2
-        },
-        {
-            id: 5,
-            image: dummy2
-        },
-        {
-            id: 6,
-            image: dummy2
-        }
-    ]
+    const [chatsArray, setChatArray] = useState([])
 
     useEffect(() => {
         authReq('GET', '/appointment')
@@ -69,6 +44,8 @@ const RightSideBar = () => {
                         image: app.appointer.image
                     }
                 }) ?? [])
+                console.log(data.messages)
+                setChatArray(data.messages.map((x, id) => { return { id, image: x.sender.image } }))
             })
     }, [])
 

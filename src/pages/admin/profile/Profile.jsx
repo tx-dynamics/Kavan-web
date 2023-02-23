@@ -36,7 +36,8 @@ const Profile = () => {
 
     useEffect(() => {
         authReq('GET', '/user/me')
-            .then(({user}) => {
+            .then((data) => {
+                const user = data.data
                 console.log(user.specializations)
                 setUser(user)
                 setFieldArray(user.specializations.map((item, index) => { return {id: index, title: item} }))
@@ -55,7 +56,7 @@ const Profile = () => {
                     <div className='kwn_three_dot_top_view' style={{ top: -10 }}>
                         {modelShow &&
                             <div className='kwn-three_dot_modal'>
-                                <h2 onClick={() => navigate('/dashboard/SettingStack/editProfile')}>Edit profile</h2>
+                                {/* <h2 onClick={() => navigate('/dashboard/SettingStack/editProfile')}>Edit profile</h2> */}
                                 <h2 onClick={() => navigate('/dashboard/SettingStack/reviews')}>Reviews</h2>
                             </div>
                         }
