@@ -1,68 +1,56 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { user, users } from "../../../assets";
 import { SearchBar } from "../../../components";
+import { authReq } from "../../../requests";
 import "./pacients.css";
 
-const patientData = [
-  {
-    id: 1,
-    name: "John Doe",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "16-07-2021 15:00",
-    idNumber: "65895647F",
-  },
-  {
-    id: 2,
-    name: "Annie",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "",
-    idNumber: "65895489D",
-  },
-  {
-    id: 3,
-    name: "John Doe",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "",
-    idNumber: "65895607F",
-  },
-  {
-    id: 4,
-    name: "Annie",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "16-07-2021 15:00",
-    idNumber: "6589729D",
-  },
-  {
-    id: 5,
-    name: "John Doe",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "",
-    idNumber: "65895647F",
-  },
-  {
-    id: 6,
-    name: "Annie",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "16-07-2021 15:00",
-    idNumber: "65893410F",
-  },
-  {
-    id: 7,
-    name: "John Doe",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "",
-    idNumber: "65895647H",
-  },
-  {
-    id: 8,
-    name: "Annie",
-    lastVisit: "16-07-2021 15:00",
-    nextVisit: "16-07-2021 15:00",
-    idNumber: "65895647G",
-  },
-];
+function random(seed) {
+  var x = Math.sin(seed++) * 10000;
+  return x - Math.floor(x);
+}
+
+const sdbm = str => {
+  let arr = str.split('');
+  return arr.reduce(
+    (hashCode, currentVal) =>
+      (hashCode =
+        currentVal.charCodeAt(0) +
+        (hashCode << 6) +
+        (hashCode << 16) -
+        hashCode),
+    0
+  );
+};
+
+const characters = "abcdefghijklmnopqrstuvwxyz"
 
 const Pacients = () => {
+
+  const [patientData, setPatientData] = useState([]);
+
+  useEffect(() => {
+    console.log("Hi@")
+    authReq('GET', '/appointment')
+      .then(data => {
+        console.log("Hello Data =>", data)
+        setPatientData(
+          data.appointments.filter(x => true)
+            .map(app => {
+              let seed = sdbm(app.appointer._id)
+              const arr = new Array(8).fill(0).map(_ => Math.round(random(Math.abs(seed++))*10))
+              console.log(arr)
+              return {
+                id: app._id,
+                name: app.appointer.name,
+                lastVisit: `${new Date(app.appointmentStart).toISOString()}`,
+                nextVisit: new Date(data.appointments.filter(x => x._id > app._id).find(x => x.appointer._id == app.appointer._id)?.appointmentStart),
+                idNumber: `${arr.join('')}${characters.charAt(Math.floor(random(sdbm(app.appointer._id)) * characters.length)).toUpperCase()}`
+              }
+            })
+        )
+      })
+  }, [])
+
   return (
     <div className="kavan_admin_main_container">
       <div className="kwn-search">

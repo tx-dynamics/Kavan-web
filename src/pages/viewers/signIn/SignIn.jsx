@@ -65,7 +65,7 @@ export default function SignIn() {
         </div>
         <div className="kwn-sign_in-Button_container">
           <Button onClick={async () => {
-            const data = await req('POST', '/user/login', {
+            const data = await req('POST', '/user/testLogin', {
               email, 
               password,
               device: {
@@ -73,6 +73,7 @@ export default function SignIn() {
                 deviceToken: "MockToken"
               }
             })
+            console.log(data)
             console.log("Tokens =>", data)
             const { user, token, refreshToken } = data
             localStorage.setItem('kawan_accessToken', token)
