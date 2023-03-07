@@ -90,7 +90,7 @@ export default function AboutUs() {
     },
   ];
   return (
-    console.log(activeSlide),
+  
     (
       <div>
         <Navbar />
