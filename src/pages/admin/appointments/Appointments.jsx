@@ -14,18 +14,22 @@ import {
   CurrentTimeIndicator,
 } from "@devexpress/dx-react-scheduler-material-ui";
 import dayjs from "dayjs";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { clock, dummy2, threeDots } from "../../../assets";
 import { AppointmentView, SearchBar } from "../../../components";
+import { authReq } from "../../../requests";
 import Button from "@mui/material/Button";
 
 import "./appointments.css";
 import SmallBtn from "../../../components/smallBtn/smallBtn";
 const Appointment = () => {
   const navigate = useNavigate();
-  const currentDate = "2022-11-30T09:45";
-  const schedulerData = [
+  const [user, setUser] = useState({})
+  const [startDate, setStartDate] = useState(0)
+  const [endDate, setEndDate] = useState(0)
+  const [refresh, setRefresh] = useState(false)
+  const [schedulerData, setSchedulerData] = useState([
     {
       startDate: "2022-11-30T09:00",
       endDate: "2022-11-30T10:00",
@@ -55,108 +59,41 @@ const Appointment = () => {
       endDate: "2022-11-30T14:30",
       title: "Appointment date",
     },
-  ];
-  const [selectedType, setSelectedType] = useState({
-    id: 1,
-    title: "Requests",
-  });
+  ]);
 
-  const appointmentTypeArray = [
-    {
-      id: 1,
-      title: "Requests",
-    },
-    {
-      id: 2,
-      title: "Upcoming",
-    },
-    {
-      id: 3,
-      title: "Reschedule",
-    },
-    {
-      id: 4,
-      title: "Completed",
-    },
-    {
-      id: 5,
-      title: "Cancelled",
-    },
-  ];
+  const doRefresh = () => {
+    authReq('GET', '/appointment')
+    .then(data => {
+      setSchedulerData(data.appointments.filter(x => x.status !== 'patient-canceled').filter(x => x.status !== 'patient-completed').map(app => {
+        const startDate = new Date(app.appointmentStart).toISOString()
+        const endDate = new Date(app.appointmentEnd).toISOString()
+        console.log(startDate, endDate, app.status)
+        return {
+          id: app._id,
+          patient: app.appointer,
+          startDate: startDate,
+          endDate: endDate,
+          title: `Appointment date`,
+          status: app.status == "patient-pending" ? "join" : undefined
+        }
+      }))
+    })
 
-  const appointmentArray = [
-    {
-      id: 1,
-      date: "11 June 2021",
-      time: "10:00 AM",
-      reason: "I don’t want to consult right now",
-      type: "Requests",
-      image: dummy2,
-      name: "Dr. Atiana",
-      profession: "General Psychologist specialist",
-    },
-    {
-      id: 1,
-      date: "11 June 2021",
-      time: "10:00 AM",
-      reason: "I don’t want to consult right now",
-      type: "Requests",
-      image: dummy2,
-      name: "Dr. Atiana",
-      profession: "General Psychologist specialist",
-    },
-    {
-      id: 1,
-      date: "11 June 2021",
-      time: "10:00 AM",
-      reason: "I don’t want to consult right now",
-      type: "Requests",
-      image: dummy2,
-      name: "Dr. Atiana",
-      profession: "General Psychologist specialist",
-    },
-    {
-      id: 3,
-      date: "11 June 2021",
-      time: "10:00 AM",
-      reason: "I don’t want to consult right now",
-      type: "Upcoming",
-      image: dummy2,
-      name: "Dr. Atiana",
-      profession: "General Psychologist specialist",
-    },
-    {
-      id: 4,
-      date: "11 June 2021",
-      time: "10:00 AM",
-      reason: "I don’t want to consult right now",
-      type: "Reschedule",
-      image: dummy2,
-      name: "Dr. Atiana",
-      profession: "General Psychologist specialist",
-    },
-    {
-      id: 5,
-      date: "11 June 2021",
-      time: "10:00 AM",
-      reason: "I don’t want to consult right now",
-      type: "Completed",
-      image: dummy2,
-      name: "Dr. Atiana",
-      profession: "General Psychologist specialist",
-    },
-    {
-      id: 6,
-      date: "11 June 2021",
-      time: "10:00 AM",
-      reason: "I don’t want to consult right now",
-      type: "Cancelled",
-      image: dummy2,
-      name: "Dr. Atiana",
-      profession: "General Psychologist specialist",
-    },
-  ];
+  authReq('GET', '/user/me')
+    .then(data => {
+      setUser(data.data)
+      setStartDate(parseInt(data.data?.startDate?.split("T")[1]?.split(":")[0]))
+      setEndDate(parseInt(data.data?.endDate?.split("T")[1]?.split(":")[0]))
+    })
+  }
 
+  useEffect(() => {
+    doRefresh()
+  }, [])
+
+  useEffect(() => {
+    doRefresh()
+  }, [refresh])
   const AppointmentContent = ({ formatDate, ...restProps }) => {
     return (
       <div {...restProps}>
@@ -183,18 +120,21 @@ const Appointment = () => {
             <div className="kwn-appointment-content-divider"></div>
             <div className="kwn-appointment-content-btn-main-container">
               <div className="kwn-appointment-content-profile_name">
-                <img src={dummy2} />
+                <img src={restProps?.data?.patient?.image} />
                 <div className="kwn-appointment-content-profile_name-sub-container">
-                  <h2>KENNETH</h2>
+                  <h2>{[restProps?.data?.patient?.name, console.log(restProps.data)][0]}</h2>
                   <h3>Anxiety</h3>
                 </div>
               </div>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <SmallBtn
-                  onClick={() =>
-                    navigate(
-                      "/dashboard/AppointmentStack/rescheduleAppointment"
-                    )
+                  onClick={async () => {
+                    if({ ...restProps.data }.status == "join") {
+                      await authReq('PATCH', `/appointment/${restProps.data.id}`, { status: 'patient-canceled' })
+                      setRefresh(!refresh)
+                    }
+                    else navigate(`/dashboard/AppointmentStack/rescheduleAppointment?id=${restProps.data.id}`)
+                  }
                   }
                   containerStyle={{
                     border:
@@ -220,6 +160,14 @@ const Appointment = () => {
                 />
                 <div style={{ marginLeft: "1rem" }}>
                   <SmallBtn
+                    onClick={async () => {
+                      console.log("Clicked", restProps.data.id)
+                      if({ ...restProps.data }.status == "join") {
+                        await authReq('PATCH', `/appointment/${restProps.data.id}`, { status: 'patient-upcoming' })
+                        setRefresh(!refresh)
+                      }
+                      else navigate(`/dashboard/ChatStack?id=${restProps.data.id}`)
+                    }}
                     containerStyle={{
                       backgroundColor:
                         { ...restProps.data }.status == "join"
@@ -247,56 +195,6 @@ const Appointment = () => {
     );
   };
 
-  const TooltipContent = ({
-    appointmentData,
-    formatDate,
-    appointmentResources,
-    ...restProps
-    // #FOLD_BLOCK
-  }) => {
-    return (
-      <div
-        className="kwn-upcoming-appointment-calender-tool_tip-main_container"
-        {...restProps}
-      >
-        <div className="kwn-side_divider-calender" />
-        <div className="kwn-appointment-calender-tool_tip-container">
-          <div className="kwn-appointment-up_coming-tool_tip-title">
-            <h1>{appointmentData.title}</h1>
-          </div>
-          <div className="kwn-appointment-calender-tool_tip-date-main_container">
-            <img src={clock} />
-            <div className="kwn-appointment-calender-tool_tip-date-container">
-              <h3>
-                {formatDate(appointmentData.startDate, {
-                  day: "numeric",
-                  weekday: "long",
-                  month: "long",
-                  year: "numeric",
-                })}
-                <span>
-                  {" | "}
-                  {`${formatDate(appointmentData.startDate, {
-                    hour: "numeric",
-                    minute: "numeric",
-                  })}`}
-                </span>
-              </h3>
-            </div>
-          </div>
-          <hr />
-          <div style={{ marginTop: "2rem" }}></div>
-          <div className="kwn-appointment_profile_view">
-            <img src={dummy2} />
-            <div className="kwn-appointment_name_view">
-              <h3>vandarani aduhai</h3>
-              <h4>Depression</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
   return (
     <div className="kavan_admin_main_container">
       <div className="kwn-search">
@@ -336,15 +234,17 @@ const Appointment = () => {
             <Scheduler data={schedulerData}>
               <ViewState
                 // currentDate={currentDate}
-                defaultCurrentDate="2022-11-30T09:45"
+                defaultCurrentDate={new Date().toISOString()}
               />
               <DayView
                 displayName="Days"
                 cellDuration={30}
-                startDayHour={8}
-                endDayHour={14}
+                // startDayHour={parseInt(user?.startDate?.split("T")[1]?.split(":")[0])}
+                // endDayHour={parseInt(user?.endDate?.split("T")[1]?.split(":")[0])}
+                startDayHour={startDate == 0 ? 11 : startDate}
+                endDayHour={endDate == 0 ? 21 : endDate}
               />
-              <WeekView cellDuration={60} startDayHour={8} endDayHour={14} />
+              {/* <WeekView cellDuration={60} startDayHour={startDate == 0 ? 11 : startDate} endDayHour={endDate == 0 ? 16 : endDate} /> */}
 
               <Toolbar />
               {/* <MonthView /> */}
@@ -356,10 +256,9 @@ const Appointment = () => {
               <CurrentTimeIndicator
               //  indicatorComponent={TimeIndicator}
               />
-              <AppointmentTooltip
+              {/* <AppointmentTooltip
                 contentComponent={TooltipContent}
-                // showCloseButton
-              />
+              /> */}
             </Scheduler>
           </Paper>
           {/* ) : (

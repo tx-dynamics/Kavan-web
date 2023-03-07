@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
   arrowLeft,
   arrowRight,
@@ -12,146 +12,21 @@ import {
   users,
 } from "../../../assets";
 import { AppointmentView, SearchBar } from "../../../components";
+import { WithAuth } from "../../../components/auth/auth.js";
+import { authReq } from "../../../requests.js";
 import { Area } from "@ant-design/plots";
 import "./dashboard.css";
 
 const Dashboard = () => {
-  const graphArray = [
-    {
-      Date: "1",
-      scales: 100,
-    },
-    {
-      Date: "2",
-      scales: 105,
-    },
-    {
-      Date: "3",
-      scales: 200,
-    },
-    {
-      Date: "4",
-      scales: 250,
-    },
-    {
-      Date: "5",
-      scales: 165,
-    },
-    {
-      Date: "6",
-      scales: 300,
-    },
-    {
-      Date: "7",
-      scales: 350,
-    },
-    {
-      Date: "8",
-      scales: 370,
-    },
-    {
-      Date: "9",
-      scales: 390,
-    },
-    {
-      Date: "10",
-      scales: 400,
-    },
-    {
-      Date: "11",
-      scales: 420,
-    },
-    {
-      Date: "12",
-      scales: 230,
-    },
-    {
-      Date: "13",
-      scales: 312,
-    },
-    {
-      Date: "14",
-      scales: 413,
-    },
-    {
-      Date: "15",
-      scales: 450,
-    },
-    {
-      Date: "16",
-      scales: 470,
-    },
-    {
-      Date: "17",
-      scales: 340,
-    },
-    {
-      Date: "18",
-      scales: 500,
-    },
-    {
-      Date: "19",
-      scales: 203,
-    },
-    {
-      Date: "20",
-      scales: 10,
-    },
-    {
-      Date: "21",
-      scales: 50,
-    },
-    {
-      Date: "22",
-      scales: 430,
-    },
-    {
-      Date: "23",
-      scales: 340,
-    },
-    {
-      Date: "24",
-      scales: 120,
-    },
-    // {
-    //     Date:25,
-    //     scales:4
-    // },
-    // {
-    //     Date:26,
-    //     scales:4
-    // },
-    // {
-    //     Date:27,
-    //     scales:4
-    // },
-    // {
-    //     Date:28,
-    //     scales:4
-    // },
-    // {
-    //     Date:29,
-    //     scales:4
-    // },
-    // {
-    //     Date:30,
-    //     scales:4
-    // },
-  ];
-  const appointmentPatientArray = [
-    {
-      id: 1,
-      title: "Citas",
-      count: "856",
-      img: sideBarAppointment,
-    },
-    {
-      id: 2,
-      title: "Pacientes",
-      count: "45",
-      img: users,
-    },
-  ];
+  const [graphArray, setGraphArray] = useState([]);
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+  const navigate = useNavigate()
+  const [year, setYear] = useState(new Date().getFullYear())
+  const [month, setMonth] = useState(new Date().getMonth())
+  const [user, setUser] = useState({})
+  const [appointments, setAppointments] = useState([])
+  const [newAppointments, setNewAppointments] = useState(0)
+  const [appointmentPatientArray, setAppointmentPatientArray] = useState([]);
 
   const config = {
     xField: "Date",
@@ -171,79 +46,139 @@ const Dashboard = () => {
     },
   };
 
-  return (
-    <div className="kavan_admin_main_container">
-      <div className="kwn-search">
-        <SearchBar />
-      </div>
-      <div className="kwn-dashboard-title_container">
-        <h1>Kavan Dashboard</h1>
-        <h3>Welcome, Annette!</h3>
-      </div>
-      <div className="kwn-dashboard-resume_container">
-        <h1>Solicitud De Citas </h1>
-      </div>
-      <div className="kwn-dashboard-solicitud-container">
-        <div className="kwn-dashboard-solicitud-sub-container">
-          <div className="kwn-dashboard-side_line"></div>
-          <div className="kwn-dashboard-solicitud-tag">
-            <p>You have # new patient request</p>
-          </div>
-        </div>
+  const updateGraph = (appointments, month, year) => {
+    setGraphArray(new Array(29).fill(0).map((_, i) => i+1).map(i => {
+      return {
+        Date: `${i}`,
+        scales: appointments.filter(app => {
+      console.log("||||||||||||||||||||||",  new Date(app.appointmentStart).getMonth(), month, new Date(app.appointmentStart).getFullYear(), year)
+          return new Date(app.appointmentStart).getDay() == i && new Date(app.appointmentStart).getFullYear() == year && new Date(app.appointmentStart).getMonth() == month
+        }).length,
+      }
+    }))
+  }
 
-        <div className="kwn-dashboard-solicitud-btn">
-          <p>Ver solicitudes</p>
-        </div>
-      </div>
-      <div className="kwn-dashboard-resume_container">
-        <h1>Resumen</h1>
-      </div>
-      <div className="kwn-dashboard-appointments_and_patients_top_view">
-        {appointmentPatientArray.map((item) => {
-          return (
-            <div className="kwn-dashboard-appointments_and_patients_view">
-              <div className="kwn-dashboard-round_calender_view">
-                <img src={item.img} />
-              </div>
-              <div>
-                <h2>{item.count}</h2>
-                <h3>{item.title}</h3>
-              </div>
-            </div>
-          );
-        })}
-      </div>
+  useEffect(() => {
 
-      <div className="kwn-dashboard-arrows_top_view">
-        <h1 className="kwn-heading">Patient’s Graph</h1>
-        <div className="kwn-dashboard-arrows_view">
-          <div>
-            <img src={arrowLeft} />
-          </div>
-          <div>
-            <img src={arrowRight} />
-          </div>
-        </div>
-      </div>
+    authReq('GET', "/appointment")
+      .then(data => {
 
-      <div className="kwn-dashboard-total_patients_view">
-        <h3>Total patient in july</h3>
-        <h4>165</h4>
-        <h5>20.5 %</h5>
-      </div>
-      <div className="kwn-dashboard-graph_view">
-        <Area data={graphArray} {...config} />
-      </div>
+        setAppointmentPatientArray([
+          {id: 1, title: "CItas", count: data.appointments.length, img: sideBarAppointment},
+          {id: 2, title: "Pacientes", count: data.appointments.filter(appointment => appointment.status === 'patient-upcoming').length, img: users},
+        ])
+  
+        const appointments = data.appointments.sort((a, b) => a > b ? -1 : 1)
+        const newestAppointmentId = localStorage.getItem('kawan_newestPatientId', appointments[0]?._id) ?? '0'
+        console.log(newestAppointmentId, appointments)
+        const newAppointments = appointments.filter(x => x._id > newestAppointmentId).length
+        setNewAppointments(newAppointments)
+        if(appointments[appointments.length - 1]) localStorage.setItem('kawan_newestPatientId', appointments[appointments.length - 1]?._id)
+        console.log("ABCDEFGH", appointments[0], newAppointments)
+        setAppointments(appointments)
 
-      <div className="kwn-dashboard-appointments_top_view">
-        <h1 className="kwn-heading">appointments requests </h1>
-        <div className="kwn-dashboard-appointment_view">
-          <AppointmentView />
-          <AppointmentView />
-        </div>
+        updateGraph(appointments, month, year)
+      })
+
+  }, [])
+
+  useEffect(() => {
+    authReq('GET', "/user/me")
+    .then(data => setUser(data.data))
+  }, [])
+
+  return <WithAuth component={
+  <div className="kavan_admin_main_container">
+  <div className="kwn-search">
+    <SearchBar />
+  </div>
+  <div className="kwn-dashboard-title_container">
+    <h1>Kavan Dashboard</h1>
+    <h3>Welcome, {user.name}!</h3>
+  </div>
+  <div className="kwn-dashboard-resume_container">
+    <h1>Solicitud De Citas </h1>
+  </div>
+  <div className="kwn-dashboard-solicitud-container">
+    <div className="kwn-dashboard-solicitud-sub-container">
+      <div className="kwn-dashboard-side_line"></div>
+      <div className="kwn-dashboard-solicitud-tag">
+        <p>You have #{newAppointments} new patient request</p>
       </div>
     </div>
-  );
+
+    <div className="kwn-dashboard-solicitud-btn" onClick={() => navigate("/dashboard/AppointmentStack")}>
+      <p>Ver solicitudes</p>
+    </div>
+  </div>
+  <div className="kwn-dashboard-resume_container">
+    <h1>Resumen</h1>
+  </div>
+  <div className="kwn-dashboard-appointments_and_patients_top_view">
+    {appointmentPatientArray.map((item) => {
+      return (
+        <div className="kwn-dashboard-appointments_and_patients_view">
+          <div className="kwn-dashboard-round_calender_view">
+            <img src={item.img} />
+          </div>
+          <div>
+            <h2>{item.count}</h2>
+            <h3>{item.title}</h3>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <div className="kwn-dashboard-arrows_top_view">
+    <h1 className="kwn-heading">Patient’s Graph</h1>
+    <div className="kwn-dashboard-arrows_view">
+      <div>
+        <img src={arrowLeft} style={{cursor: 'pointer'}} onClick={() => {
+          let newMonth = month - 1
+          let newYear = year
+          if(newMonth < 0) {
+            newMonth = 11
+            newYear = year - 1
+          }
+          setYear(newYear)
+          setMonth(newMonth)
+          updateGraph(appointments, newMonth, newYear)
+        }} />
+      </div>
+      <div>
+        <img src={arrowRight} style={{cursor: 'pointer'}} onClick={() => {
+          let newMonth = month + 1
+          let newYear = year
+          if(newMonth > 11) {
+            newMonth = 0
+            newYear = year + 1
+          }
+          setMonth(newMonth)
+          setYear(newYear)
+          updateGraph(appointments, newMonth, newYear)
+        }} />
+      </div>
+    </div>
+  </div>
+
+  <div className="kwn-dashboard-total_patients_view">
+    <h3>Total patient in {monthNames[month]}</h3>
+    <h4>{appointments.filter(app => new Date(app.appointmentStart).getFullYear() == year && new Date(app.appointmentStart).getMonth() == month).length}</h4>
+    {/* <h5>20.5 %</h5> */}
+  </div>
+  <div className="kwn-dashboard-graph_view">
+    <Area data={graphArray} {...config} />
+  </div>
+
+  <div className="kwn-dashboard-appointments_top_view">
+    <h1 className="kwn-heading">appointments requests </h1>
+    <div className="kwn-dashboard-appointment_view">
+      {appointments.map(appointment => <AppointmentView appointment={appointment} />)}
+    </div>
+  </div>
+</div>}
+  />;
 };
 
 export default Dashboard;

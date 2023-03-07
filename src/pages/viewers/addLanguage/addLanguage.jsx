@@ -3,9 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { cross } from "../../../assets";
 
 import { Button, Footer, Navbar, TextInput } from "../../../components";
+import { getAllParams, setParam } from "../../../urlParams";
 
 const AddLanguage = () => {
   const navigate = useNavigate();
+  const params = getAllParams()
   const [specialiezedText, setSpecialiezedText] = useState("");
   const [specialiezedArray, setSpecialiezedArray] = useState([]);
 
@@ -56,7 +58,10 @@ const AddLanguage = () => {
             .slice(0, 5)}
         </div>
         <div style={{ marginTop: "8.7rem" }}>
-          <Button onClick={() => navigate("/createProfile")}>Next</Button>
+          <Button onClick={() => {
+            const search = setParam(params, "languages", JSON.stringify({ languages: specialiezedArray.map(x => x?.title).filter(x => !!x) }))
+            navigate(`/createProfile?${search}`)
+          }}>Next</Button>
         </div>
         <div className="kawan-add_later-container">
           <p>Add Later</p>

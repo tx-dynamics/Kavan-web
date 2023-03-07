@@ -3,8 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { Button, Footer, Navbar } from "../../../components";
 import OtpInput from "react18-otp-input";
 import "./verifyEmail.css";
+import { req } from "../../../requests";
 const VerifyEmail = () => {
   const [otp, setOtp] = useState("");
+  const urlParams = new URLSearchParams(window.location.search);
+  const email = urlParams.get('email');
   const navigate = useNavigate();
   return (
     <div>
@@ -29,7 +32,12 @@ const VerifyEmail = () => {
         <div className="kwn-verify_email-Button_container">
           <p>Change Email address</p>
           <div style={{ marginTop: "3rem", marginRight: "0" }}>
-            <Button onClick={() => navigate("/createProfile")}>Verify</Button>
+            <Button onClick={async () => {
+              const { token, refreshToken } = await req('POST', '/user/verify', { email, otp, device: { id: 'web', deviceToken: "MockToken" } })
+              localStorage.setItem('kawan_accessToken', token)
+              localStorage.setItem('kawan_refreshToken', refreshToken)
+              navigate("/createProfile")
+            }}>Verify</Button>
           </div>
         </div>
       </div>

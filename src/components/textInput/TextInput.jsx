@@ -13,6 +13,9 @@ const TextInput = (props) => {
           style={{ borderColor: isFoucs && "#006039", ...props.style }}
           onFocus={() => setisFocus(true)}
           onBlur={() => setisFocus(false)}
+          onKeyPress={props.onKeyPress}
+          onChange={props.onChange}
+          value={props.value}
           placeholder={props.placeholder}
         />
       ) : (

@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "./static/css/main.f5549d45.css",
+    "main.js": "./static/js/main.80c06a0b.js",
+    "static/media/about-image1.png": "./static/media/about-image1.e0f2c8cb2e0c36da7179.png",
+    "static/media/home-image3.png": "./static/media/home-image3.2b81eb3125f93b827145.png",
+    "static/media/dummy2.png": "./static/media/dummy2.87680e8caeab17d3774b.png",
+    "static/media/dummy1.png": "./static/media/dummy1.d6b29bdb4680af213078.png",
+    "static/media/dummy3.png": "./static/media/dummy3.95067e867786060d1541.png",
+    "static/media/option.png": "./static/media/option.2a59fe599d1491f94cde.png",
+    "static/media/mobile-ss.png": "./static/media/mobile-ss.4329ca9125227fae4db8.png",
+    "static/media/home_headerImg.png": "./static/media/home_headerImg.918f449f751fe98425d9.png",
+    "static/media/home-ellipse2.png": "./static/media/home-ellipse2.6939ea13fad979f07932.png",
+    "static/media/user.png": "./static/media/user.cef6315b13d97a7d3819.png",
+    "static/media/dummy.jpg": "./static/media/dummy.64912d14aab0e577dfc7.jpg",
+    "static/media/about-ellipse4.png": "./static/media/about-ellipse4.df1bd8e4e60a4c4e9bec.png",
+    "static/media/wave.png": "./static/media/wave.731b36e7ca503c87336a.png",
+    "static/media/climb.png": "./static/media/climb.cf97ff361b464bda0079.png",
+    "static/media/comparison.png": "./static/media/comparison.61838a92291e53dbefe8.png",
+    "static/media/icon2.png": "./static/media/icon2.79fbb22e906e360821dd.png",
+    "static/media/icon3.png": "./static/media/icon3.bbe38dddf7059ad1349e.png",
+    "static/media/icon5.png": "./static/media/icon5.20042ba0e02da867318b.png",
+    "static/media/icon1.png": "./static/media/icon1.03c1cf0382bf281e6299.png",
+    "static/media/icon4.png": "./static/media/icon4.1dff8457847f7cb70f23.png",
+    "static/media/appleStore.png": "./static/media/appleStore.cdcd2f69c6f7912beff4.png",
+    "static/media/googleStore.png": "./static/media/googleStore.41663cb6f99a70252c9d.png",
+    "static/media/about-ellipse3.png": "./static/media/about-ellipse3.99a100b70fd9dfaa87f9.png",
+    "static/media/app-store.png": "./static/media/app-store.a7e984f52fcaed8daa51.png",
+    "static/media/play-store.png": "./static/media/play-store.3019e896b233d744be14.png",
+    "static/media/kawan.png": "./static/media/kawan.330b0688d9877fb51e48.png",
+    "static/media/clockWithDots.png": "./static/media/clockWithDots.843c8ab5fa3699eb4eea.png",
+    "static/media/therapyIcon.png": "./static/media/therapyIcon.75ff44772f1c80d2180b.png",
+    "static/media/checkWithDots.png": "./static/media/checkWithDots.8ecefcb9d7141d998092.png",
+    "index.html": "./index.html",
+    "main.f5549d45.css.map": "./static/css/main.f5549d45.css.map",
+    "main.80c06a0b.js.map": "./static/js/main.80c06a0b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f5549d45.css",
+    "static/js/main.80c06a0b.js"
+  ]
+}

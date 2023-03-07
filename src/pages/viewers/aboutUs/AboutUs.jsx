@@ -100,7 +100,7 @@ export default function AboutUs() {
             style={{
               backgroundImage: `url(${aboutUsImg})`,
               width: "100%",
-              backgroundSize: "auto",
+              backgroundSize: "100%",
               backgroundRepeat: "no-repeat",
             }}
           >

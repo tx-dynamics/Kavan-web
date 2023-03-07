@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Navbar, Footer, TextInput, Button } from "../../../components";
+import { authReq } from "../../../requests";
 import "./forgotPassword.css";
+
 const ForgotPassword = () => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("")
   return (
     <div>
       <Navbar />
@@ -16,12 +19,17 @@ const ForgotPassword = () => {
           <TextInput
             type={"text"}
             title={"Email"}
+            value={email}
+            onChange={ev => setEmail(ev.target.value)}
             placeholder={"Johndoe@mail.com"}
           />
         </div>
 
         <div className="kwn-forgot_password-Button_container">
-          <Button onClick={() => navigate("/verifyEmail")}>Verify</Button>
+          <Button onClick={async () => {
+            await authReq('POST', '/user/forgotPassword', {email})
+            navigate(`/verifyEmailForgetPassword?email=${encodeURIComponent(email)}`)
+          }}>Verify</Button>
         </div>
       </div>
       <Footer />

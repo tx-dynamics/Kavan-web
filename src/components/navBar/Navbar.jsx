@@ -3,6 +3,8 @@ import "./navbar.css";
 import logo from "../../assets/navbarLogo.png";
 import close from "../../assets/close.png";
 import menu from "../../assets/menu.png";
+
+import { WithAuth } from "../auth/auth.js";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {

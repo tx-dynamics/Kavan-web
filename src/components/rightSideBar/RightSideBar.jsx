@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { bell, clock, dropdown, dummy2, info } from '../../assets'
+import { authReq } from '../../requests'
 import './rightSideBar.css'
 
 const RightSideBar = () => {
+    const navigate = useNavigate()
     const [showDropdow, setShowDropdown] = useState(true)
     const notificationArray = [
         {
@@ -26,48 +29,25 @@ const RightSideBar = () => {
             title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
         },
     ]
-    const appointmentArray = [
-        {
-            id: 0,
-            title: 'Vandarani Aduhai',
-            disease: 'Depression',
-            time: '10:00 AM',
-            image: dummy2
-        },
-        {
-            id: 1,
-            title: 'Vandarani Aduhai',
-            disease: 'Depression',
-            time: '10:00 AM',
-            image: dummy2
-        }
-    ]
-    const chatsArray = [
-        {
-            id: 1,
-            image: dummy2
-        },
-        {
-            id: 2,
-            image: dummy2
-        },
-        {
-            id: 3,
-            image: dummy2
-        },
-        {
-            id: 4,
-            image: dummy2
-        },
-        {
-            id: 5,
-            image: dummy2
-        },
-        {
-            id: 6,
-            image: dummy2
-        }
-    ]
+    const [appointmentArray, setAppointmentArray] = useState([])
+    const [chatsArray, setChatArray] = useState([])
+
+    useEffect(() => {
+        authReq('GET', '/appointment')
+            .then(data => {
+                console.log(data)
+                setAppointmentArray(data.appointments.filter(x => new Date(x.appointmentStart).toISOString().split('T')[0] === new Date().toISOString().split('T')[0]).map(app => {
+                    return {
+                        id: app._id,
+                        title: app.appointer.name,
+                        disease: 'Depression',
+                        image: app.appointer.image
+                    }
+                }) ?? [])
+                console.log(data.messages)
+                setChatArray(data.messages.map((x, id) => { return { id, image: x.sender.image } }))
+            })
+    }, [])
 
     return (
         <div className='kwn-right_side_bar-main_container'>
@@ -97,7 +77,7 @@ const RightSideBar = () => {
             </div>
             <div className='kwn-right_side_bar-today_appoint_container'>
                 <h1>today appointments</h1>
-                {appointmentArray.map((item) => {
+                {appointmentArray.filter((_, i) => i < 2).map((item) => {
                     return (
                         <div className='kwn-right_side_bar-appointment_view'>
                             <div className='kwn-right_side_bar-appointment_view_image'>
@@ -115,7 +95,9 @@ const RightSideBar = () => {
                                 <div className='kwn-right_side_bar-appointment_view_message_botton'>
                                     <p>Message</p>
                                 </div>
-                                <div className='kwn-right_side_bar-appointment_view_schedule_botton'>
+                                <div className='kwn-right_side_bar-appointment_view_schedule_botton' style={{cursor: 'pointer'}} onClick={() => {
+                                    navigate(`/dashboard/AppointmentStack/rescheduleAppointment?id=${item.id}`)
+                                }}>
                                     <p>Reschedule</p>
                                 </div>
                             </div>

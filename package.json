@@ -1,6 +1,7 @@
 {
   "name": "kavan",
   "version": "0.1.0",
+  "homepage": ".",
   "private": true,
   "dependencies": {
     "@ant-design/plots": "^1.2.2",
@@ -24,6 +25,7 @@
     "react-scripts": "5.0.1",
     "react-simply-carousel": "^8.4.5",
     "react18-otp-input": "^1.0.3",
+    "socket.io-client": "^4.6.1",
     "styled-components": "^5.3.6",
     "web-vitals": "^2.1.4"
   },

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { apple, facebookBlue, google } from "../../../assets";
 import { Navbar, Footer, TextInput, Button } from "../../../components";
 import { useNavigate } from "react-router-dom";
+import { req } from "../../../requests";
 import "./signIn.css";
 
 export default function SignIn() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
   const socialArray = [
     {
       id: 1,
@@ -36,11 +39,15 @@ export default function SignIn() {
           <TextInput
             type={"text"}
             title={"Email"}
+            value={email}
+            onChange={ev => setEmail(ev.target.value)}
             placeholder={"EX:Lonnie@gmail.com"}
           />
           <TextInput
             type={"password"}
             title={"Password"}
+            value={password}
+            onChange={ev => setPassword(ev.target.value)}
             placeholder={"************"}
           />
         </div>
@@ -57,7 +64,22 @@ export default function SignIn() {
           </p>
         </div>
         <div className="kwn-sign_in-Button_container">
-          <Button onClick={() => navigate("/dashboard/AdminHome")}>
+          <Button onClick={async () => {
+            const data = await req('POST', '/user/testLogin', {
+              email, 
+              password,
+              device: {
+                id: "web",
+                deviceToken: "MockToken"
+              }
+            })
+            console.log(data)
+            console.log("Tokens =>", data)
+            const { user, token, refreshToken } = data
+            localStorage.setItem('kawan_accessToken', token)
+            localStorage.setItem('kawan_refreshToken', refreshToken)
+            navigate("/dashboard/AdminHome")
+            }}>
             Sign In
           </Button>
         </div>
