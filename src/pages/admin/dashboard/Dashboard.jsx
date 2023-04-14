@@ -87,8 +87,7 @@ const Dashboard = () => {
     .then(data => setUser(data.data))
   }, [])
 
-  return <WithAuth component={
-  <div className="kavan_admin_main_container">
+  return <div className="kavan_admin_main_container">
   <div className="kwn-search">
     <SearchBar />
   </div>
@@ -178,7 +177,5 @@ const Dashboard = () => {
     </div>
   </div>
 </div>}
-  />;
-};
 
 export default Dashboard;

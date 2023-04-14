@@ -85,7 +85,7 @@ const Pacients = () => {
               return (
                 <tr>
                   <td data-label={"NOMBRE Y APELLIDO"}>{item.name}</td>
-                  <td data-label={"Last Visit"}>16-07-2021 15:00</td>
+                  <td data-label={"Last Visit"}>{item.startsAt}</td>
                   {item.nextVisit == "" ? (
                     <td data-label={"Next Visit"}>
                       <div className="kawan-pacient-table-create-visit">

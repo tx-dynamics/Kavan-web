@@ -1,6 +1,6 @@
 import { baseURL } from './constants'
 
-export const req = async (method, endpoint, body=null) => {
+export const req = async (method, endpoint, body=null, onError=()=>{}) => {
     try {
         const res = await fetch(`${baseURL}${endpoint}`, {
             method, 
@@ -8,8 +8,10 @@ export const req = async (method, endpoint, body=null) => {
             body: JSON.stringify(body)
         })
         const data = await res.json()
+        if(!data.success) onError()
         return data.data
     } catch(err) {
+        onError()
         console.log(err)
     }
 }

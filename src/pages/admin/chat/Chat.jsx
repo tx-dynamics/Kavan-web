@@ -74,7 +74,7 @@ const Chat = () => {
           console.log(inbox.id, selectedChat.id)
           if(inbox.id == selectedChat.id) setSelectedChat(inbox)
         })
-        setSelectedChat(newinboxes[0])
+        if(first) setSelectedChat(newinboxes[0])
         first = false
       })
 

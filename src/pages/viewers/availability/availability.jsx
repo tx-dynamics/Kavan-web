@@ -11,8 +11,8 @@ import DropDown from "../../../components/DropDown/DropDown";
 const Availability = () => {
   const params = getAllParams()
   const navigate = useNavigate();
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
+  const [startDate, setStartDate] = useState(new Date().toISOString());
+  const [endDate, setEndDate] = useState(new Date().toISOString());
   const [weekSelect, setWeekSelected] = useState({
     label: "Monday",
     value: "monday",
@@ -66,31 +66,18 @@ const Availability = () => {
           setSelected={setWeekSelected2}
           text={"Day end"}
         />
-        <DatePicker
+        <DropDown
+          options={new Array(24).fill(0).map((i, _) => i+1).map(h => `${new Date().toISOString().split("T")[0]}T${h < 9 ? `0${h}` : h}:00:00Z`)}
           selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          withPortal
-          portalId="root-portal"
-          customInput={<SelectDate2 text={"Start Date"} />}
-          maxDate={new Date()}
-          // fixedHeight
-          timeCaption="Time"
-          dateFormat="h:mm aa"
-          showTimeSelect
-          showTimeSelectOnly
+          setSelected={setStartDate}
+          text={"Start time"}
         />
 
-        <DatePicker
+        <DropDown
+          options={new Array(24).fill(0).map((i, _) => i+1).map(h => `${new Date().toISOString().split("T")[0]}T${h < 9 ? `0${h}` : h}:00:00Z`).filter(x => x < startDate)}
           selected={endDate}
-          onChange={(date) => setEndDate(date)}
-          withPortal
-          portalId="root-portal"
-          customInput={<SelectDate2 text={"End Date"} />}
-          maxDate={new Date()}
-          showTimeSelect
-          showTimeSelectOnly
-          timeCaption="Time"
-          dateFormat="h:mm aa"
+          setSelected={setEndDate}
+          text={"End time"}
         />
         <div style={{ marginTop: "3.7rem" }}>
           <Button onClick={() => {

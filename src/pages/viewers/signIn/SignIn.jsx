@@ -7,6 +7,7 @@ import "./signIn.css";
 
 export default function SignIn() {
   const navigate = useNavigate();
+  const [error, setError] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const socialArray = [
@@ -63,8 +64,10 @@ export default function SignIn() {
             Forget password?
           </p>
         </div>
+        <div style={{ color: 'red', display: 'flex', justifyContent: 'flex-start', fontSize: 20 }}>{error}</div>
         <div className="kwn-sign_in-Button_container">
           <Button onClick={async () => {
+            let success = true
             const data = await req('POST', '/user/testLogin', {
               email, 
               password,
@@ -72,7 +75,11 @@ export default function SignIn() {
                 id: "web",
                 deviceToken: "MockToken"
               }
+            }, () => {
+              success = false
+              setError("Incorrect email or password")
             })
+            if(!success) return
             console.log(data)
             console.log("Tokens =>", data)
             const { user, token, refreshToken } = data
