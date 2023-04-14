@@ -114,10 +114,21 @@
   background: none no-repeat;
   content: url(../../assets/clock.png);
 }
+@media screen and (max-width: 600px) {
+  .kwn-input_container {
+    width: 40rem !important;
+  }
+  .kwn-input_container_input {
+    width: 40rem !important;
+  }
+}
 
 @media screen and (max-width: 480px) {
+  .kwn-input_container {
+    width: 33rem !important;
+  }
   .kwn-input_container_input {
-    width: 33rem;
+    width: 33rem !important;
     padding: 1.6rem 1.8rem;
   }
 

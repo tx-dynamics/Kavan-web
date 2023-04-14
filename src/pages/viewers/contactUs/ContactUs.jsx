@@ -12,11 +12,13 @@ export default function ContactUs() {
         <div className="kwn-contact_us-form_container">
           <div className="kwn-contact_us-form_sub-container1">
             <TextInput
+              style={{ width: "58rem" }}
               type={"text"}
               title={"Name"}
               placeholder={"EX:Lonnie Murphy"}
             />
             <TextInput
+              style={{ width: "58rem" }}
               type={"text"}
               title={"Email"}
               placeholder={"EX:Lonnie@gmail.com"}
@@ -24,6 +26,7 @@ export default function ContactUs() {
           </div>
 
           <TextInput
+            style={{ width: "58rem" }}
             type={"text"}
             title={"Subject"}
             placeholder={"EX:Project complaint"}

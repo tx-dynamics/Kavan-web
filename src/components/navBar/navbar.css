@@ -31,29 +31,33 @@
 .kavan__navbar-links_text {
   color: white;
   font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 22px;
+  font-weight: 400;
+  font-size: 16px;
   line-height: 25px;
   margin: 0rem 3.2rem;
   cursor: pointer;
   padding-bottom: 1.5rem;
   border-bottom-width: 2px;
-
 }
 
 .kavan__navbar-links_button {
   background-color: white;
-  color: black;
+  color: #414141;
   padding: 1.6rem 3.2rem;
-  border-radius: 32rem;
+  border-radius: 1.4rem;
   font-family: var(--font-family);
-  font-weight: 500;
-  font-size: 22px;
+  font-weight: 400;
+  font-size: 1.6rem;
   line-height: 25px;
   margin: 0rem 3.2rem;
   cursor: pointer;
   outline: none;
   border: none;
+  /* width: 25.9rem; */
+  height: 4.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .kavan__navbar_closeIcon {
